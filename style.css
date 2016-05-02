@@ -2,6 +2,11 @@ body {
 	background-color: #12192b;
 }
 
+.navbar {
+	background:none;
+	border: 0px;
+}
+
 p {
 	color: #aa6920;
 	font-family: Copperplate;
