@@ -1,0 +1,50 @@
+a {
+	text-decoration: none;
+	color: black;
+	border-bottom: 0;
+	font-family: Raleway, Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	margin: 0 0 2em 0;
+	text-transform: uppercase;
+}
+
+article h3 {
+	text-align:center;
+}
+
+body {
+	color: white;
+}
+/* Force all Font Awesome icons (within the 
+span with class faIcon) to be centered. */
+.faIcon {
+	display:inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.menu-item ul {
+	max-height: 0px;
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0px;
+
+	/* Animating collapsing */
+	-webkit-transition: max-height 2s ease;
+	-moz-transition:	max-height 2s ease;
+	-o-transition:		max-height 2s ease;
+	-ms-transition:		max-height 2s ease;
+	transition:			max-height 2s ease;
+}
+
+.menu-item:hover ul {
+	max-height: 400px;
+	/* Animating expanding */
+	-webkit-transition: max-height 1s ease;
+	-moz-transition:	max-height 1s ease;
+	-o-transition:		max-height 1s ease;
+	-ms-transition:		max-height 1s ease;
+	transition:			max-height 1s ease;
+}
