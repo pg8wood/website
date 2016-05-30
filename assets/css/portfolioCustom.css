@@ -17,6 +17,7 @@ article h3 {
 body {
 	color: white;
 }
+
 /* Force all Font Awesome icons (within the 
 span with class faIcon) to be centered. */
 .faIcon {
@@ -25,21 +26,34 @@ span with class faIcon) to be centered. */
 	text-align: center;
 }
 
+html {
+	background: url(../images/writing.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.menu-item {
+	cursor: pointer;
+}
+
 .menu-item ul {
+	cursor: pointer;
 	max-height: 0px;
 	list-style-type: none;
 	overflow: hidden;
 	padding: 0px;
 
 	/* Animating collapsing */
-	-webkit-transition: max-height 2s ease;
-	-moz-transition:	max-height 2s ease;
-	-o-transition:		max-height 2s ease;
-	-ms-transition:		max-height 2s ease;
-	transition:			max-height 2s ease;
+	-webkit-transition: max-height 1s ease;
+	-moz-transition:	max-height 1s ease;
+	-o-transition:		max-height 1s ease;
+	-ms-transition:		max-height 1s ease;
+	transition:			max-height 1s ease;
 }
 
-.menu-item:hover ul {
+.menu-item ul.clicked {
 	max-height: 400px;
 	/* Animating expanding */
 	-webkit-transition: max-height 1s ease;
@@ -47,4 +61,8 @@ span with class faIcon) to be centered. */
 	-o-transition:		max-height 1s ease;
 	-ms-transition:		max-height 1s ease;
 	transition:			max-height 1s ease;
+}
+
+.submenu {
+	display: none;
 }

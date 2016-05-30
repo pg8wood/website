@@ -17,13 +17,6 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
-	html {
-		background: url(../images/flag.jpg) no-repeat center center fixed; 
-  		-webkit-background-size: cover;
-  		-moz-background-size: cover;
-  		-o-background-size: cover;
-  		background-size: cover;
-	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -238,7 +231,7 @@
 		}
 	}
 
-*	@-ms-keyframes bg {
+	@-ms-keyframes bg {
 		0% {
 			-moz-transform: translate3d(0,0,0);
 			-webkit-transform: translate3d(0,0,0);
@@ -276,7 +269,7 @@
 	}
 
 /* Overlay */
-/*
+
 	@-moz-keyframes overlay {
 		0% {
 			opacity: 0;
@@ -334,7 +327,7 @@
 		top: 0;
 		width: 100%;
 	}
-*/
+
 /* Main */
 
 	#main {
@@ -723,7 +716,6 @@
 					-ms-transform: translate3d(-1500px,0,0);
 					transform: translate3d(-1500px,0,0);
 				}
-
 	}
 
 		@-webkit-keyframes bg {
@@ -740,7 +732,7 @@
 				-ms-transform: translate3d(-1500px,0,0);
 				transform: translate3d(-1500px,0,0);
 			}
-			}
+		}
 
 		@-ms-keyframes bg {
 			0% {
