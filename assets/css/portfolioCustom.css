@@ -62,7 +62,3 @@ html {
 	-ms-transition:		max-height 1s ease;
 	transition:			max-height 1s ease;
 }
-
-.submenu {
-	display: none;
-}

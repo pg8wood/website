@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d94b015f-b028-41ba-85fe-ce8653396615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/homeCustom.css" afterPath="$PROJECT_DIR$/assets/css/homeCustom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/homeMain.css" afterPath="$PROJECT_DIR$/assets/css/homeMain.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/portfolioCustom.css" afterPath="$PROJECT_DIR$/assets/css/portfolioCustom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio.html" afterPath="$PROJECT_DIR$/portfolio.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.portfolio.html.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/flag.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="website.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +59,8 @@
       <file leaf-file-name="portfolioCustom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/portfolioCustom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29411766">
-              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.5882353">
+              <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -116,7 +114,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="553" />
+    <option name="x" value="554" />
     <option name="y" value="23" />
     <option name="width" value="887" />
     <option name="height" value="805" />
@@ -530,15 +528,15 @@
       <created>1464558168534</created>
       <option name="number" value="Default" />
       <updated>1464558168534</updated>
-      <workItem from="1464558170089" duration="13680000" />
+      <workItem from="1464558170089" duration="14280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13680000" />
+    <option name="totallyTimeSpent" value="14280000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="553" y="23" width="887" height="805" extended-state="0" />
+    <frame x="554" y="23" width="887" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -724,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/portfolioCustom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29411766">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.5882353">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
           <folding />
         </state>
       </provider>
