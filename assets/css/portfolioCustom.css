@@ -1,15 +1,3 @@
-a {
-	text-decoration: none;
-	color: black;
-	border-bottom: 0;
-	font-family: Raleway, Helvetica, sans-serif;
-	font-size: 0.8em;
-	font-weight: 700;
-	letter-spacing: 0.1em;
-	margin: 0 0 2em 0;
-	text-transform: uppercase;
-}
-
 article h3 {
 	text-align:center;
 }
