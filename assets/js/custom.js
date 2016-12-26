@@ -1,5 +1,5 @@
 /**
- * Created by PatrickGatewood on 5/29/16.
+ * JQuery handling tapping of menu items to work on desktop and mobile
  */
 $(document).ready(function() {
     $(function() {
