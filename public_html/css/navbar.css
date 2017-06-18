@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #303030;
+    overflow: hidden;
+} 
+
+.navbar a {
+    float: left;
+    display: block;
+    text-decoration: none;
+}
+
+
+/* 
+-------------------
+Mobile-first styles 
+-------------------
+*/
+
+.navbar a.icon {
+    float: right;
+    display: block;
+}
+
+/* Hide expand button on large screens */
+@media screen and (min-width: 600px) { 
+    .navbar .icon {
+        display: none;
+    } 
+} 
