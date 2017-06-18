@@ -10,16 +10,21 @@ Copyright © 2017 Patrick Gatewood. All rights reserved.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        
+        <link rel="stylesheet" href="css/siteStyles.css" />
 
+        <!-- Load navbar from server -->
         <script>
             $(function () {
-                $("#header").load("navbar.html");
+                $("#header").load("template/navbar.html");
+                $("#footer").load("template/footer.html");
             });
         </script>
     </head>
 
     <body>
         <div id="header"></div>
-        Hello world
+        Hello world! 
+        <div id="footer"></div>
     </body>
 </html>

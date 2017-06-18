@@ -2,7 +2,8 @@
 
 .navbar {
     background-color: #303030;
-    overflow: hidden;
+    overflow: hidden;  
+    margin: 0px;
 } 
 
 .navbar a {
@@ -24,8 +25,11 @@
 
 
 /* Collapse navbar items on mobile */
-@media screen and (max-width: 600px) {
-    .navbar a:not(:first-child) {display: none;}
+@media screen and (max-width: 500px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
     .navbar a.icon {
         float: right;
         display: block;
@@ -33,7 +37,7 @@
 }
 
 /* Expand navbar when the expand icon is clicked */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .navbar.responsive {
         position: relative;
     }
