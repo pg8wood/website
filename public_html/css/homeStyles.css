@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 body {
     background: url(../images/flag.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -6,8 +8,11 @@ body {
     background-size: cover;
 }
 
-h1, p {
+h1 {
     color: white;
+    margin: 0px;
+    font-size: 40px;
+font-family: 'Press Start 2P', cursive;
 }
 
 #portrait {
@@ -28,11 +33,12 @@ li {
     line-height: 1vh;
 }
 
+/* Circled Font Awesome icons */
 i.custom-icon {
     /* These must match */
-    font-size: 6vh;
-    width: 6vh;
-    height: 6vh;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
 
     color: white;
     border: 1px solid white;
