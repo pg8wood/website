@@ -1,0 +1,48 @@
+body {
+    background: url(../images/flag.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1, p {
+    color: white;
+}
+
+#portrait {
+    margin-top: 10vh;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    top: 27%;
+    left: 13%;	
+}
+
+li {
+    display: inline-block;
+}
+
+.contactLinks a {
+    text-decoration: none;
+    line-height: 1vh;
+}
+
+i.custom-icon {
+    /* These must match */
+    font-size: 6vh;
+    width: 6vh;
+    height: 6vh;
+
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 1vh;
+    padding: 2vh;
+    text-align: center;
+    vertical-align: middle;
+}
+
+i.custom-icon:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}

@@ -5,18 +5,21 @@ Copyright © 2017 Patrick Gatewood. All rights reserved.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Patrick Gatewood</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        
+
         <link rel="stylesheet" href="css/siteStyles.css" />
+        <link rel="stylesheet" href="css/homeStyles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Load navbar from server -->
         <script>
             $(function () {
                 $("#header").load("template/navbar.html");
+                $("#content").load("home.html");
                 $("#footer").load("template/footer.html");
             });
         </script>
@@ -24,7 +27,36 @@ Copyright © 2017 Patrick Gatewood. All rights reserved.
 
     <body>
         <div id="header"></div>
-        Hello world! 
+
+        <!-- Feature portrait image -->
+        <div align="center">
+            <img id="portrait" src="images/portrait.jpg" alt="Patrick's Profile Photo" />
+
+            <h1>Patrick Gatewood</h1>
+            <p>Software Developer &nbsp;&bull;&nbsp; Creator &nbsp;&bull;&nbsp; Technology Enthusiast </p>
+
+            <ul class="contactLinks">
+                <li>
+                    <a href="http://www.facebook.com/senorpatrick" target="_blank">
+                        <i class="fa fa-facebook custom-icon"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
+                        <i class="fa fa-linkedin custom-icon"></i>
+                    </a>
+                </li>
+                <li><a href="https://github.com/pg8wood" target="_blank">
+                     <i class="fa fa-github custom-icon"></i>
+                    </a></li>
+                    <li><a href="https://play.google.com/store/apps/developer?id=Robot+Hand" target="_blank">
+                         <i class="fa fa-android custom-icon"></i>
+                        </a></li>
+                <li><a href="mailto:pg8wood@vt.edu"></a>
+                <i class="fa fa-envelope-o custom-icon"></i></li>
+            </ul>
+        </div>
+
         <div id="footer"></div>
     </body>
 </html>
