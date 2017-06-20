@@ -4,6 +4,7 @@
     background-color: rgba(51, 51, 51, 0);
     overflow: hidden;  
     margin: 0px;
+    height: 6vh;
 } 
 
 .navbar a {

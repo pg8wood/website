@@ -15,11 +15,10 @@ Copyright © 2017 Patrick Gatewood. All rights reserved.
         <link rel="stylesheet" href="css/homeStyles.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Load navbar from server -->
+        <!-- Load header and footer from server -->
         <script>
             $(function () {
                 $("#header").load("template/navbar.html");
-                $("#content").load("home.html");
                 $("#footer").load("template/footer.html");
             });
         </script>
@@ -55,24 +54,31 @@ Copyright © 2017 Patrick Gatewood. All rights reserved.
                     </a>
                 </li>
             </ul>
-        </div>
-        <br />
 
-        <div align="center">
-            <h1>About</h1>
-            <p>Driven, fast-learning software engineer. Curious. Lorem ipsum some other nice things here.</p>
-            <p>I'm going to write something in first person in this paragraph so that it seems more personal. Maybe mention some non-tech things like my hobbies or other things that I enjoy.</p>
-        </div>
-        <br />
-        <hr />
-
-        <div align="center">
-            <h1>Resume
         </div>
 
+        <div id="about">
+            <br />
+            <div align="center">
+                <h1>About</h1>
+            </div>
 
+            <div id="about-container">
+                 <p>Driven, fast-learning software engineer. Curious. Lorem ipsum some other nice things here.</p>
+                <p>I'm going to write something in first person in this paragraph so that it seems more personal. Maybe mention some non-tech things like my hobbies or other things that I enjoy.</p>
+            </div>
+            <br />
+        </div>
+       
 
+        <div id="resume">
+            <div align="center">
+                <h1>Resume</h1>
+                <p>My education, professional experience, and personal ventures.</p>
+            </div>
+            <div id="resume-container">
 
-        <!--<div id="footer"></div>-->
+            </div>
+        </div>
     </body>
 </html>

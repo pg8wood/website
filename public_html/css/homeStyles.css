@@ -7,12 +7,12 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
-    height: 95vh;
+
+    height: 100vh;
     min-height: 650px;
-    
-    /* Collide with header on page load */
-    margin-top: -52px; 
+
+    /* Collide with header on page load. Must match header's height */
+    margin-top: -6vh; 
 }
 
 #name-header {
@@ -31,6 +31,14 @@
     height: 250px;
     top: 27%;
     left: 13%;	
+}
+
+#about-container {
+ 
+}
+
+#resume-container {
+    margin: 0px 25px;
 }
 
 .subtitle {
