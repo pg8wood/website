@@ -1,7 +1,12 @@
-body {
-    margin: 0px;
+* {
+    margin: 5px;
 }
+
 
 .centered {
     text-align: center;
+}
+
+table {
+    
 }
