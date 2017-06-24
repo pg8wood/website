@@ -1,12 +1,56 @@
-* {
-    margin: 5px;
+@import url('https://fonts.googleapis.com/css?family=Spectral:Bold,Regular,Light,Extra-Light');
+#resume-wrapper {
+    font-family: 'Spectral', serif;
 }
 
+#resume-header {
+    font-size: 40px;
+    font-weight: 300;
+}
 
+/* TODO remove */
+#resume-wrapper h2, h3, h4, ul, p {
+    margin: 0px;
+}
+
+#resume-wrapper h2 {
+    margin-bottom: 10px;
+}
+
+#resume-wrapper h4 {
+  font-weight: 800;
+}
+
+#resume-wrapper h4 {
+    font-family: 'Spectral:Extra-light'
+}
+
+#resume-wrapper li {
+    font-weight: 100;
+    vertical-align: 50%;
+}
+
+/* Customize list bullet point size */
+/*ul li:before {
+     content: "•";
+     font-size: 150%;
+     margin-right: 5px;
+}*/
+
+
+#contact-info {
+    margin-bottom: 20px;
+}
+
+.activity-date {
+    float:right;
+    font-size: 15px;
+    font-weight: normal;
+}
 .centered {
     text-align: center;
 }
 
-table {
-    
+.module-wrapper {
+    margin: 20px;
 }
