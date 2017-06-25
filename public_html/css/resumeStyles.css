@@ -13,7 +13,6 @@
     font-family: 'Spectral', serif;
 }
 
-/* TODO remove */
 #resume-wrapper h2, h3, h4, ul, p {
     margin: 0px;
 }
@@ -38,7 +37,6 @@
 
 .activity-date {
     float:right;
-    /*font-size: 15px;*/
     font-weight: normal;
 }
 .centered {
