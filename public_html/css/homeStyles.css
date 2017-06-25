@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Rock+Salt');
 
 #intro {
     background: url(../images/flag.jpg) no-repeat center center fixed;

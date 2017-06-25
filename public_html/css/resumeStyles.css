@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Spectral:Bold,Regular,Light,Extra-Light');
-#resume-wrapper {
-    font-family: 'Spectral', serif;
+@import url('https://fonts.googleapis.com/css?family=Spectral:Semi-Bold,Regular,Light,Extra-Light');
+
+#contact-info {
+    margin-bottom: 20px;
 }
 
 #resume-header {
-    font-size: 40px;
-    font-weight: 300;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#resume-wrapper {
+    font-family: 'Spectral', serif;
 }
 
 /* TODO remove */
@@ -14,32 +19,21 @@
 }
 
 #resume-wrapper h2 {
-    margin-bottom: 10px;
+    margin-bottom: -8px;
+}
+
+#resume-wrapper h2 * {
+    line-height: 200%;
 }
 
 #resume-wrapper h4 {
-  font-weight: 800;
+  font-weight: 500;
+  font-family: 'Spectral:Extra-light';
 }
 
-#resume-wrapper h4 {
-    font-family: 'Spectral:Extra-light'
-}
-
-#resume-wrapper li {
-    font-weight: 100;
-    vertical-align: 50%;
-}
-
-/* Customize list bullet point size */
-/*ul li:before {
-     content: "•";
-     font-size: 150%;
-     margin-right: 5px;
-}*/
-
-
-#contact-info {
-    margin-bottom: 20px;
+#resume-wrapper .contactLinks li {
+    display: inline-block;
+    font-weight: normal;
 }
 
 .activity-date {
@@ -51,6 +45,19 @@
     text-align: center;
 }
 
+.list-start {
+    margin-right: 1em;
+}
+
 .module-wrapper {
-    margin: 20px;
+    margin: 10px 10px 0px 10px;
+}
+
+.module-wrapper li {
+    font-weight: 100;
+    vertical-align: 50%;
+}
+
+.no-break {
+    white-space: nowrap;
 }
