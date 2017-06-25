@@ -11,6 +11,11 @@
 
 #resume-wrapper {
     font-family: 'Spectral', serif;
+    max-width: 900px;
+    
+    /* Ensure the resume doesn't start wrapping lines on tiny windows */
+    margin: 0px auto;
+    min-width: 600px;
 }
 
 #resume-wrapper h2, h3, h4, ul, p {
