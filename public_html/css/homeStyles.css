@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Rock+Salt');
 
 #intro {
     background: url(../images/flag.jpg) no-repeat center center fixed;
@@ -13,6 +12,10 @@
 
     /* Collide with header on page load. Must match header's height */
     margin-top: -6vh; 
+}
+
+#intro li {
+    display: inline-block;
 }
 
 #name-header {
@@ -54,10 +57,6 @@
 
 .contactLinks a {
     text-decoration: none;
-}
-
-li {
-    display: inline-block;
 }
 
 /* Circled Font Awesome icons */

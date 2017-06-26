@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral:Semi-Bold,Regular,Light,Extra-Light');
+
+#contact-info {
+    margin-bottom: 15px;
+}
+
+#resume-header {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#resume-wrapper {
+    font-family: 'Spectral', serif;
+    max-width: 900px;
+    
+    /* Ensure the resume doesn't start wrapping lines on tiny windows */
+    margin: 0px auto;
+    min-width: 600px;
+}
+
+#resume-wrapper h2, h3, h4, ul, p {
+    margin: 0px;
+}
+
+#resume-wrapper h2 {
+    margin-bottom: -8px;
+}
+
+#resume-wrapper h2 * {
+    line-height: 200%;
+}
+
+#resume-wrapper h4 {
+  font-weight: 500;
+  font-family: 'Spectral:Extra-light';
+}
+
+#resume-wrapper .contactLinks li {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.activity-date {
+    float:right;
+    font-weight: normal;
+}
+.centered {
+    text-align: center;
+}
+
+.list-start {
+    margin-right: 1em;
+}
+
+.module-wrapper {
+    margin: 10px 10px 0px 10px;
+}
+
+.module-wrapper li {
+    font-weight: 100;
+    vertical-align: 50%;
+}
+
+.no-break {
+    white-space: nowrap;
+}
