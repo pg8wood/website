@@ -15,7 +15,7 @@ Copyright © 2017 Patrick Gatewood. All rights reserved.
         <link rel="stylesheet" href="css/homeStyles.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Load header and footer from server -->
+        <!-- Load header, resume, and footer from server -->
         <script>
             $(function () {
                 $("#header").load("template/navbar.html");
@@ -29,33 +29,35 @@ Copyright © 2017 Patrick Gatewood. All rights reserved.
         <div id="header"></div>
 
         <div id="intro" align="center">
-            <!-- Feature portrait image -->
-            <img id="portrait" src="images/portrait.jpg" alt="Patrick's Profile Photo" />
+            <div id="gradient-container">
 
-            <h1 id="name-header">Patrick Gatewood</h1>
-            <p class="subtitle">Software Engineer &nbsp;&bull;&nbsp; Creator &nbsp;&bull;&nbsp; Technology Enthusiast</p>
+                <!-- Feature portrait image -->
+                <img id="portrait" src="images/portrait.jpg" alt="Patrick's Profile Photo" />
 
-            <ul class="contactLinks">
-                <li>
-                    <a href="http://www.facebook.com/senorpatrick" target="_blank">
-                        <i class="fa fa-facebook custom-icon"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
-                        <i class="fa fa-linkedin custom-icon"></i>
-                    </a>
-                </li>
-                <li><a href="https://github.com/pg8wood" target="_blank">
-                        <i class="fa fa-github custom-icon"></i>
-                    </a></li>
-                <li>
-                    <a href="mailto:pg8wood@vt.edu">
-                        <i class="fa fa-envelope-o custom-icon"></i>
-                    </a>
-                </li>
-            </ul>
+                <h1 id="name-header">Patrick Gatewood</h1>
+                <p class="subtitle">Software Engineer &nbsp;&bull;&nbsp; Creator &nbsp;&bull;&nbsp; Technology Enthusiast</p>
 
+                <ul class="contactLinks">
+                    <li>
+                        <a href="http://www.facebook.com/senorpatrick" target="_blank">
+                            <i class="fa fa-facebook custom-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
+                            <i class="fa fa-linkedin custom-icon"></i>
+                        </a>
+                    </li>
+                    <li><a href="https://github.com/pg8wood" target="_blank">
+                            <i class="fa fa-github custom-icon"></i>
+                        </a></li>
+                    <li>
+                        <a href="mailto:pg8wood@vt.edu">
+                            <i class="fa fa-envelope-o custom-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div id="about">

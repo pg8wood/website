@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Rock+Salt');
+#gradient-container {
+    background-image: linear-gradient(to bottom,rgba(65, 71, 112, 0.5),rgba(244, 96, 54, 0.4), rgba(244, 96, 54, 0.05));
+    height: 100vh;
+}
 
 #intro {
     background: url(../images/flag.jpg) no-repeat center center fixed;
+    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,8 +25,8 @@
 #name-header {
     color: white;
     margin: 0px;
-    font-size: 40px;
-    font-family: 'Rock Salt', cursive;
+    font-size: 60px;
+    font-family: 'Spectral', serif;
     letter-spacing: 10px;
     line-height: 80px;
 }
@@ -37,7 +41,7 @@
 }
 
 #about-container {
- 
+
 }
 
 #resume-container {
