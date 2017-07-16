@@ -1,5 +1,5 @@
 #about {
-    margin: 1vh 5vw 1vh 5vw;
+    margin: 1vh 5vw 0vh 5vw;
 }
 
 #about-wrapper {
@@ -72,7 +72,7 @@
 }
 
 #resume-container {
-    margin: 0px 25px;
+    margin: 20px 25px 0px 25px;
 }
 
 .subtitle {
