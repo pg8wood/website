@@ -1,14 +1,24 @@
 /* Navigation bar styles for mobile and desktop */
 
+#navGradientContainer {
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(244, 96, 54, 0), rgb(65, 71, 112));
+    height: 100vh;
+    width: inherit; 
+}
+
 .navbar {
-    background-color: rgb(65, 71, 112);
-    height: 6vh;
+    background-image:  url(../images/flag.jpg);
+    height: 50px;
     left:0;
     margin: 0px;
     overflow: hidden;  
     position: fixed;
     top:0; 
-    width: 100vw;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 } 
 
 .navbar a {
