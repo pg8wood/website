@@ -7,6 +7,14 @@ $(window).scroll(function () {
     $("#navGradientContainer").css("background-position", "0px -" + $(window).scrollTop() + "px");
 });
 
+$("#home-link").click(function() {
+    $("body").animate({
+        scrollTop: 0
+    }, 700);
+    
+    return false;
+});
+
 $("#resume-link").click(function() {
     $("body").animate({
         scrollTop: $("#resume-container").offset().top - $(".navbar").height()
