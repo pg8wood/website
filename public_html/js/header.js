@@ -29,5 +29,5 @@ function toggleNavbar() {
             "navbar responsive" :
             "navbar");
 
-    window.alert($('#headerNavbar').attr("class"));
+    window.alert($("#headerNavbar").attr("class"));
 }

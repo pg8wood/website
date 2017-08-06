@@ -15,7 +15,6 @@
 
     /* Ensure the resume doesn't start wrapping lines on tiny windows */
     margin: 0px auto;
-    min-width: 600px;
 }
 
 #resume-wrapper h2, h3, h4, ul, p {
@@ -44,6 +43,7 @@
     float:right;
     font-weight: normal;
 }
+
 .centered {
     text-align: center;
 }
@@ -63,4 +63,34 @@
 
 .no-break {
     white-space: nowrap;
+}
+
+/* Mobile resume styles */
+@media screen and (max-width: 500px) {
+    
+    #resume-container h2 {
+        font-size: 6vw;
+    }
+    
+     #resume-container h3 {
+        font-size: 5vw;
+    }
+
+    #resume-container h3 span {
+        display: block;
+        float: left;
+    }
+   
+    #resume-container h4, ul {
+        clear: both;
+    }
+    
+    #resume-header {
+        font-size: 10vw;
+    }
+    
+     .activity-date {
+        clear: both;
+        font-size: 4.5vw;
+    }
 }
