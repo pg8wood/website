@@ -106,3 +106,11 @@ i.custom-icon {
 i.custom-icon:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
+
+/* Header styles for mobile */
+@media only screen and (max-device-width: 480px) {
+    #intro {
+        background: url(../images/flag.jpg) no-repeat center scroll; 
+        background-size: cover;
+    }
+} 
