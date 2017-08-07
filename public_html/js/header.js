@@ -1,10 +1,10 @@
 $(window).scroll(function () {
     // Give header opaque background after scrolling approx. one viewport's height 
-    $("#navGradientContainer").css("background",
+    $("#nav-gradient-container").css("background",
             $(window).scrollTop() >= $(window).height() * 0.93 ? "#414770" : "");
 
     // Scroll header gradient along with #intro gradient 
-    $("#navGradientContainer").css("background-position", "0px -" + $(window).scrollTop() + "px");
+    $("#nav-gradient-container").css("background-position", "0px -" + $(window).scrollTop() + "px");
 });
 
 $("#home-link").click(function() {
