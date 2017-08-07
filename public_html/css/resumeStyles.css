@@ -83,15 +83,15 @@
     }
 
     #resume-container h3 {
+        display: flex;
+        /*flex-direction: column;*/
+        flex-wrap: wrap;
         font-size: 5vw;
-    }
+        align-items: center;
+        line-height: 2em;
+    }    
 
-    #resume-container span {
-        display: block;
-        float: left;
-    }
-
-    #resume-container li span.activity-date {
+    #resume-container span.activity-date {
         font-size: 4vw;
     }
 
@@ -104,9 +104,10 @@
         margin-top: -2vh;
     }
 
-    .activity-date {
-        clear: both;
+    span.activity-date {
+        clear: none;
         font-size: 4.5vw;
+        
     }  
 
 }
