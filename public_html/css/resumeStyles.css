@@ -10,9 +10,12 @@
 }
 
 #resume-wrapper {
+    background: rgb(221, 213, 208);
+    border-radius: 20px;
     font-family: 'Spectral', serif;
-    margin: 0px auto;
+    margin: 0 auto;
     max-width: 900px;
+    padding: 20px;
 }
 
 #resume-wrapper h2, h3, h4, ul, p {
@@ -37,7 +40,7 @@
 
 #resume-wrapper h4 {
     font-weight: 500;
-    font-family: 'Spectral:Extra-light';
+    font-family: 'Spectral:Extra-light', serif;
 }
 
 #resume-wrapper .contactLinks li {
@@ -115,6 +118,10 @@
 
     #resume-header {
         font-size: 10vw;
+    }
+
+    #resume-wrapper {
+        padding-bottom: 45px;
     }
 
     #skills-extra {

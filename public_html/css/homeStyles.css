@@ -68,9 +68,10 @@
 }
 
 #resume-container {
+    background: rgb(65, 71, 112);
     border-left:  2vw solid rgb(65, 71, 112);
     border-right: 2vw solid rgb(65, 71, 112);
-    padding: 20px 25px 0px 25px;
+    /*padding: 20px 25px 0px 25px;*/
 }
 
 .subtitle {
