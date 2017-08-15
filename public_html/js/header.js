@@ -17,7 +17,7 @@ $("#home-link").click(function () {
 
 $("#resume-link").click(function () {
     $("body").animate({
-        scrollTop: $("#resume-container").offset().top - $(".navbar").height()
+        scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
 
     return false;

@@ -17,10 +17,24 @@
     color: white;
     font-family: 'Spectral', serif;
     font-size: 35px;
+    margin-bottom: 15vh;
 }
 
-#about-wrapper p:not(:last-child) {
-    margin-bottom: 15vh;
+#download-resume-link {
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-size: 35px;
+    padding: 10px;
+    margin-bottom: 5vh;
+    text-decoration: none;
+    width: fit-content;
+}
+
+#download-resume-link:hover {
+    background-color: white;
+    color: rgb(65, 71, 112);
 }
 
 #gradient-container {
@@ -43,15 +57,6 @@
     display: inline-block;
 }
 
-#more-info-wrapper {
-    background-color: #2b2b2b;
-}
-
-#more-info-wrapper p {
-    margin: 1vh;
-    font-size: 12px;
-}
-
 #name-header {
     color: white;
     margin: 0px;
@@ -71,10 +76,8 @@
 }
 
 #resume-container {
-    background: rgb(65, 71, 112);
     border-left: 2vw solid rgb(65, 71, 112);
     border-right: 2vw solid rgb(65, 71, 112);
-    /*padding: 20px 25px 0px 25px;*/
 }
 
 .subtitle {
@@ -90,6 +93,10 @@
 
 .contactLinks a {
     text-decoration: none;
+}
+
+body {
+    background: rgb(65, 71, 112);
 }
 
 /* Circled Font Awesome icons */
@@ -118,4 +125,5 @@ i.custom-icon:hover {
         background: url(../images/flag.jpg) no-repeat center scroll;
         background-size: cover;
     }
-} 
+}
+
