@@ -24,7 +24,7 @@
     border: 2px solid white;
     border-radius: 5px;
     color: white;
-    display: block;
+    display: inline-block;
     font-size: 35px;
     padding: 10px;
     margin-bottom: 5vh;

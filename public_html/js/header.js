@@ -1,3 +1,25 @@
+var browser;
+
+$(document).ready(function () {
+   detectBrowser();
+});
+
+function detectBrowser() {
+    var userAgent = navigator.userAgent;
+
+    if(userAgent.indexOf("Chrome") > -1) {
+        browser = "Google Chrome";
+    } else if (userAgent.indexOf("Safari") > -1) {
+        browser = "Apple Safari";
+    } else if (userAgent.indexOf("Opera") > -1) {
+        browser = "Opera";
+    } else if (userAgent.indexOf("Firefox") > -1) {
+        browser = "Mozilla Firefox";
+    } else if (userAgent.indexOf("MSIE") > -1) {
+        browser = "Microsoft Internet Explorer";
+    }
+}
+
 $(window).scroll(function () {
     // Give header opaque background after scrolling approx. one viewport's height 
     $("#nav-gradient-container").css("background",
@@ -8,7 +30,7 @@ $(window).scroll(function () {
 });
 
 $("#home-link").click(function () {
-    $("body").animate({
+    $(browser === "Mozilla Firefox" ? "html" :  "body").animate({
         scrollTop: 0
     }, 700);
 
@@ -16,7 +38,7 @@ $("#home-link").click(function () {
 });
 
 $("#resume-link").click(function () {
-    $("body").animate({
+    $(browser === "Mozilla Firefox" ? "html" :  "body").animate({
         scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
 
