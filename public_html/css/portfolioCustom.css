@@ -6,8 +6,6 @@ body {
 	color: white;
 }
 
-/* Force all Font Awesome icons (within the 
-span with class faIcon) to be centered. */
 .faIcon {
 	display:inline-block;
 	width: 100%;
