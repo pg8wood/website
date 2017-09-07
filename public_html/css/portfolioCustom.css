@@ -1,50 +1,88 @@
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 article h3 {
-	text-align:center;
+    text-align: center;
 }
 
 body {
-	color: white;
+    color: white;
 }
 
 .faIcon {
-	display:inline-block;
-	width: 100%;
-	text-align: center;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
 html {
-	background: url(../images/writing.jpg) no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
+    background: url(../images/writing.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .menu-item {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .menu-item ul {
-	cursor: pointer;
-	max-height: 0px;
-	list-style-type: none;
-	overflow: hidden;
-	padding: 0px;
+    cursor: pointer;
+    max-height: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0px;
 
-	/* Animating collapsing */
-	-webkit-transition: max-height 1s ease;
-	-moz-transition:	max-height 1s ease;
-	-o-transition:		max-height 1s ease;
-	-ms-transition:		max-height 1s ease;
-	transition:			max-height 1s ease;
+    /* Animating collapsing */
+    -webkit-transition: max-height 1s ease;
+    -moz-transition: max-height 1s ease;
+    -o-transition: max-height 1s ease;
+    -ms-transition: max-height 1s ease;
+    transition: max-height 1s ease;
 }
 
 .menu-item ul.clicked {
-	max-height: 400px;
-	/* Animating expanding */
-	-webkit-transition: max-height 1s ease;
-	-moz-transition:	max-height 1s ease;
-	-o-transition:		max-height 1s ease;
-	-ms-transition:		max-height 1s ease;
-	transition:			max-height 1s ease;
+    max-height: 400px;
+    /* Animating expanding */
+    -webkit-transition: max-height 1s ease;
+    -moz-transition: max-height 1s ease;
+    -o-transition: max-height 1s ease;
+    -ms-transition: max-height 1s ease;
+    transition: max-height 1s ease;
+}
+
+.badge {
+    background: inherit;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 5vh;
+    margin-right: 20px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.badge-container {
+    bottom: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.badge-container *:hover {
+    cursor: default;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
