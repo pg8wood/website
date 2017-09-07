@@ -3,6 +3,11 @@
     z-index: 5;
 }
 
+.article-preview {
+    font-size: small;
+    width: 75%;
+}
+
 .badge {
     background: rgba(255, 255, 255, 0.25);
     color: white;
@@ -51,7 +56,8 @@
 }
 
 .menu-item ul.clicked {
-    max-height: 400px;
+    max-height: 100vh;
+
     /* Animating expanding */
     -webkit-transition: max-height 1s ease;
     -moz-transition: max-height 1s ease;
