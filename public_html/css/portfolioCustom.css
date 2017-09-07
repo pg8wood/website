@@ -18,6 +18,10 @@ body {
     text-align: center;
 }
 
+#header-navbar {
+    z-index: 5;
+}
+
 html {
     background: url(../images/writing.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
