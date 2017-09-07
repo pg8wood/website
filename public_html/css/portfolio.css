@@ -1424,7 +1424,7 @@ body.is-loading #banner p {
 /* Wrapper */
 
 #wrapper > header {
-    padding: 11em 0 2.25em 0;
+    padding: 8em 0 0 0;
 }
 
 #wrapper > header .inner {
