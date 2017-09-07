@@ -2,6 +2,10 @@ var browser;
 
 $(document).ready(function () {
     detectBrowser();
+
+    if (window.location.hash === "#download-resume-link") {
+        scrollToResume();
+    }
 });
 
 function detectBrowser() {
@@ -50,12 +54,15 @@ $("#resume-link").click(function () {
         return true;
     }
 
+    scrollToResume();
+    return false;
+});
+
+function scrollToResume() {
     $(browser === "Mozilla Firefox" ? "html" : "body").animate({
         scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
-
-    return false;
-});
+}
 
 // When viewing on mobile or in a small window, expands/collapses the navbar menu
 function toggleNavbar() {
