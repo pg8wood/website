@@ -8,8 +8,8 @@
 }
 
 .navbar {
+    background: rgb(65, 71, 112);
     background-attachment: fixed;
-    background-image:  url(../images/flag.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100vh;
@@ -26,7 +26,12 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-} 
+}
+
+/* Custom navbar image for homepage */
+.index {
+    background-image:  url(../images/flag.jpg);
+}
 
 .navbar a {
     color: white;
