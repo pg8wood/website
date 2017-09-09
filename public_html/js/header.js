@@ -1,4 +1,5 @@
 var browser;
+var chromeOverflowAtHtml;
 
 $(document).ready(function () {
     detectBrowser();
@@ -22,6 +23,10 @@ function detectBrowser() {
     } else if (userAgent.indexOf("MSIE") > -1) {
         browser = "Microsoft Internet Explorer";
     }
+
+    // Chrome started storing overflow at the html level in version 61.
+    var chromeVersion = parseInt(/Chrome\/([0-9.]+)/.exec(navigator.userAgent)[1]);
+    chromeOverflowAtHtml = browser === "Google Chrome" && chromeVersion > 60;
 }
 
 $(window).scroll(function () {
@@ -42,7 +47,7 @@ $("#home-link").click(function () {
         return true;
     }
 
-    $(browser === "Mozilla Firefox" ? "html" : "body").animate({
+    $(browser === "Mozilla Firefox" || chromeOverflowAtHtml ? "html" : "body").animate({
         scrollTop: 0
     }, 700);
 
@@ -59,7 +64,7 @@ $("#resume-link").click(function () {
 });
 
 function scrollToResume() {
-    $(browser === "Mozilla Firefox" ? "html" : "body").animate({
+    $(browser === "Mozilla Firefox" || chromeOverflowAtHtml ? "html" : "body").animate({
         scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
 }
