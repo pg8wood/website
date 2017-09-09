@@ -5,6 +5,9 @@ $(document).ready(function() {
     $(function() {
         $('.menu-item').click(function() {
             var children = $(this).children();
+            var icon = children.find("i");
+            icon.toggleClass("fa fa-chevron-up");
+            icon.toggleClass("fa fa-chevron-down");
             children.toggleClass("clicked");
         });
     });

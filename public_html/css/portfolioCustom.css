@@ -56,7 +56,7 @@
 }
 
 .menu-item ul.clicked {
-    max-height: 100vh;
+    max-height: 150vh;
 
     /* Animating expanding */
     -webkit-transition: max-height 1s ease;
@@ -94,5 +94,16 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+
+/* Portfolio styles for mobile and small browser windows */
+@media screen and (max-width: 800px) {
+   .features article {
+       align-content: center;
+       margin-right: 0;
+       position: relative;
+       width: calc(100%);
+   }
 }
 
