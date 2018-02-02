@@ -2586,11 +2586,7 @@ a {
     text-decoration: none;
 }
 
-/* Undo this CSS' messing with header's CSS */
-#header-navbar a {
-    text-decoration: none;
-    border-bottom: none;
-}
+
 
 a:hover {
     border-bottom-color: #f56a6a;
@@ -4545,4 +4541,16 @@ button:disabled,
     border-top: 0;
     margin-top: 0;
     padding-top: 0;
+}
+
+/* Custom styles not found in Editorial's CSS */
+
+/* Undo this CSS' messing with header's CSS */
+#header-navbar a {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.image.bullet {
+    margin-right: 50px;
 }
