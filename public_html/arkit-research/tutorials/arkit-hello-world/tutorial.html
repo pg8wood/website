@@ -9,16 +9,31 @@
     <title>ARKit Hello World</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!--[if lte IE 8]>
+    <script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../assets/css/custom.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="../../assets/css/ie9.css"/><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="../../assets/css/ie8.css"/><![endif]-->
 
     <!--Code Syntax Highlighting JS library-->
     <link rel="stylesheet" href="../../assets/css/xcode.css"/>
     <script src="../../assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+    <!-- Load header from server -->
+    <script>
+        $(function () {
+            $("#header-container").load("/template/header.html");
+        });
+    </script>
+
 </head>
 <body>
+<div id="header-container"></div>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -190,6 +205,59 @@ func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor:
 
             </section>
         </div>
+    </div>
+
+    <div id="sidebar">
+        <!-- Sidebar -->
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="../../research-intro.html">Welcome</a></li>
+                    <li><a href="../../literature-review.html">Literature Review</a></li>
+                    <li><a href="../../arkit-samples.html">Sample Applications</a></li>
+                </ul>
+                <br/>
+                <section>
+                    <header class="major">
+                        <h2 style="margin-bottom: 10px;">Tutorials</h2>
+                    </header>
+                    <nav>
+                        <ul>
+                            <li><a href="../arkit-hello-world/tutorial.html">Hello World</a></li>
+                            <li><a href="../models-and-physics/tutorial.html" target="_blank">SceneKit Models and
+                                Physics</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <br/>
+                <section>
+                    <header class="major">
+                        <h2 style="margin-bottom: 10px;">Semester Project</h2>
+                    </header>
+                    <nav>
+                        <ul>
+                            <li><a href="../documentation/documentation.html" target="_blank">Documentation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </nav>
+
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Patrick Gatewood. All rights reserved. Design: <a
+                        href="https://html5up.net">HTML5
+                    UP</a>.</p>
+            </footer>
+
+        </div>
+
     </div>
 </div>
 
