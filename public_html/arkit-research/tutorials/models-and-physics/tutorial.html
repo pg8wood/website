@@ -10,15 +10,24 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../assets/css/custom.css"/>
 
     <!--Code Syntax Highlighting JS library-->
     <link rel="stylesheet" href="../../assets/css/xcode.css"/>
     <script src="../../assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+    <!-- Load header from server -->
+    <script>
+        $(function () {
+            $("#header-container").load("../../../template/header.html");
+        });
+    </script>
+
 </head>
 <body>
+<div id="header-container"></div>
 
 <!-- Wrapper -->
 <div id="wrapper">
