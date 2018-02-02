@@ -6,19 +6,30 @@
 -->
 <html>
 <head>
-    <title>ARKit Samples</title>
+    <title>ARKit Literature Review</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <!--[if lte IE 8]>
     <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="stylesheet" href="assets/css/custom.css"/>
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+
+    <!-- Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+    <!-- Load header from server -->
+    <script>
+        $(function () {
+            $("#header-container").load("../template/header.html");
+        });
+    </script>
 </head>
+
 <body>
+<div id="header-container"></div>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -136,7 +147,8 @@
         </div>
     </div>
 
-    <div id="side">
+    <!-- Sidebar -->
+    <div id="sidebar">
         <!-- Sidebar -->
         <div class="inner">
 
@@ -146,8 +158,9 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="research-intro.html">Home</a></li>
-                    <li><a href="arkit-samples.html">Sample Applications</a></li>
+                    <li><a href="research-intro.html">Welcome</a></li>
+                    <li><a href="literature-review.html">Literature Review</a></li>
+                    <li><a href="arkit-samples.bak.html">Sample Applications</a></li>
                 </ul>
                 <br/>
                 <section>
@@ -156,10 +169,8 @@
                     </header>
                     <nav>
                         <ul>
-                            <li><a href="tutorials/arkit-hello-world/tutorial.html" target="_blank">Hello
-                                World</a></li>
-                            <li><a href="tutorials/models-and-physics/tutorial.html" target="_blank">SceneKit
-                                Models and
+                            <li><a href="tutorials/arkit-hello-world/tutorial.html" target="_blank">Hello World</a></li>
+                            <li><a href="tutorials/models-and-physics/tutorial.html" target="_blank">SceneKit Models and
                                 Physics</a></li>
                         </ul>
                     </nav>
@@ -171,7 +182,8 @@
                     </header>
                     <nav>
                         <ul>
-                            <li><a href="tutorials/documentation/documentation.html" target="_blank">Documentation</a></li>
+                            <li><a href="tutorials/documentation/documentation.html" target="_blank">Documentation</a>
+                            </li>
                         </ul>
                     </nav>
                 </section>
@@ -186,9 +198,18 @@
             </footer>
 
         </div>
+
     </div>
 
 </div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
