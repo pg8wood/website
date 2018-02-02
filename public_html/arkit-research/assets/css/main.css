@@ -4129,7 +4129,7 @@ button:disabled,
     text-indent: 7.5em;
     top: 0;
     width: 6em;
-    z-index: 10000;
+    z-index: 10;
 }
 
 #sidebar .toggle:before {
