@@ -38,7 +38,7 @@ $(window).scroll(function () {
     $("#nav-gradient-container").css("background",
         $(window).scrollTop() >= $("#about-wrapper").offset().top - $(".navbar").height() ? "#414770" : "");
 
-    // Scroll header gradient along with #intro gradient 
+    // Scroll header gradient along with #intro gradient
     $("#nav-gradient-container").css("background-position", "0px -" + $(window).scrollTop() + "px");
 });
 
