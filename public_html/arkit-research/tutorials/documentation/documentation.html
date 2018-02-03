@@ -464,7 +464,8 @@ func distanceBetweenPointsInMiles(lat1: Double, long1: Double,
                 <p>The code that follows contains everything required to implement
                     <code>getARCoordinateOfBuilding()</code>. </p>
                 <pre><code>
-// Converts a CLLocation object to a matrix_float4x4 with the 3rd column representing the location in SCNKit coordinates
+/* Converts a CLLocation object to a matrix_float4x4
+   with the 3rd column representing the location in SCNKit coordinates */
 func getARCoordinateOfBuilding(userLocation: CLLocation,
         buildingLocation: CLLocation, distanceFromUserInMiles: Double) -> matrix_float4x4 {
     let bearing = getBearingBetweenPoints(point1: userLocation, point2: buildingLocation)
