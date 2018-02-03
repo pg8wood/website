@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="../../assets/css/main.css"/>
 
+    <!-- Inline code fixes -->
+
     <!--Code Syntax Highlighting JS library-->
     <link rel="stylesheet" href="../../assets/css/xcode.css"/>
     <script src="../../assets/js/highlight.pack.js"></script>
@@ -118,7 +120,8 @@
     let tapPoint: CGPoint = sender.location(in: self.sceneView)
 
     // Conduct the hit test on the SceneView
-    let hitTestResults: [ARHitTestResult] = sceneView.hitTest(tapPoint, types: .existingPlaneUsingExtent)
+    let hitTestResults: [ARHitTestResult] = sceneView.hitTest(tapPoint,
+        types: .existingPlaneUsingExtent)
 
     if hitTestResults.isEmpty {
         return
@@ -132,7 +135,9 @@
     let resultPositionMatrixColumn = result.worldTransform.columns.3
 
     // Position the node slightly above the hit test's position in order to show off gravity later
-    let targetPosition: SCNVector3 = SCNVector3Make(resultPositionMatrixColumn.x, resultPositionMatrixColumn.y + /* insertion offset of ~50 cm */ 0.5, resultPositionMatrixColumn.z)
+    let targetPosition: SCNVector3 = SCNVector3Make(
+        resultPositionMatrixColumn.x, resultPositionMatrixColumn.y + /* insertion offset of ~50 cm */ 0.5,
+        resultPositionMatrixColumn.z)
 
     // This method is implemented in the next section of the tutorial.
     addCubeAt(targetPosition)
@@ -196,7 +201,8 @@ cubeNode.physicsBody = physicsBody
                 physics bodies</p>
             <pre><code>
 // Add Physics Body to the cube
-let physicsBody: SCNPhysicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(geometry: cubeGeometry, options: nil))
+let physicsBody: SCNPhysicsBody = SCNPhysicsBody(
+                type: .dynamic, shape: SCNPhysicsShape(geometry: cubeGeometry, options: nil))
 physicsBody.mass = 1.5; // 1.5kg
 physicsBody.restitution = 0.25
 physicsBody.friction = 0.75
@@ -210,11 +216,15 @@ cubeNode.physicsBody = physicsBody
  Creates a new physics body for a plane SCNNode
  */
 func createPlanePhysicsBody(forNode: SCNNode, anchor: ARPlaneAnchor) {
-    // Create a SCNBox the size of the plane, but 1cm high to prevent the cubes from clipping. SCNPlane has no height, so it is easily clipped through.
-    let planeGeometry = SCNBox(width: CGFloat(anchor.extent.x) , height: CGFloat(anchor.extent.z), length: 0.005, chamferRadius: 0)
+    /* Create a SCNBox the size of the plane, but 1cm high to prevent the
+       cubes from clipping. SCNPlane has no height, so it is easily clipped through. */
+    let planeGeometry = SCNBox(width: CGFloat(anchor.extent.x),
+        height: CGFloat(anchor.extent.z), length: 0.005, chamferRadius: 0)
 
-    // Give the plane a kinematic physics body so other nodes can interact with it, but it never moves and is unaffected by collisions
-    let physicsBody: SCNPhysicsBody = SCNPhysicsBody(type: .kinematic, shape: SCNPhysicsShape(geometry: planeGeometry, options: nil))
+    /* Give the plane a kinematic physics body so other nodes can interact with it,
+       but it never moves and is unaffected by collisions */
+    let physicsBody: SCNPhysicsBody = SCNPhysicsBody(type: .kinematic,
+        shape: SCNPhysicsShape(geometry: planeGeometry, options: nil))
 
     physicsBody.restitution = 0.0
     physicsBody.friction = 1.0
@@ -238,7 +248,8 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
     planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
 
     // Give the SCNNode a texture from Assets.xcassets to better visualize the detected plane.
-    planeNode.geometry?.firstMaterial?.diffuse.contents = "grid.png" // NOTE: change this string to the name of the file you added
+    // NOTE: change this string to the name of the file you added
+    planeNode.geometry?.firstMaterial?.diffuse.contents = "grid.png"
 
     createPlanePhysicsBody(forNode: planeNode, anchor: planeAnchor)
 
@@ -336,6 +347,59 @@ func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact)
             </code></pre>
             <p>Congratulations! You have completed the tutorial, and your implementation is now memory-efficient!</p>
         </section>
+        </div>
+
+    </div>
+
+    <div id="sidebar">
+        <!-- Sidebar -->
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="../../research-intro.html">Welcome</a></li>
+                    <li><a href="../../literature-review.html">Literature Review</a></li>
+                    <li><a href="../../arkit-samples.html">Sample Applications</a></li>
+                </ul>
+                <br/>
+                <section>
+                    <header class="major">
+                        <h2 style="margin-bottom: 10px;">Tutorials</h2>
+                    </header>
+                    <nav>
+                        <ul>
+                            <li><a href="../arkit-hello-world/tutorial.html">Hello World</a></li>
+                            <li><a href="../models-and-physics/tutorial.html" target="_blank">SceneKit Models and
+                                Physics</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <br/>
+                <section>
+                    <header class="major">
+                        <h2 style="margin-bottom: 10px;">Semester Project</h2>
+                    </header>
+                    <nav>
+                        <ul>
+                            <li><a href="../documentation/documentation.html" target="_blank">Documentation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </nav>
+
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Patrick Gatewood. All rights reserved. Design: <a
+                        href="https://html5up.net">HTML5
+                    UP</a>.</p>
+            </footer>
+
         </div>
 
     </div>
