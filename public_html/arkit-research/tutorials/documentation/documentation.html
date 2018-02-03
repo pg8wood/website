@@ -186,7 +186,8 @@ override func viewWillAppear(_ animated: Bool) {
     override func viewDidLoad() {
         ...
         sceneView.overlaySKScene = createOverlayHintLabel(withText: "Your hint text here")
-        fadeNodeInAndOut(node: sceneView.overlaySKScene!, initialDelay: 2.0, fadeInDuration: 1.0, displayDuration: 6.0, fadeOutDuration: 1.0)
+        fadeNodeInAndOut(node: sceneView.overlaySKScene!,
+            initialDelay: 2.0, fadeInDuration: 1.0, displayDuration: 6.0, fadeOutDuration: 1.0)
         ...
     }
                 </code></pre>
@@ -213,9 +214,11 @@ override func viewWillAppear(_ animated: Bool) {
         // Configure the label background
         let labelBackground = SKShapeNode()
 
-        // Give the background a slightly larger bounding rectangle in order to give the text a margin.
+        /* Give the background a slightly larger bounding
+        rectangle in order to give the text a margin. */
         let labelBackgroundSizeRect = hintLabel.frame.insetBy(dx: -10, dy: -10)
-        labelBackground.path = CGPath(roundedRect: labelBackgroundSizeRect, cornerWidth: 5, cornerHeight: 5, transform: nil)
+        labelBackground.path = CGPath(roundedRect: labelBackgroundSizeRect,
+            cornerWidth: 5, cornerHeight: 5, transform: nil)
         labelBackground.position = CGPoint(x: sceneView.frame.midX, y: sceneView.frame.midY)
         labelBackground.strokeColor = UIColor.clear
         labelBackground.fillColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.96)
@@ -235,7 +238,8 @@ override func viewWillAppear(_ animated: Bool) {
                     function can be reused with any SKNode, not just an overlay.</p>
 
                 <pre><code>
-   func fadeNodeInAndOut(node: SKNode, initialDelay: Double, fadeInDuration: Double, displayDuration: Double, fadeOutDuration: Double) {
+   func fadeNodeInAndOut(node: SKNode, initialDelay: Double,
+        fadeInDuration: Double, displayDuration: Double, fadeOutDuration: Double) {
         // Fade in the label
         node.run(SKAction.sequence([
             .wait(forDuration: initialDelay),
@@ -283,7 +287,8 @@ override func viewDidLoad() {
     ...
     // User must enable location services to use this app
     if !CLLocationManager.locationServicesEnabled() {
-        showAlertMessage(title: "Location Services Disabled", message: "You must enable location services to use this app")
+        showAlertMessage(title: "Location Services Disabled",
+            message: "You must enable location services to use this app")
         return
     }
 
@@ -297,7 +302,8 @@ override func viewDidLoad() {
 func getLocation() {
     // The user has not authorized location monitoring
     if (CLLocationManager.authorizationStatus() == .denied) {
-        showAlertMessage(title: "App Not Authorized", message: "Unable to determine your location: please allow VT AR Tour to use your location.")
+        showAlertMessage(title: "App Not Authorized",
+            message: "Unable to determine your location: please allow VT AR Tour to use your location.")
 
         // Try to get location authorization again
         locationManager.requestWhenInUseAuthorization()
@@ -327,7 +333,9 @@ override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     let configuration = ARWorldTrackingConfiguration()
 
-    // Defines the ARSession's coordinate system based on gravity and the compass heading in the device. Note: THIS IS CRITICALLY IMPORTANT for location-based AR applications
+    /* Defines the ARSession's coordinate system based on gravity and
+       the compass heading in the device. Note: THIS IS CRITICALLY IMPORTANT
+       for location-based AR applications*/
     configuration.worldAlignment = .gravityAndHeading
     ...
     // Run the view's session
@@ -342,7 +350,8 @@ override func viewWillAppear(_ animated: Bool) {
                 <pre><code>
 // New location data is available
 func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    //  Must wait until at least one heading update comes through. If we proceed before this, our coordinate system won't be set up correctly
+    /* Must wait until at least one heading update comes through.
+       If we proceed before this, our coordinate system won't be set up correctly*/
     guard (manager.heading?.magneticHeading) != nil else { return }
 
     // Don't process any further without the user's current location
@@ -356,14 +365,16 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
     if let jsonDataFromApi = jsonInDocumentDirectory {
         // Getting the JSON was successful
         do {
-            let jsonArray = try JSONSerialization.jsonObject(with: jsonDataFromApi, options: .mutableContainers) as! NSArray
+            let jsonArray = try JSONSerialization.jsonObject(
+                with: jsonDataFromApi, options: .mutableContainers) as! NSArray
 
             for building in jsonArray {
                 // Update the location and appearance of each buildingNode as necessary
                 processBuilding(building, currentLocation)
             }
         } catch let error as NSError {
-            showAlertMessage(title: "Error in JSON serialization", message: error.localizedDescription)
+            showAlertMessage(title: "Error in JSON serialization",
+                message: error.localizedDescription)
         }
     }
 }
@@ -398,11 +409,14 @@ func radiansToDegrees(_ radians: Double) -> Double { return radians * 180.0 / .p
 // MARK: Haversine formula
 // Calculates the distance between two lat/long coordinates in miles.
 // Modified from https://gist.github.com/Jamonek/16ecda78cebcd0da5862
-func distanceBetweenPointsInMiles(lat1: Double, long1: Double, lat2: Double, long2: Double) -> Double {
+func distanceBetweenPointsInMiles(lat1: Double, long1: Double,
+        lat2: Double, long2: Double) -> Double {
+
     let radius: Double = 3959.0 // Average radius of the Earth in miles
     let deltaP = degreesToRadians(lat2) - degreesToRadians(lat1)
     let deltaL = degreesToRadians(long2) - degreesToRadians(long1)
-    let a = sin(deltaP/2) * sin(deltaP/2) + cos(degreesToRadians(lat1)) * cos(degreesToRadians(lat2)) * sin(deltaL/2) * sin(deltaL/2)
+    let a = sin(deltaP/2) * sin(deltaP/2) + cos(degreesToRadians(lat1)) *
+                cos(degreesToRadians(lat2)) * sin(deltaL/2) * sin(deltaL/2)
     let c = 2 * atan2(sqrt(a), sqrt(1-a))
     let d = radius * c
     return d
@@ -454,7 +468,8 @@ func distanceBetweenPointsInMiles(lat1: Double, long1: Double, lat2: Double, lon
                     <code>getARCoordinateOfBuilding()</code>. </p>
                 <pre><code>
 // Converts a CLLocation object to a matrix_float4x4 with the 3rd column representing the location in SCNKit coordinates
-func getARCoordinateOfBuilding(userLocation: CLLocation, buildingLocation: CLLocation, distanceFromUserInMiles: Double) -> matrix_float4x4 {
+func getARCoordinateOfBuilding(userLocation: CLLocation,
+        buildingLocation: CLLocation, distanceFromUserInMiles: Double) -> matrix_float4x4 {
     let bearing = getBearingBetweenPoints(point1: userLocation, point2: buildingLocation)
     let originTransform = matrix_identity_float4x4
 
@@ -467,7 +482,8 @@ func getARCoordinateOfBuilding(userLocation: CLLocation, buildingLocation: CLLoc
     translationMatrix.columns.3.z = -1 * Float(distanceInMeters)
 
     // Rotate the position matrix
-    let rotationMatrix = MatrixHelper.rotateMatrixAroundY(degrees: Float(bearing * -1), matrix: translationMatrix)
+    let rotationMatrix = MatrixHelper.rotateMatrixAroundY(degrees: Float(bearing * -1),
+            matrix: translationMatrix)
 
     // Multiply the rotation by the translation
     let transformMatrix = simd_mul(rotationMatrix, translationMatrix)
@@ -476,7 +492,8 @@ func getARCoordinateOfBuilding(userLocation: CLLocation, buildingLocation: CLLoc
     return simd_mul(originTransform, transformMatrix)
 }
 
-// Adapted from https://stackoverflow.com/questions/26998029/calculating-bearing-between-two-cllocation-points-in-swift
+// Adapted from https://stackoverflow.com/questions/26998029/
+       calculating-bearing-between-two-cllocation-points-in-swift
 func getBearingBetweenPoints(point1 : CLLocation, point2 : CLLocation) -> Double {
     let lat1 = degreesToRadians(point1.coordinate.latitude)
     let lon1 = degreesToRadians(point1.coordinate.longitude)
@@ -578,28 +595,36 @@ class BuildingDetailsViewController: UIViewController {
                     dictionary. This gives us the full implementation of
                     createBuildingDetailsViewControllerFromDict().</p>
                 <pre><code>
-// Create a BuildingDetailsController and populate it asynchronously with data from the API
-func createBuildingDetailsViewControllerFromDict(buildingDict: NSMutableDictionary?) -> BuildingDetailsViewController {
+// Create a BuildingDetailsController and populate
+        it asynchronously with data from the API
+func createBuildingDetailsViewControllerFromDict(
+        buildingDict: NSMutableDictionary?) -> BuildingDetailsViewController {
     // Create a new ViewController and pass it the selected building's data
-    let buildingDetailViewController = BuildingDetailsViewController.init(nibName: "BuildingDetails", bundle: nil)
+    let buildingDetailViewController = BuildingDetailsViewController.init(
+            nibName: "BuildingDetails", bundle: nil)
     buildingDetailViewController.delegate = self
 
-    // NOTE: ViewController.view must be referenced at least once before referencing ANY IBOutlets in the ViewController. Referencing the `view` property implicity calls loadView(), which should never be called directly by the programmer.
+    /* NOTE: ViewController.view must be referenced at least once before referencing
+       ANY IBOutlets in the ViewController. Referencing the `view` property implicitly
+       calls loadView(), which should never be called directly by the programmer.*/
     let _: UIView! = buildingDetailViewController.view
 
     // Display the building name
-    buildingDetailViewController.buildingNameLabel.text = buildingDict?.value(forKey: "name") as? String
+    buildingDetailViewController.buildingNameLabel.text =
+        buildingDict?.value(forKey: "name") as? String
 
     // Get the building's image asynchronously and display it once available
     if let imageAddress = buildingDict?.value(forKey: "imageUrl") as? String,
         let buildingImageUrl = URL(string: imageAddress) {
-            downloadAndDisplayImageAsync(url: buildingImageUrl, imageView: buildingDetailViewController.buildingImageview)
+            downloadAndDisplayImageAsync(url: buildingImageUrl,
+                imageView: buildingDetailViewController.buildingImageview)
     }
 
     // Get the building's description asynchronously and display it once available
     if let descriptionAddress = buildingDict?.value(forKey: "descriptionUrl") as? String,
         let buildingDescriptionUrl = URL(string: descriptionAddress) {
-            downloadAndDisplayLabelTextAsync(url: buildingDescriptionUrl, label: buildingDetailViewController.buildingDescriptionLabel)
+            downloadAndDisplayLabelTextAsync(url: buildingDescriptionUrl,
+                label: buildingDetailViewController.buildingDescriptionLabel)
     }
 
     return buildingDetailViewController
@@ -753,7 +778,8 @@ func downloadAndDisplayImageAsync(url: URL, imageView: UIImageView) {
         view.addSubview(backButton)
 
         // Fade out the back button after a few seconds.
-        UIView.animateKeyframes(withDuration: 1.0, delay: 6.0, options: .allowUserInteraction, animations: {
+        UIView.animateKeyframes(withDuration: 1.0, delay: 6.0,
+            options: .allowUserInteraction, animations: {
             self.backButton.alpha = 0
         }, completion: { (finished: Bool) in
             self.backButton.isHidden = true
@@ -780,7 +806,8 @@ func downloadAndDisplayImageAsync(url: URL, imageView: UIImageView) {
 
         ...
 
-        // If the back button is hidden and your hit test has no results... show the back button for a few seconds
+        /* If the back button is hidden and your hit test has no results...
+           show the back button for a few seconds*/
         {
             let animationTime = 1.0
             let animationDelay = 3.0
@@ -793,7 +820,8 @@ func downloadAndDisplayImageAsync(url: URL, imageView: UIImageView) {
             })
 
             // Fade back out
-            UIView.animate(withDuration: animationTime, delay: animationDelay, options: UIViewAnimationOptions.allowUserInteraction, animations: {
+            UIView.animate(withDuration: animationTime, delay: animationDelay,
+                options: UIViewAnimationOptions.allowUserInteraction, animations: {
                 self.backButton.alpha = 0
             }, completion: { (finished: Bool) in
                 self.backButton.isHidden = true
@@ -822,6 +850,58 @@ override func viewDidLoad() {
             </section>
 
         </div>
+    </div>
+    <div id="sidebar">
+        <!-- Sidebar -->
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="../../research-intro.html">Welcome</a></li>
+                    <li><a href="../../literature-review.html">Literature Review</a></li>
+                    <li><a href="../../arkit-samples.html">Sample Applications</a></li>
+                </ul>
+                <br/>
+                <section>
+                    <header class="major">
+                        <h2 style="margin-bottom: 10px;">Tutorials</h2>
+                    </header>
+                    <nav>
+                        <ul>
+                            <li><a href="../arkit-hello-world/tutorial.html">Hello World</a></li>
+                            <li><a href="../models-and-physics/tutorial.html">SceneKit Models and
+                                Physics</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <br/>
+                <section>
+                    <header class="major">
+                        <h2 style="margin-bottom: 10px;">Semester Project</h2>
+                    </header>
+                    <nav>
+                        <ul>
+                            <li><a href="../documentation/documentation.html">Documentation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </nav>
+
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Patrick Gatewood. All rights reserved. Design: <a
+                        href="https://html5up.net">HTML5
+                    UP</a>.</p>
+            </footer>
+
+        </div>
+
     </div>
 
 </div>
