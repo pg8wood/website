@@ -13,6 +13,10 @@
     min-height: 600px;
 }
 
+#toggle-navbar-button {
+    display: none;
+}
+
 .navbar {
     background: rgb(65, 71, 112);
     background-attachment: fixed;
@@ -74,7 +78,22 @@
 
 /* Collapse navbar on mobile and tiny browser windows */
 @media only screen and (max-width: 400px) {
-    .navbar {
-        background: rgb(0, 0, 0);
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    #toggle-navbar-button {
+        display: block;
+        float: right;
+    }
+
+    .navbar a {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .navbar a:hover {
+        background-color: transparent;
     }
 }
+
