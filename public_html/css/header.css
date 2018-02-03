@@ -60,14 +60,21 @@
     display: none;
 }
 
-
-/* Header styles for mobile */
-@media only screen and (max-device-width: 480px) {
+/* Prevent white text on white background
+ * image in smaller browser windows */
+@media only screen and (max-width: 850px) {
     #nav-gradient-container {
         background: none;
     }
     
     .navbar {
         background: rgb(65, 71, 112);
+    }
+}
+
+/* Collapse navbar on mobile and tiny browser windows */
+@media only screen and (max-width: 400px) {
+    .navbar {
+        background: rgb(0, 0, 0);
     }
 }

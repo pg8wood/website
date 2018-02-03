@@ -68,12 +68,3 @@ function scrollToResume() {
         scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
 }
-
-// When viewing on mobile or in a small window, expands/collapses the navbar menu
-function toggleNavbar() {
-    $('#headerNavbar').attr("class", $("#headerNavbar").className === "navbar" ?
-        "navbar responsive" :
-        "navbar");
-
-    window.alert($("#headerNavbar").attr("class"));
-}
