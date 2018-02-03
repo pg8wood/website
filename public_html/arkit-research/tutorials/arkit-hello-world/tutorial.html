@@ -148,7 +148,8 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
     planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
 
     // Give the SCNNode a texture from Assets.xcassets to better visualize the detected plane.
-    planeNode.geometry?.firstMaterial?.diffuse.contents = "grid.png" // NOTE: change this string to the name of the file you added
+    // NOTE: change this string to the name of the file you added
+    planeNode.geometry?.firstMaterial?.diffuse.contents = "grid.png"
 
     /*
      `SCNPlane` is vertically oriented in its local coordinate space, so
