@@ -4,20 +4,19 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html xmlns:background-color="http://www.w3.org/1999/xhtml" xmlns:max-width="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <title>VT AR Tour Documentation</title>
+    <title>Documentation</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <!--[if lte IE 8]>
-    <script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../assets/css/custom.css"/>
     <link rel="stylesheet" href="documentation.css"/>
+
 
     <!--Code Syntax Highlighting JS library-->
     <link rel="stylesheet" href="../../assets/css/xcode.css"/>
-
+    <script src="../../assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 
@@ -28,10 +27,7 @@
         });
     </script>
 
-    <script src="../../assets/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 </head>
-
 <body>
 <div id="header-container"></div>
 
@@ -50,7 +46,8 @@
             <!-- Content -->
             <section>
                 <h2>Overview</h2>
-                <p>The hierarchical documentation documents how to build many of the functionalities found in the semester project.</p>
+                <p>The hierarchical documentation documents how to build many of the functionalities found in the
+                    semester project.</p>
 
                 <h2>Contents</h2>
                 <ul class="no-before">
@@ -851,6 +848,7 @@ override func viewDidLoad() {
 
         </div>
     </div>
+
     <div id="sidebar">
         <!-- Sidebar -->
         <div class="inner">
@@ -903,9 +901,25 @@ override func viewDidLoad() {
         </div>
 
     </div>
-
 </div>
 
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/skel.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="../../assets/js/main.js"></script>
+
+<script src="../../assets/js/main.js"></script>
+<!-- Highlight code -->
+<script>
+    $(document).ready(function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
 
 </body>
 </html>
