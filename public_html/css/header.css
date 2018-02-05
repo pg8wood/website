@@ -88,10 +88,10 @@
     }
 
     .navbar.responsive {
-        height: 250px;
+        height: 200px;
     }
 
-    .navbar.responsive.icon {
+    .navbar.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
@@ -103,7 +103,7 @@
         text-align: left;
     }
 
-    .navbar.responsive a:not(:first-child) {
+    .navbar.responsive a:not(:first-child):not(:last-child) {
         background-color: #333333;
     }
 
