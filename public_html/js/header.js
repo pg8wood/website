@@ -68,3 +68,7 @@ function scrollToResume() {
         scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
 }
+
+function toggleNavbar() {
+   $("#header-navbar").toggleClass("responsive")
+}

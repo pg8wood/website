@@ -78,13 +78,33 @@
 
 /* Collapse navbar on mobile and tiny browser windows */
 @media only screen and (max-width: 400px) {
+    #toggle-navbar-button {
+        display: block;
+        float: right;
+    }
+
     .navbar a:not(:first-child) {
         display: none;
     }
 
-    #toggle-navbar-button {
+    .navbar.responsive {
+        height: 250px;
+    }
+
+    .navbar.responsive.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
         display: block;
-        float: right;
+        float: none;
+        text-align: left;
+    }
+
+    .navbar.responsive a:not(:first-child) {
+        background-color: #333333;
     }
 
     .navbar a {
@@ -96,4 +116,3 @@
         background-color: transparent;
     }
 }
-
