@@ -59,11 +59,11 @@
 
 #name-header {
     color: white;
-    margin: 0px;
     font-size: 60px;
     font-family: 'Spectral', serif;
-    letter-spacing: 10px;
-    line-height: 80px;
+    letter-spacing: 6px;
+    line-height: 70px;
+    margin: 0;
 }
 
 #portrait {
@@ -84,6 +84,7 @@
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
+    margin-bottom: 15px;
     margin-top: 0px;
 }
 
@@ -109,8 +110,8 @@ i.custom-icon {
     color: white;
     border: 1px solid white;
     border-radius: 50%;
-    margin: 1vw;
-    padding: 2vw;
+    margin: 8px;
+    padding: 15px;
     text-align: center;
     vertical-align: middle;
 }
@@ -130,5 +131,13 @@ i.custom-icon:hover {
     #about-wrapper p {
         margin-bottom: 5vh;
     }
+}
+
+/* Styles for small browser windows and mobile */
+@media only screen and (max-width: 400px) {
+    #portrait {
+        margin-top: 10vh;
+    }
+
 }
 
