@@ -7,8 +7,7 @@
 }
 
 #nav-gradient-container {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(244, 96, 54, 0), rgb(65, 71, 112));
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(244, 96, 54, 0), rgb(65, 71, 112)) no-repeat;
     height: 100vh;
     min-height: 600px;
 }
@@ -18,18 +17,14 @@
 }
 
 .navbar {
-    background: rgb(65, 71, 112);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vh;
+    background: rgb(65, 71, 112) no-repeat fixed center;
     height: 50px;
-    left:0;
+    left: 0;
     line-height: 50px;
     margin: 0px;
-    overflow: hidden;  
+    overflow: hidden;
     position: fixed;
-    top:0; 
+    top: 0;
     width: 100%;
 
     -webkit-background-size: cover;
@@ -40,7 +35,7 @@
 
 /* Custom navbar image for homepage */
 .index {
-    background-image:  url(../images/flag.jpg);
+    background-image: url(../images/flag.jpg);
 }
 
 .navbar a {
@@ -58,6 +53,7 @@
 
 .navbar a:hover {
     background-color: #5B85AA;
+    color: white !important;
 }
 
 .navbar a.icon {
@@ -70,7 +66,7 @@
     #nav-gradient-container {
         background: none;
     }
-    
+
     .navbar {
         background: rgb(65, 71, 112);
     }
@@ -85,6 +81,17 @@
 
     .navbar a:not(:first-child) {
         display: none;
+    }
+
+    .navbar a {
+        color: white !important;
+        border: 2px transparent;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .navbar a:hover {
+        background-color: transparent;
     }
 
     .navbar.responsive {
@@ -108,16 +115,5 @@
 
     .navbar.responsive a:not(:first-child):not(:last-child) {
         background-color: #333333;
-    }
-
-    .navbar a {
-        color: white !important;
-        border: 2px transparent;
-        font-size: 24px;
-        font-weight: 500;
-    }
-
-    .navbar a:hover {
-        background-color: transparent;
     }
 }
