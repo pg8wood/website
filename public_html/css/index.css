@@ -17,7 +17,7 @@
     color: white;
     font-family: 'Spectral', serif;
     font-size: 35px;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
 }
 
 #download-resume-link {
@@ -119,11 +119,16 @@ i.custom-icon:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Header styles for mobile */
+/* Styles for mobile */
 @media only screen and (max-device-width: 480px) {
     #intro {
         background: url(../images/flag.jpg) no-repeat center scroll;
         background-size: cover;
+    }
+    /* Prevent the spacing in the about
+     section from getting obnoxiously long */
+    #about-wrapper p {
+        margin-bottom: 5vh;
     }
 }
 
