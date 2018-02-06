@@ -88,6 +88,7 @@
     }
 
     .navbar.responsive {
+        border: none;
         height: 200px;
     }
 
@@ -98,6 +99,8 @@
     }
 
     .navbar.responsive a {
+        border-color: transparent;
+        color: white !important;
         display: block;
         float: none;
         text-align: left;
@@ -108,7 +111,8 @@
     }
 
     .navbar a {
-        border: none;
+        color: white !important;
+        border: 2px transparent;
         font-size: 24px;
         font-weight: 500;
     }
