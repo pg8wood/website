@@ -69,6 +69,18 @@ function scrollToResume() {
     }, 700);
 }
 
+/**
+ * Toggles the expanded/collapsed navbar on mobile/small browser windows
+ */
 function toggleNavbar() {
-   $("#header-navbar").toggleClass("responsive")
+    var navClass = $("#header-navbar").attr("class");
+
+    if (navClass === "navbar" || navClass === "navbar index") {
+        $("#header-navbar").addClass("animated");
+        $("#header-navbar").toggleClass("responsive");
+    } else {
+        $("#header-navbar").toggleClass("collapsed");
+    }
+
+    $("#header-navbar").toggleClass("expanded");
 }

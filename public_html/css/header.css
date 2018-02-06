@@ -16,6 +16,11 @@
     display: none;
 }
 
+.animated {
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+}
+
 .navbar {
     background: rgb(65, 71, 112) no-repeat fixed center;
     height: 50px;
@@ -79,6 +84,14 @@
         float: right;
     }
 
+    .collapsed {
+        height: 50px;
+    }
+
+    .expanded {
+        height: 200px;
+    }
+
     .navbar a:not(:first-child) {
         display: none;
     }
@@ -96,7 +109,6 @@
 
     .navbar.responsive {
         border: none;
-        height: 200px;
     }
 
     .navbar.responsive a.icon {
