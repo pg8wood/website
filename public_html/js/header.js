@@ -1,5 +1,11 @@
+const GOOGLE_CHROME = "Google Chrome";
+const FIREFOX = "Mozilla Firefox";
+const INTERNET_EXPLORER = "Microsoft Internet Explorer";
+const OPERA = "Opera";
+const SAFARI = "Apple Safari";
+
 var browser;
-var chromeOverflowAtHtml;
+var chromeOverflowAtHtml = false;
 
 $(document).ready(function () {
     detectBrowser();
@@ -13,20 +19,22 @@ function detectBrowser() {
     var userAgent = navigator.userAgent;
 
     if (userAgent.indexOf("Chrome") > -1) {
-        browser = "Google Chrome";
+        browser = GOOGLE_CHROME;
     } else if (userAgent.indexOf("Safari") > -1) {
-        browser = "Apple Safari";
+        browser = SAFARI;
     } else if (userAgent.indexOf("Opera") > -1) {
-        browser = "Opera";
+        browser = OPERA;
     } else if (userAgent.indexOf("Firefox") > -1) {
-        browser = "Mozilla Firefox";
+        browser = FIREFOX;
     } else if (userAgent.indexOf("MSIE") > -1) {
-        browser = "Microsoft Internet Explorer";
+        browser = INTERNET_EXPLORER;
     }
 
-    // Chrome started storing overflow at the html level in version 61.
-    var chromeVersion = parseInt(/Chrome\/([0-9.]+)/.exec(navigator.userAgent)[1]);
-    chromeOverflowAtHtml = browser === "Google Chrome" && chromeVersion > 60;
+    if (browser === GOOGLE_CHROME) {
+        // Chrome started storing overflow at the html level in version 61.
+        var chromeVersion = parseInt(/Chrome\/([0-9.]+)/.exec(navigator.userAgent)[1]);
+        chromeOverflowAtHtml = chromeVersion > 60;
+    }
 }
 
 $(window).scroll(function () {
@@ -47,7 +55,7 @@ $("#home-link").click(function () {
         return true;
     }
 
-    $(browser === "Mozilla Firefox" || chromeOverflowAtHtml ? "html" : "body").animate({
+    $(browser === FIREFOX || chromeOverflowAtHtml ? "html" : "body").animate({
         scrollTop: 0
     }, 700);
 
@@ -64,7 +72,7 @@ $("#resume-link").click(function () {
 });
 
 function scrollToResume() {
-    $(browser === "Mozilla Firefox" || chromeOverflowAtHtml ? "html" : "body").animate({
+    $(browser === FIREFOX || chromeOverflowAtHtml ? "html" : "body").animate({
         scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
 }
