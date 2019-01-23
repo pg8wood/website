@@ -32,8 +32,9 @@
 
 .faIcon {
     display: inline-block;
-    width: 100%;
+    margin-bottom: 15px;
     text-align: center;
+    width: 100%;
 }
 
 .menu-item {
