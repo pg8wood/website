@@ -30,6 +30,15 @@
     cursor: default;
 }
 
+.contact-icon {
+    margin-right: 15px;
+}
+
+.contact-info {
+    font-size: 25px;
+    padding: 0px !important;
+}
+
 .faIcon {
     display: inline-block;
     margin-bottom: 15px;
@@ -107,4 +116,3 @@ html {
        width: calc(100%);
    }
 }
-
