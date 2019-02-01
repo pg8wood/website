@@ -1,4 +1,4 @@
-# Patrick Gatewood's Website
+# <img src="public_html/images/favicons/android-chrome-192x192.png" height=44 align="left">&nbsp;&nbsp;Patrick Gatewood's Website
 
 > The complete source for http://www.patrickgatewood.com.
 
