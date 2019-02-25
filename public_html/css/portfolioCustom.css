@@ -84,6 +84,10 @@
     user-select: none;
 }
 
+.tall-img {
+    width: 50%;
+}
+
 article {
     display: flex;
     flex-direction: column;
@@ -115,4 +119,9 @@ html {
        position: relative;
        width: calc(100%);
    }
+
+   .tall-img {
+       max-width: 95%;
+       max-height: 50%;
+    }
 }
