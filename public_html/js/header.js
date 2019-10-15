@@ -17,6 +17,7 @@ $(document).ready(function () {
 
 function detectBrowser() {
     var userAgent = navigator.userAgent;
+    console.log(navigator.userAgent)
 
     if (userAgent.indexOf("Chrome") > -1) {
         browser = GOOGLE_CHROME;
@@ -29,12 +30,22 @@ function detectBrowser() {
     } else if (userAgent.indexOf("MSIE") > -1) {
         browser = INTERNET_EXPLORER;
     }
+}
 
-    if (browser === GOOGLE_CHROME) {
+function overflowIsAtHtml() {
+    if (browser === FIREFOX) {
+        return true;
+    } else if (browser === SAFARI) {
+        // Safari started storing overflow at the html level in version 13.
+        var safariVersion = parseInt(/Version\/[0-9]+\.[0-9]+(\.[0-9])? Safari/.exec(navigator.userAgent)[1]);
+        return safariVersion >= 13;
+    } else if (browser === GOOGLE_CHROME) {
         // Chrome started storing overflow at the html level in version 61.
         var chromeVersion = parseInt(/Chrome\/([0-9.]+)/.exec(navigator.userAgent)[1]);
-        chromeOverflowAtHtml = chromeVersion > 60;
+        return chromeVersion >= 61;
     }
+
+    return false
 }
 
 $(window).scroll(function () {
@@ -55,7 +66,7 @@ $("#home-link").click(function () {
         return true;
     }
 
-    $(browser === FIREFOX || chromeOverflowAtHtml ? "html" : "body").animate({
+    $(overflowIsAtHtml ? "html" : "body").animate({
         scrollTop: 0
     }, 700);
 
@@ -72,7 +83,7 @@ $("#resume-link").click(function () {
 });
 
 function scrollToResume() {
-    $(browser === FIREFOX || chromeOverflowAtHtml ? "html" : "body").animate({
+    $(overflowIsAtHtml ? "html" : "body").animate({
         scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
     }, 700);
 }
