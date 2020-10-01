@@ -1,0 +1,7 @@
+[{
+    "title": "👋 Hello, Hugo!",
+    "date": "",
+    "description": "",
+    "body": "this is a test paragraph\nalert(\"hi!\") Welcome! You\u0026rsquo;ve found my first blog post. Hugo is an awesome open-source static site generator with a super active community.\nI\u0026rsquo;ve chosen Hugo as my blog framework so I can learn more about static site generators and have a place to post some write-ups of what I\u0026rsquo;m up to without needing to manually create my site or need to worry about a CMS. My blog is focused on content, so Hugo is a great fit.\nRight off the bat I can see how flexible this tool is as I see my site hot-reloading while the Hugo server observes changes in my Markdown.\n",
+    "ref": "/blog/blog/posts/hello-hugo/"
+  }]

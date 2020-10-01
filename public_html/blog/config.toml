@@ -6,8 +6,8 @@ title                   = "Patrick Gatewood's Blog"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 disqusShortname         = ""
-googleAnalytics         = ""
-pluralizeListTitles     = false
+googleAnalytics         = "UA-179400076-1"
+pluralizeListTitles     = true
 disableLanguages        = []
 
 [markup.goldmark.renderer]
@@ -31,8 +31,8 @@ disableLanguages        = []
   hideEmptyStats        = false
 
   [params.meta]
-    description         = "A theme by HTML5 UP, ported by Julio Pescador. Slimmed and enhanced by Patrick Collins. Multilingual by StatnMap. Powered by Hugo."
-    author              = "HTML5UP and Hugo"
+    description         = "Sometimes I write down my thoughts."
+    author              = "Patrick Gatewood"
     favicon             = false
     svg                 = true
     faviconVersion      = "1"
@@ -40,28 +40,28 @@ disableLanguages        = []
     iOSColor            = "#ffffff"
 
   [params.header]
-    navbarTitle         = "Future Imperfect"
-    dynamicTitles       = true
+    navbarTitle         = "<i class='fa fa-home'></i> Blog"
+    dynamicTitles       = false
     searchMenu          = true
     shareMenu           = true
-    languageMenu        = true
+    languageMenu        = false
 
   [params.intro]
-    header                = "Hugo Future Imperfect Slim"
-    paragraph             = "Another fine, responsive site template by <a href='http://html5up.net'>HTML5 UP</a>."
+    header                = "My Ideas"
+    paragraph             = "Stuff I found interesting"
     rssIntro              = true
     socialIntro           = true
     hideWhenSingleColumn  = false
     alwaysOnHomepage      = false
 
     [params.intro.pic]
-      src                 = "img/main/logo.jpg"
+      src                 = "images/portrait.jpg"
       shape               = "circle"
       width               = ""
-      alt                 = "Hugo Future Imperfect Slim"
+      alt                 = "Picture of Patrick"
 
   [params.sidebar]
-    about               = "This theme was developed for Hugo static site generator."
+    # about               = "Sometimes I actually write my thoughts down"
     postAmount          = 5
     categories          = true
     categoriesByCount   = true
@@ -91,19 +91,19 @@ disableLanguages        = []
     pre               = "<i class='fa fa-home'></i>"
     weight            = 1
 
-  [[menu.main]]
-    name              = "About"
-    identifier        = "about"
-    url               = "/about/"
-    pre               = "<i class='far fa-id-card'></i>"
-    weight            = 2
-
-  [[menu.main]]
-    name              = "Blog"
-    identifier        = "blog"
-    url               = "/blog/"
-    pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 3
+  # [[menu.main]]
+  #   name              = "About"
+  #   identifier        = "about"
+  #   url               = "/about/"
+  #   pre               = "<i class='far fa-id-card'></i>"
+  #   weight            = 2
+  #
+  # [[menu.main]]
+  #   name              = "Blog"
+  #   identifier        = "blog"
+  #   url               = "/blog/"
+  #   pre               = "<i class='far fa-newspaper'></i>"
+  #   weight            = 3
 
   [[menu.main]]
     name              = "Categories"
@@ -121,7 +121,7 @@ disableLanguages        = []
 
 [social]
   # Coding Communities
-  github                = "pacollins/hugo-future-imperfect-slim"
+  github                = "pg8wood"
   gitlab                = ""
   stackoverflow         = "" # User Number
   bitbucket             = ""
@@ -129,22 +129,21 @@ disableLanguages        = []
   codepen               = ""
   # Visual Art Communities
   deviantart            = ""
-  flickr                = "example"
+  flickr                = ""
   behance               = ""
   dribbble              = ""
   # Publishing Communities
   wordpress             = ""
   medium                = ""
   # Professional/Business Oriented Communities
-  linkedin              = "example"
-  linkedin_company      = "examplebusiness"
+  linkedin              = "patrickgatewood"
+  linkedin_company      = "willowtreeapps"
   foursquare            = ""
   xing                  = ""
   slideshare            = ""
   # Social Networks
-  facebook              = "example"
-  googleplus            = ""
-  reddit                = "example"
+  facebook              = "senorpatrick"
+  reddit                = ""
   quora                 = ""
   youtube               = ""
   vimeo                 = ""
@@ -152,19 +151,19 @@ disableLanguages        = []
     # WeChat and QQ need testing.
     wechat              = ""
     qq                  = "" # User ID Number
-  instagram             = "example"
+  instagram             = ""
   tumblr                = ""
-  twitter               = "example"
+  twitter               = ""
   strava                = ""
   skype                 = ""
   snapchat              = ""
-  pinterest             = "example"
-  telegram              = "example"
+  pinterest             = ""
+  telegram              = ""
   vine                  = ""
   googlescholar         = ""
   orcid                 = ""
-  researchgate          = "example"
-  keybase               = "example"
-  mastodon              = "example.com/@example"
+  researchgate          = ""
+  keybase               = ""
+  mastodon              = ""
   # Email
-  email                 = "example"
+  email                 = "pg8wood[AT_SIGN_HERE]vt.edu"

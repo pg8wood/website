@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patrick Gatewood&#39;s Blog</title>
+    <link>https://patrickgatewood.com/blog/</link>
+    <description>Recent content on Patrick Gatewood&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 16 Sep 2020 13:27:57 -0400</lastBuildDate>
+    
+	<atom:link href="https://patrickgatewood.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>👋 Hello, Hugo!</title>
+      <link>https://patrickgatewood.com/blog/blog/posts/hello-hugo/</link>
+      <pubDate>Wed, 16 Sep 2020 13:27:57 -0400</pubDate>
+      
+      <guid>https://patrickgatewood.com/blog/blog/posts/hello-hugo/</guid>
+      <description>this is a test paragraph
+alert(&#34;hi!&#34;) Welcome! You&amp;rsquo;ve found my first blog post. Hugo is an awesome open-source static site generator with a super active community.
+I&amp;rsquo;ve chosen Hugo as my blog framework so I can learn more about static site generators and have a place to post some write-ups of what I&amp;rsquo;m up to without needing to manually create my site or need to worry about a CMS. My blog is focused on content, so Hugo is a great fit.</description>
+    </item>
+    
+  </channel>
+</rss>
