@@ -31,7 +31,7 @@ disableLanguages        = []
   hideEmptyStats        = false
 
   [params.meta]
-    description         = "Sometimes I write down my thoughts."
+    description         = "Stuff I found interesting."
     author              = "Patrick Gatewood"
     favicon             = false
     svg                 = true
@@ -40,7 +40,7 @@ disableLanguages        = []
     iOSColor            = "#ffffff"
 
   [params.header]
-    navbarTitle         = "<i class='fa fa-home'></i> Blog"
+    navbarTitle         = "<i class='fa fa-book-open'></i> Patrick's Blog"
     dynamicTitles       = false
     searchMenu          = true
     shareMenu           = true
@@ -55,7 +55,7 @@ disableLanguages        = []
     alwaysOnHomepage      = false
 
     [params.intro.pic]
-      src                 = "images/portrait.jpg"
+      src                 = "images/2020/portrait.jpg"
       shape               = "circle"
       width               = ""
       alt                 = "Picture of Patrick"
@@ -87,28 +87,14 @@ disableLanguages        = []
   [[menu.main]]
     name              = "Home"
     identifier        = "home"
-    url               = "/"
+    url               = "https://patrickgatewood.com"
     pre               = "<i class='fa fa-home'></i>"
     weight            = 1
-
-  # [[menu.main]]
-  #   name              = "About"
-  #   identifier        = "about"
-  #   url               = "/about/"
-  #   pre               = "<i class='far fa-id-card'></i>"
-  #   weight            = 2
-  #
-  # [[menu.main]]
-  #   name              = "Blog"
-  #   identifier        = "blog"
-  #   url               = "/blog/"
-  #   pre               = "<i class='far fa-newspaper'></i>"
-  #   weight            = 3
 
   [[menu.main]]
     name              = "Categories"
     identifier        = "categories"
-    url               = "/categories/"
+    url               = "categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 5
 
@@ -151,7 +137,7 @@ disableLanguages        = []
     # WeChat and QQ need testing.
     wechat              = ""
     qq                  = "" # User ID Number
-  instagram             = ""
+  instagram             = "senorpatrick"
   tumblr                = ""
   twitter               = ""
   strava                = ""
