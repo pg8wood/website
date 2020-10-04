@@ -27,6 +27,7 @@ I'm looking for two outcomes from setting up Staticman: learning how to automati
 
 ### Setting up Staticman
 Staticman works by hosting a REST API that my static website will consume in order to serve dynamic content. Here's how it works:
-1. Submitting a comment on my blog sends a `POST` request with form data to Staticman
-2. Staticman ingests the form data and pushes a commit to my website's repo
-3. A CI/CD pipeline triggers, building and deploying the new static site complete with the new comment
+1. Submitting a comment on my blog sends a `POST` request with form data to Staticman.
+2. Staticman ingests the form data and pushes a commit to my website's repo. If using the `moderate comments via PR` option, the bot opens a PR; otherwise, it will commit to the repositroy's main branch.
+3. A CI/CD pipeline triggers, building and deploying the new static site complete with the new comment.
+4. Staticman automatically deletes its PR branch (if using the `moderate comments via PR` option) using a webhook.

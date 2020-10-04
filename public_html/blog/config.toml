@@ -73,10 +73,10 @@ disableLanguages        = []
   [params.staticman]
     enabled             = true
     api                 = ""  # No Trailing Slash
-    gitProvider         = ""
-    username            = ""
-    repo                = ""
-    branch              = ""
+    gitProvider         = "github"
+    username            = "pg8wood"
+    repo                = "website"
+    branch              = "master"
 
     [params.staticman.recaptcha]
       siteKey           = ""
@@ -85,7 +85,7 @@ disableLanguages        = []
 [menu]
 
   [[menu.main]]
-    name              = "Home"
+    name              = "Patrick Gatewood Home"
     identifier        = "home"
     url               = "https://patrickgatewood.com"
     pre               = "<i class='fa fa-home'></i>"
@@ -96,14 +96,14 @@ disableLanguages        = []
     identifier        = "categories"
     url               = "categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 5
+    weight            = 2
 
   [[menu.main]]
-    name              = "Contact"
-    identifier        = "contact"
-    url               = "/contact/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 6
+    name              = "Apps"
+    identifier        = "portfolio"
+    url               = "https://patrickgatewood.com/portfolio.html"
+    pre               = "<i class='fab fa-app-store'></i>"
+    weight            = 3
 
 [social]
   # Coding Communities
