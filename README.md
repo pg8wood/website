@@ -1,6 +1,6 @@
 # <img src="public_html/images/favicons/android-chrome-192x192.png" height=40 align="left"> Patrick Gatewood's Website
 
-> The complete source for http://www.patrickgatewood.com.
+> The complete source for https://patrickgatewood.com.
 
 <br />
 <p align=center>
@@ -12,7 +12,7 @@
 
 
 ## Responsive web design brewed in-house
-Read more about it on my [portfolio page](http://www.patrickgatewood.com/portfolio.html).
+Read more about it on my [portfolio page](https://patrickgatewood.com/portfolio.html).
 
-Wanna learn more about me? Check out my [resume](http://www.patrickgatewood.com/index.html#download-resume-link).
+Wanna learn more about me? Check out my [resume](https://patrickgatewood.com/index.html#download-resume-link).
 
