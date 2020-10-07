@@ -1,0 +1,16 @@
+<article class="post">
+  {{ .Render "header" }}
+  <div class="content">
+    {{ .Render "featured" }}
+    {{ $.Scratch.Set "summary" ((delimit (findRE "<p.*?>(.|\n)*?</p>" .Content 1) "") | truncate (default 500 .Site.Params.summary_length) (default "&hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
+    {{ $.Scratch.Get "summary" }}
+  </div>
+  <footer>
+    {{ if .Params.externalLink }}
+      <a href="{{ .Params.externalLink }}" class="button big">{{ i18n "read_more" }}</a>
+    {{ else }}
+      <a href="{{ .RelPermalink }}" class="button big">{{ i18n "read_more" }}</a>
+    {{ end }}
+    {{ .Render "stats" }}
+  </footer>
+</article>
