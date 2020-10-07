@@ -3,26 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://patrickgatewood.com/blog/blog/</loc>
-    <lastmod>2020-09-16T13:27:57-04:00</lastmod>
+    <loc>https://blog.patrickgatewood.com/categories/blog-meta/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://patrickgatewood.com/blog/</loc>
-    <lastmod>2020-09-16T13:27:57-04:00</lastmod>
+    <loc>https://blog.patrickgatewood.com/blog/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://patrickgatewood.com/blog/blog/posts/hello-hugo/</loc>
-    <lastmod>2020-09-16T13:27:57-04:00</lastmod>
+    <loc>https://blog.patrickgatewood.com/categories/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://patrickgatewood.com/blog/categories/</loc>
+    <loc>https://blog.patrickgatewood.com/tags/hugo/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://patrickgatewood.com/blog/tags/</loc>
+    <loc>https://blog.patrickgatewood.com/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.patrickgatewood.com/tags/staticman/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.patrickgatewood.com/tags/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.patrickgatewood.com/blog/posts/hello-hugo/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
