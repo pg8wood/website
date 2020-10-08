@@ -31,3 +31,11 @@ Staticman works by hosting a REST API that my static website will consume in ord
 2. Staticman ingests the form data and pushes a commit to my website's repo. If using the `moderate comments via PR` option, the bot opens a PR; otherwise, it will commit to the repositroy's main branch.
 3. A CI/CD pipeline triggers, building and deploying the new static site complete with the new comment.
 4. Staticman automatically deletes its PR branch (if using the `moderate comments via PR` option) using a webhook.
+
+### Linking External Posts
+Since I had some existing blog posts, I wanted to include them here so I can have a repository of all the content I've written. I'm glad I chose a framework with an active community, because someone had already done this! I was able to link to my existing blog posts in just a few minutes following [Harry Cresswell's guide](https://harrycresswell.com/articles/hugo-external-articles/). Neat!
+
+I also tried my hand at extending some of the Hugo templates so I could indicate that an article was published by an external source. That was a good way to learn some Go, and may inspire another blog post in the future...
+
+### That's it for now!
+I've learned a ton just deploying this site, and I've gotten some inspiration for more articles to come! See ya soon ✌️
