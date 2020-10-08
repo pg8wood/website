@@ -1,8 +1,8 @@
 +++
 title = "How to Adapt Existing Apps for SwiftUI"
 date = 2019-12-23T17:54:17-04:00
-categories = []
-tags = ["WillowTree"]
+categories = ["iOS"]
+tags = ["WillowTree", "UIKit", "SwiftUI", "WWDC"]
 
 [[images]]
 	src = "images/2020/swift-logo.png"
