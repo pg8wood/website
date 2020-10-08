@@ -7,7 +7,7 @@
   </div>
   <footer>
     {{ if .Params.externalLink }}
-      <a href="{{ .Params.externalLink }}" class="button big">{{ i18n "read_more" }}</a>
+      <a href="{{ .Params.external.link }}" target="_" class="button big">{{ i18n "read_more" }}</a>
     {{ else }}
       <a href="{{ .RelPermalink }}" class="button big">{{ i18n "read_more" }}</a>
     {{ end }}
