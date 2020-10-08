@@ -8,7 +8,7 @@ summaryParagraphs = 2
 [[images]]
 	src = "images/2020/swift-logo.png"
 	alt = "Swift Logo"
-	
+
 [external]
 	link = "https://willowtreeapps.com/ideas/how-to-adapt-existing-apps-for-swiftui"
 	siteName = "WillowTree"

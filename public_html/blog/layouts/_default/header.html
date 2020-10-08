@@ -5,7 +5,7 @@
     {{ if .Params.external }}
         {{ $articleURL = .Params.external.link }}
         {{ $target = "_blank" }}
-        <a href="{{ $articleURL }}" target={{$target}}><h5><img class="circle" src="{{ .Params.external.img }}" alt="{{ .Params.external.alt }}" width=50px/>  {{.Params.external.siteName}}  <i class='fa fa-external-link-alt'></i></h5></a>
+        <a href="{{ $articleURL }}" target={{$target}}><h5><img class="circle" src="{{ .Params.external.img }}" alt="{{ .Params.external.alt }}" width=35px/>    {{.Params.external.siteName}}    <i class='fa fa-external-link-alt'></i></h5></a>
     {{ end }}
 
     {{ if $.Scratch.Get "h1" }}
