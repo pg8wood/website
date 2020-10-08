@@ -1,8 +1,8 @@
-https://patrickgatewood.com
+https://patrickgatewood.com {
   file_server
 }
 
 https://blog.patrickgatewood.com {
-  file_server 
+  file_server
     root "./blog/public/"
 }
