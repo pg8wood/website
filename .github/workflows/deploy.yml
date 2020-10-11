@@ -5,7 +5,7 @@ on:
     branches: 
       - master
     paths:
-      - public_html/blog
+      - public_html/blog/*
 
 jobs:
   build:
