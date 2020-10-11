@@ -1,5 +1,6 @@
 +++
 title = "👋 Hello, Hugo!"
+description = "My first Hugo post"
 author = "Patrick Gatewood"
 date = "2020-10-04"
 categories = ["blog-meta"]

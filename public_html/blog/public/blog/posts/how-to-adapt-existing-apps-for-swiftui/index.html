@@ -6,31 +6,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.74.3" /><meta itemprop="name" content="👋 Hello, Hugo!">
-<meta itemprop="description" content="Welcome! You&rsquo;ve found my first blog post. Hugo is an awesome open-source static site generator with a super active community.
-I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static site generators and post some write-ups of what I&rsquo;m up to without needing to manually create my site or worry about a CMS. As with most blogs, I expect everything on this site to be content-driven, so Hugo is a great fit.">
-<meta itemprop="datePublished" content="2020-10-04T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-10-08T00:45:42-04:00" />
-<meta itemprop="wordCount" content="562">
+<meta name="generator" content="Hugo 0.74.3" /><meta itemprop="name" content="How to Adapt Existing Apps for SwiftUI">
+<meta itemprop="description" content="Now that iOS 14 has been released to the public, SwiftUI and Combine are looking more and more attractive as you choose how to build your next greenfield app. But what about your existing applications? If you’re ready to drop iOS 12 and blaze new trails with SwiftUI, congratulations–and prepare yourself for an exciting journey.
+So you’ve shipped your app’s iOS 13 updates, added dark mode, and dropped iOS 12 support… now what?">
+<meta itemprop="datePublished" content="2019-12-23T17:54:17-04:00" />
+<meta itemprop="dateModified" content="2020-10-08T00:45:54-04:00" />
+<meta itemprop="wordCount" content="76">
 <meta itemprop="image" content="">
 
 
 
-<meta itemprop="keywords" content="hugo,staticman," />
-<meta property="og:title" content="👋 Hello, Hugo!" />
-<meta property="og:description" content="Welcome! You&rsquo;ve found my first blog post. Hugo is an awesome open-source static site generator with a super active community.
-I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static site generators and post some write-ups of what I&rsquo;m up to without needing to manually create my site or worry about a CMS. As with most blogs, I expect everything on this site to be content-driven, so Hugo is a great fit." />
+<meta itemprop="keywords" content="WillowTree,UIKit,SwiftUI,WWDC," />
+<meta property="og:title" content="How to Adapt Existing Apps for SwiftUI" />
+<meta property="og:description" content="Now that iOS 14 has been released to the public, SwiftUI and Combine are looking more and more attractive as you choose how to build your next greenfield app. But what about your existing applications? If you’re ready to drop iOS 12 and blaze new trails with SwiftUI, congratulations–and prepare yourself for an exciting journey.
+So you’ve shipped your app’s iOS 13 updates, added dark mode, and dropped iOS 12 support… now what?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.patrickgatewood.com/blog/posts/hello-hugo/" />
+<meta property="og:url" content="https://blog.patrickgatewood.com/blog/posts/how-to-adapt-existing-apps-for-swiftui/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-10-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-10-08T00:45:42-04:00" />
+<meta property="article:published_time" content="2019-12-23T17:54:17-04:00" />
+<meta property="article:modified_time" content="2020-10-08T00:45:54-04:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
-<meta name="twitter:title" content="👋 Hello, Hugo!"/>
-<meta name="twitter:description" content="Welcome! You&rsquo;ve found my first blog post. Hugo is an awesome open-source static site generator with a super active community.
-I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static site generators and post some write-ups of what I&rsquo;m up to without needing to manually create my site or worry about a CMS. As with most blogs, I expect everything on this site to be content-driven, so Hugo is a great fit."/>
+<meta name="twitter:title" content="How to Adapt Existing Apps for SwiftUI"/>
+<meta name="twitter:description" content="Now that iOS 14 has been released to the public, SwiftUI and Combine are looking more and more attractive as you choose how to build your next greenfield app. But what about your existing applications? If you’re ready to drop iOS 12 and blaze new trails with SwiftUI, congratulations–and prepare yourself for an exciting journey.
+So you’ve shipped your app’s iOS 13 updates, added dark mode, and dropped iOS 12 support… now what?"/>
 <link rel="stylesheet" href="/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
@@ -83,37 +83,37 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
 
   
     
-    <a href="//twitter.com/share?text=%f0%9f%91%8b%20Hello%2c%20Hugo%21&amp;url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI&amp;url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f&amp;title=%f0%9f%91%8b%20Hello%2c%20Hugo%21" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f&amp;title=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f&amp;title=%f0%9f%91%8b%20Hello%2c%20Hugo%21" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f&amp;title=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f&amp;description=%f0%9f%91%8b%20Hello%2c%20Hugo%21" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f&amp;description=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Patrick%20Gatewood&amp;body=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -192,18 +192,20 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
     
     
     
+        
+        
+        <a href="https://willowtreeapps.com/ideas/how-to-adapt-existing-apps-for-swiftui" target=_blank><h5><img class="circle" src="images/2020/wt-logo.png" alt="WillowTree Logo" width=35px/>    WillowTree    <i class='fa fa-external-link-alt'></i></h5></a>
+    
 
     
 
-      <h2><a href="/blog/posts/hello-hugo/" target=>👋 Hello, Hugo!</a></h2>
+      <h2><a href="https://willowtreeapps.com/ideas/how-to-adapt-existing-apps-for-swiftui" target=_blank>How to Adapt Existing Apps for SwiftUI</a></h2>
     
     
   </div>
   <div class="meta">
-    <time datetime="2020-10-04 00:00:00 &#43;0000 UTC">October 4, 2020</time>
-    <p>Patrick Gatewood</p>
+    <time datetime="2019-12-23 17:54:17 -0400 -0400">December 23, 2019</time>
     
-      <p>3-Minute Read</p>
     
   </div>
 </header>
@@ -216,37 +218,37 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
 
   
     
-    <a href="//twitter.com/share?text=%f0%9f%91%8b%20Hello%2c%20Hugo%21&amp;url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI&amp;url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f&amp;title=%f0%9f%91%8b%20Hello%2c%20Hugo%21" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f&amp;title=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f&amp;title=%f0%9f%91%8b%20Hello%2c%20Hugo%21" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f&amp;title=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f&amp;description=%f0%9f%91%8b%20Hello%2c%20Hugo%21" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f&amp;description=How%20to%20Adapt%20Existing%20Apps%20for%20SwiftUI" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Patrick%20Gatewood&amp;body=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhello-hugo%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.patrickgatewood.com%2fblog%2fposts%2fhow-to-adapt-existing-apps-for-swiftui%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -257,30 +259,15 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
       
   
   
-    <a href="/blog/posts/hello-hugo/" target="" class="image" style="--bg-image: url('https://blog.patrickgatewood.com/images/2020/hugo-logo.jpg');">
-    <img src="https://blog.patrickgatewood.com/images/2020/hugo-logo.jpg" alt="Hugo Logo">
+      
+      
+  
+    <a href="https://willowtreeapps.com/ideas/how-to-adapt-existing-apps-for-swiftui" target="_blank" class="image" style="--bg-image: url('https://blog.patrickgatewood.com/images/2020/swift-logo.png');">
+    <img src="https://blog.patrickgatewood.com/images/2020/swift-logo.png" alt="Swift Logo">
   </a>
-      <p>Welcome! You&rsquo;ve found my first blog post. <a href="https://gohugo.io">Hugo</a> is an awesome open-source static site generator with a super active community.</p>
-<p>I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static site generators and post some write-ups of what I&rsquo;m up to without needing to manually create my site or worry about a CMS. As with most blogs, I expect everything on this site to be content-driven, so Hugo is a great fit.</p>
-<p>Right off the bat I can see how flexible this tool is as my site hot-reloads while the Hugo server observes changes in my Markdown. There are a <em>lot</em> of customization options, but I&rsquo;m going to keep it slim until I have my site hosted and building/deploying automatically. I&rsquo;m excited to look back on this hello world post in the future and see how much I&rsquo;ve learned since the time of writing.</p>
-<p>What follows will be anything interesting I learned while setting up this blog.</p>
-<h2 id="dynamic-content-on-a-static-site">Dynamic Content on a Static Site</h2>
-<p>To be honest, I didn&rsquo;t think about hosting any dynamic content on this statically-generated site until looking over the <a href="https://github.com/pacollins/hugo-future-imperfect-slim">Hugo Imperfect Slim</a> documentation. This theme ships with an almost-complete setup of <a href="https://github.com/pacollins/hugo-future-imperfect-slim/wiki/staticman.yml#official">Staticman</a>, an engine that transforms user-generated content into data that is committed into source control. From there, I can make sure my site observes my repository and automatically rebuilds when changes are detected in the main branch.</p>
-<p>The theme ships with a good amount of <a href="https://github.com/pacollins/hugo-future-imperfect-slim/wiki/staticman.yml#official">Staticman</a> boilerplate already abstracted away, but not in a way that locks me into this theme if I ever want to change the look and feel of my blog. I&rsquo;ll definitely be setting it up.</p>
-<p>I&rsquo;m looking for two outcomes from setting up Staticman: learning how to automatically re-deploy my site when changes are pushed to the main branch of GitHub, and creating a feedback channel so that I can interact with the readers of my blog.</p>
-<h3 id="setting-up-staticman">Setting up Staticman</h3>
-<p>Staticman works by hosting a REST API that my static website will consume in order to serve dynamic content. Here&rsquo;s how it works:</p>
-<ol>
-<li>Submitting a comment on my blog sends a <code>POST</code> request with form data to Staticman.</li>
-<li>Staticman ingests the form data and pushes a commit to my website&rsquo;s repo. If using the <code>moderate comments via PR</code> option, the bot opens a PR; otherwise, it will commit to the repositroy&rsquo;s main branch.</li>
-<li>A CI/CD pipeline triggers, building and deploying the new static site complete with the new comment.</li>
-<li>Staticman automatically deletes its PR branch (if using the <code>moderate comments via PR</code> option) using a webhook.</li>
-</ol>
-<h3 id="linking-external-posts">Linking External Posts</h3>
-<p>Since I had some existing blog posts, I wanted to include them here so I can have a repository of all the content I&rsquo;ve written. I&rsquo;m glad I chose a framework with an active community, because someone had already done this! I was able to link to my existing blog posts in just a few minutes following <a href="https://harrycresswell.com/articles/hugo-external-articles/">Harry Cresswell&rsquo;s guide</a>. Neat!</p>
-<p>I also tried my hand at extending some of the Hugo templates so I could indicate that an article was published by an external source. That was a good way to learn some Go, and may inspire another blog post in the future&hellip;</p>
-<h3 id="thats-it-for-now">That&rsquo;s it for now!</h3>
-<p>I&rsquo;ve learned a ton just deploying this site, and I&rsquo;ve gotten some inspiration for more articles to come! See ya soon ✌️</p>
+      <p>Now that iOS 14 has been released to the public, SwiftUI and Combine are looking more and more attractive as you choose how to build your next greenfield app. But what about your existing applications? If you’re ready to drop iOS 12 and blaze new trails with SwiftUI, congratulations–and prepare yourself for an exciting journey.</p>
+<p>So you’ve shipped your app’s iOS 13 updates, added dark mode, and dropped iOS 12 support… now what?</p>
+<p>Full article: <a href="https://willowtreeapps.com/ideas/how-to-adapt-existing-apps-for-swiftui">https://willowtreeapps.com/ideas/how-to-adapt-existing-apps-for-swiftui</a></p>
 
     </div>
     <footer>
@@ -289,7 +276,7 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/categories/blog-meta/">blog-meta</a></li>
+          <li><a class="article-terms-link" href="/categories/ios/">iOS</a></li>
         
       
     </ul>
@@ -298,9 +285,13 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
     <ul class="tags">
       
         
-          <li><a class="article-terms-link" href="/tags/hugo/">hugo</a></li>
+          <li><a class="article-terms-link" href="/tags/willowtree/">WillowTree</a></li>
         
-          <li><a class="article-terms-link" href="/tags/staticman/">staticman</a></li>
+          <li><a class="article-terms-link" href="/tags/uikit/">UIKit</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/swiftui/">SwiftUI</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/wwdc/">WWDC</a></li>
         
       
     </ul>
@@ -322,7 +313,7 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
           </h3>
 
           
-          <input type="hidden" name="options[entryId]" value="7614793863a00b27470abad6232309ea">
+          <input type="hidden" name="options[entryId]" value="6db7a02d4b34b58747a677ba5b0228c9">
           <input type='hidden' name='fields[replyThread]' value=''>
           <input type='hidden' name='fields[replyID]' value=''>
           <input type='hidden' name='fields[replyName]' value=''>
@@ -358,8 +349,10 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
   
   <div class="pagination">
     
+      <a href="/blog/posts/hello-hugo/" class="button left"><span>👋 Hello, Hugo!</span></a>
     
-      <a href="/blog/posts/how-to-adapt-existing-apps-for-swiftui/" class="button right"><span>How to Adapt Existing Apps for SwiftUI</span></a>
+    
+      <a href="/blog/posts/how-to-have-a-successful-internship/" class="button right"><span>How to Have a Successful Internship</span></a>
     
   </div>
 
@@ -502,8 +495,8 @@ I&rsquo;ve chosen Hugo as my blog framework so I can learn more about static sit
       <br>
     Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.3' target='_blank' rel='noopener'>Hugo</a>
     <br>
-    {"hash":"c9a68d78a68deea07314c6242cd8bdc6f7af15ea","abbreviatedHash":"c9a68d7","subject":"Add ability to customize # of summary paragraphs","authorName":"Patrick Gatewood","authorEmail":"pg8wood@vt.edu","authorDate":"2020-10-08T00:45:42-04:00","commitDate":"2020-10-08T00:45:42-04:00"}
-    Version:  {c9a68d78a68deea07314c6242cd8bdc6f7af15ea c9a68d7 Add ability to customize # of summary paragraphs Patrick Gatewood pg8wood@vt.edu 2020-10-08 00:45:42 -0400 EDT 2020-10-08 00:45:42 -0400 EDT}
+    {"hash":"a64b77fe7d4839f8f5da25af516ecabf371db811","abbreviatedHash":"a64b77f","subject":"Adjust external logo size","authorName":"Patrick Gatewood","authorEmail":"pg8wood@vt.edu","authorDate":"2020-10-08T00:45:54-04:00","commitDate":"2020-10-08T00:45:54-04:00"}
+    Version:  {a64b77fe7d4839f8f5da25af516ecabf371db811 a64b77f Adjust external logo size Patrick Gatewood pg8wood@vt.edu 2020-10-08 00:45:54 -0400 EDT 2020-10-08 00:45:54 -0400 EDT}
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

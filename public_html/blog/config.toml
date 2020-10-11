@@ -17,6 +17,7 @@ disableLanguages        = []
   home                  = ["html", "json", "rss"]
 
 [params]
+  author                = "Patrick Gatewood"
   enableCDN             = false
   cssFiles              = ["default"]
   jsFiles               = ["default"]

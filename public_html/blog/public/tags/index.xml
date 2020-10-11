@@ -28,5 +28,41 @@
       <description></description>
     </item>
     
+    <item>
+      <title>SwiftUI</title>
+      <link>https://blog.patrickgatewood.com/tags/swiftui/</link>
+      <pubDate>Mon, 23 Dec 2019 17:54:17 -0400</pubDate>
+      
+      <guid>https://blog.patrickgatewood.com/tags/swiftui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UIKit</title>
+      <link>https://blog.patrickgatewood.com/tags/uikit/</link>
+      <pubDate>Mon, 23 Dec 2019 17:54:17 -0400</pubDate>
+      
+      <guid>https://blog.patrickgatewood.com/tags/uikit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WillowTree</title>
+      <link>https://blog.patrickgatewood.com/tags/willowtree/</link>
+      <pubDate>Mon, 23 Dec 2019 17:54:17 -0400</pubDate>
+      
+      <guid>https://blog.patrickgatewood.com/tags/willowtree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WWDC</title>
+      <link>https://blog.patrickgatewood.com/tags/wwdc/</link>
+      <pubDate>Mon, 23 Dec 2019 17:54:17 -0400</pubDate>
+      
+      <guid>https://blog.patrickgatewood.com/tags/wwdc/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
