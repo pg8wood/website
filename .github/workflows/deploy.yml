@@ -1,0 +1,20 @@
+name: Build & Deploy Static Site
+
+on:
+  push:
+    branches: [ workflow-test ]
+
+jobs:
+  build:
+    name: Build and Deploy on Linode
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
+
