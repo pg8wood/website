@@ -1,20 +1,23 @@
-name: Build & Deploy Static Site
+name: Build & Deploy Hugo Blog
 
 on:
   push:
-    branches: [ workflow-test ]
+    branches: [ master, workflow-test ]
 
 jobs:
   build:
     name: Build and Deploy on Linode
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
+    - name: Run Hugo on Blog Host
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script_stop: true # stop the script immediately if any commands fail
+        script: |
+          cd ${{ secrets.HUGO_DIR }}
+          hugo
 
