@@ -2,7 +2,7 @@ name: Build & Deploy Hugo Blog
 
 on:
   push:
-    branches: [ master, workflow-test ]
+    branches: [ master ]
 
 jobs:
   build:
