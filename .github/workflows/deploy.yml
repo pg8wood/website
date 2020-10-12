@@ -22,5 +22,6 @@ jobs:
         script_stop: true # stop the script immediately if any commands fail
         script: |
           cd ${{ secrets.HUGO_DIR }}
+          git pull
           hugo
 
