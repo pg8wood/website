@@ -4,7 +4,11 @@
 <!-- Rich Link Preview metadata -->
 
 <!-- Title tags -->
+{{ if in .Site.BaseURL "localhost" }}
+  <title itemprop="name"> 🚧 DEBUG - {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }} 🚧</title>
+{{ else }}
 <title itemprop="name">{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
+{{ end }}
 <meta property=”og:title” content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
 <meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
 <meta itemprop="name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
