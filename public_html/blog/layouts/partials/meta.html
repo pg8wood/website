@@ -1,24 +1,58 @@
 <meta charset="utf-8">
-<title>{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- TODO: Do we want to add rel=author? -->
 
 <!-- Rich Link Preview metadata -->
-<meta name="description"
-      content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}"/>
-<meta property=”og:title”
-      content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}"/>
-<meta name="og:description"
-      content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}"/>
+
+<!-- Title tags -->
+<title itemprop="name">{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta property=”og:title” content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
+<meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
+<meta itemprop="name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
+<meta name="application-name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
+<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+
+<!-- Description tags -->
+<!-- Thanks to https://www.skcript.com/svr/perfect-seo-meta-tags-with-hugo/ for teaching me about these -->
+<meta name="description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}"/>
+<meta name="og:description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}"/>
+<meta property="og:description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}" />
+<meta name="twitter:description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}" />
+
+<!-- Link tags -->
+<base href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+<meta name="url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
 <meta property="og:url" content="{{ .Permalink }}"/>
 
+<!-- Language tags -->
+<meta property="og:locale" content="{{ .Language.Lang }}">
+<meta name="language" content="English">
+
+<!-- Image tags -->
 {{ if .Params.images }}
   {{ range first 1 .Params.images }}
     {{ $src := .src | absURL }}
     <meta property="og:image" content="{{ $src }}"/>
+    <meta itemprop="image" content="{{ $src }}" />
+    <meta name="twitter:image" content="{{ $src }}" />
+    <meta name="twitter:image:src" content="{{ $src }}" />
   {{ end }}
 {{ else }}
   <meta property="og:image" content="images/2020/favicon.png"/>
+  <meta itemprop="image" content="images/2020/favicon.png" />
+  <meta name="twitter:image" content="images/2020/favicon.png" />
+  <meta name="twitter:image:src" content="images/2020/favicon.png" />
+{{ end }}
+
+<!-- Date tags -->
+<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+Sitemap & RSS Feed Tags
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
+
+{{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
 
 <!-- End Rich Link Preview metadata -->

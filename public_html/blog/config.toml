@@ -18,6 +18,7 @@ disableLanguages        = []
 
 [params]
   author                = "Patrick Gatewood"
+  sitename              = "Patrick Gatewood | Software Engineer. Creator. Technology Enthusiast."
   enableCDN             = false
   cssFiles              = ["default"]
   jsFiles               = ["default"]
