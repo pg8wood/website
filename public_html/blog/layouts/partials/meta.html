@@ -9,7 +9,7 @@
 {{ else }}
 <title itemprop="name">{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
 {{ end }}
-<meta property=”og:title” content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
+<meta name="title" property=”og:title” content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
 <meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
 <meta itemprop="name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
 <meta name="application-name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
@@ -37,7 +37,7 @@
 {{ if .Params.images }}
   {{ range first 1 .Params.images }}
     {{ $src := .src | absURL }}
-    <meta property="og:image" content="{{ $src }}"/>
+    <meta name="image" property="og:image" content="{{ $src }}"/>
     <meta itemprop="image" content="{{ $src }}" />
     <meta name="twitter:image" content="{{ $src }}" />
     <meta name="twitter:image:src" content="{{ $src }}" />
