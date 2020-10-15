@@ -2,8 +2,7 @@
 title = "CI/CD - Continuous Delivery with GitHub Actions"
 description = "Deploy your Hugo blog automatically and publish new posts with ease."
 author = "Patrick Gatewood"
-date = "2020-10-04"
-draft = true
+date = "2020-10-14"
 categories = ["blog-meta", "CI/CD"]
 tags = ["hugo", "github", "github actions"]
 [[images]]
@@ -18,6 +17,7 @@ GitHub Actions is an easy way to automate publishing new content on your Hugo bl
 ## Prerequisites
 - Your blog is already hosted. I highly recommend [Caddy](https://caddyserver.com).
 - Your hosted blog lives in a git repository and you have permissions to pull changes from the remote repository.
+- Hugo is installed on your server and is in your `PATH`.
 
 ## Building the Workflow
 Workflows are automated processes that run on GitHub's virtual machines in response to repository events.
@@ -27,7 +27,7 @@ Create a file called `.github/workflows/deploy.yml` in the root of your reposito
 Below is the [workflow](https://github.com/pg8wood/website/blob/master/.github/workflows/deploy.yml) that deploys this blog.
 
 **deploy.yml**
-```
+```yaml
 name: Build & Deploy Hugo Blog
 
 on:
@@ -45,7 +45,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script_stop: true # stop the script immediately if any commands fail
         script: |
@@ -55,11 +55,22 @@ jobs:
 ```
 
 This workflow does a few things:
-1. It will run every time a commit is pushed to the `main` branch
+1. It will run every time a commit is pushed to the `main` branch.
 2. It contains one job called `build`.
-3. The `build` job contains one step, `Run Hugo` which uses a GitHub Action called [ssh-action](https://github.com/appleboy/ssh-action) to SSH to the server hosting my blog.
-4. Once connected, the `ssh-action` executes my build script on my web server which pulls the changes from GitHub and runs `hugo` to rebuild the blog.
-5. It keeps data like my `${{ secrets.password }}` safe by [encrypting](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets) my sensitive info and passing it as environment variables.
+3. The `build` job contains one step, `Run Hugo` which uses a GitHub Action called [ssh-action](https://github.com/appleboy/ssh-action) to SSH to the server hosting the blog.
+4. Once connected, the `ssh-action` step executes the build script on the web server which pulls the changes from GitHub and runs `hugo` to rebuild the blog.
+5. It keeps data like the `${{ secrets.USERNAME }}` safe by [encrypting](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets) my sensitive info and passing it as environment variables.
 
-That's it! With just 24 lines of YAML, GitHub will build and deploy my site every time I push to the main branch.
+### Set up Environment Variables
+Go to your repository > Settings > Secrets and add your environment variables:
+- `secrets.HOST` - your machine's hostname.
+- `secrets.USERNAME` - the username with which to build your Blog.
+- `secrets.KEY` - that user's SSH private key.
+- `secrets.PORT` - your machine's SSH port. If you don't know this, it's probably [22](https://www.ssh.com/ssh/port0).
+- `secrets.HUGO_DIR` - the directory in which your blog lives.
+
+### Final steps
+Make sure `deploy.yml` is committed and pushed to the `main` branch, or else GitHub won't start running your workflow just yet.
+
+That's it! With just a few lines of YAML, GitHub will build and deploy your blog every time you push to the main branch.
 If any problems occur on the remote machine, the `ssh-action` reports a failure back to GitHub, and the build in the GitHub Actions tab is marked as failed.
