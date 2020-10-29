@@ -3,7 +3,7 @@ title = "Rich Links with Hugo"
 description = "Help your site get discovered and look great when shared on social media."
 categories = ["blog-meta"]
 tags = ["seo", "search engine optimization", "rich links", "rich link previews"]
-date = 2020-10-27
+date = 2020-10-29
 draft = false
 [[images]]
   src = "images/2020/rich-links.jpg"
@@ -18,7 +18,7 @@ If you've never thought about how links to your site look when shared, they prob
 
 Luckily, transforming your links into enticing, tappable calls to action is just a matter of adding a few `meta` tags to your pages. And if you're using Hugo or another site templating system, you can set it up once and forget it.
 
-By the end of this tutorial, your links will look something like this:
+By the end of this tutorial, your links will look much more professional:
 
 <div class="inline-figures">
   <figure>
@@ -58,25 +58,21 @@ If you're unfamiliar with partial Hugo templates, check out the
 # Meta Tags
 Here's where you'll expose the data needed to create rich link previews. Typically,
 the most important properties are your page title and an image, but there's plenty of
-options available.
-
-Most sites use metadata tags defined in the [Open Graph protocol](https://ogp.me)
-to normalize the process used to make your site's links look good everywhere on
-the Internet.
+options available. Most sites use metadata tags defined in the [Open Graph protocol](https://ogp.me) to normalize the process used to make your site's links look good everywhere on the Internet. That's great for developers, because for the most
+part we only need to implement these meta tags once.
 
 The following tags will populate rich links with the [front matter](https://gohugo.io/content-management/front-matter/) for your site's articles, and data from your
 site's [config file](https://gohugo.io/getting-started/configuration/) for all
-other pages.
-
-Note: some of the Go variables assume your site is including standard metadata
+other pages. Note: some of the Go variables assume your site is including standard metadata
 in your article front matter and site configuration. You may need to adjust the
 variable names to match your theme's implementation.
 
 <br />
 
 ## Title
-This property is often inferred automatically, but it usually defaults to the page title.
-Some sites like Twitter use [unique metadata types](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary) to populate their UI.
+This property is often inferred automatically, but it usually defaults to the `<title>` tag, which may not be what you had in mind. Some sites like Twitter use
+[unique metadata types](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary)
+to populate their UI.
 
 ```html
 <meta name="title" property=”og:title” content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
@@ -86,8 +82,8 @@ Some sites like Twitter use [unique metadata types](https://developer.twitter.co
 <br />
 
 ## Description
-Typically a short, 1-2 sentence description of your site. This property displayed as
-frequently in my experience, but I always create one just in case. Again, Twitter
+Typically a short, 1-2 sentence description of your site. This property isn't displayed as
+frequently in my experience, but I always create one anyway. Again, Twitter
 uses their special types for some reason.
 
 ```html
@@ -134,3 +130,5 @@ front matter image structure.
 ## Done
 That's it! With just a few meta tags, you've transformed your links from standard
 URLs to rich, eye-catching content.
+
+Links looking good? Show me yours in the comments. I'd love to see them!
