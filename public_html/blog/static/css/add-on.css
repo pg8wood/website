@@ -1,0 +1,19 @@
+/* Figures displayed in the same line when they're able to fit */
+.inline-figures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.inline-figures figure {
+  flex: 1;
+  flex-grow: 1;
+  margin: 5px;
+  max-width: 30vw;
+  min-width: 30vh;
+}
+
+.inline-figures figcaption {
+  font-style: normal;
+}
