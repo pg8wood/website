@@ -7,7 +7,7 @@
 {{ if in .Site.BaseURL "localhost" }}
   <title itemprop="name"> 🚧 DEBUG - {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }} 🚧</title>
 {{ else }}
-<title itemprop="name">{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
+  <title itemprop="name">{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
 {{ end }}
 <meta name="title" property=”og:title” content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
 <meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
