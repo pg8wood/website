@@ -46,6 +46,34 @@
     width: 100%;
 }
 
+/* Flex box images that easily align nicely*/
+
+.flex-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.flex-images-container a {
+  border-bottom-style: none;
+  flex: 1;
+  flex-grow: 1;
+  margin: 5px;
+  max-width: 50%;
+  min-width: 30%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.flex-images-container img {
+  width: 100%;
+}
+
+.flex-images-container figcaption {
+  height: 75px;
+}
+
 .menu-item {
     cursor: pointer;
 }
