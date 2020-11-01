@@ -3,6 +3,14 @@
     z-index: 5;
 }
 
+#blog-feature {
+  background-color: rgba(152, 129, 79, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  padding: 25px;
+  width: calc(50% - 1.5em);
+}
+
 .article-preview {
     font-size: 14px;
     width: 75%;
@@ -141,6 +149,15 @@ html {
 
 /* Portfolio styles for mobile and small browser windows */
 @media screen and (max-width: 800px) {
+  #blog-feature-container {
+      padding-left: 2em;
+      padding-right: 2em;
+  }
+
+  #blog-feature {
+    width: 100%;
+  }
+
    .features article {
        align-content: center;
        margin-right: 0;
