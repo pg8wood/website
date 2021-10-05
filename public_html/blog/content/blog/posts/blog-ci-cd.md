@@ -4,7 +4,7 @@ description = "Deploy your Hugo blog automatically and publish new posts with ea
 author = "Patrick Gatewood"
 date = "2020-10-14"
 categories = ["blog-meta", "CI/CD"]
-tags = ["hugo", "github", "github actions"]
+tags = ["hugo", "github", "github actions", "devops"]
 [[images]]
   src = "images/2020/github-actions.png"
   alt = "GitHub Actions Logo"
