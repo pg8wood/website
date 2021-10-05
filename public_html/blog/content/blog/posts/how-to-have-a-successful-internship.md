@@ -9,8 +9,8 @@ tags = ["WillowTree"]
 	alt = "Internship"
 	
 [external]
-	link = "https://willowtreeapps.com/ideas/how-to-have-a-successful-internship"
-	siteName = "WillowTree"
+	link = "https://web.archive.org/web/20210411015403/https://www.willowtreeapps.com/ideas/how-to-have-a-successful-internship"
+	siteName = "WillowTree (archived)"
 	img = "images/2020/wt-logo.png"
 	alt = "WillowTree Logo"
 +++
