@@ -1,10 +1,10 @@
 +++
-title = "Curbing Cumbersome CHANGELOG Conflicts with Swift Argument Parser"
+title = "Curbing Cumbersome CHANGELOG Conflicts with Swift Argument Parser | Part 1"
 description = "How I made the first tool that I use every single day."
 author = "Patrick Gatewood"
 date = "2021-10-05"
 categories = ["swift"]
-draft = true
+draft = false
 tags = ["devops", "swift argument parser"]
 [[images]]
   src = "images/2021/merge-conflict.png"
@@ -58,7 +58,71 @@ Changelog Header. Contains some project-specific information.
 Now all I had to do was design the changelog tool's commands and then actually implement the thing. 
 
 ## Commands
-Boiled down into its simplest form, the changelog tool needed two commands: a `log` command to create a new entry, and a `publish` command to collect all the changelog entries and prepend them to the existing `CHANGELOG.md`. 
+Boiled down into its simplest form, the changelog tool needed two subcommands: a `log` command to create a new entry, and a `publish` command to collect all the changelog entries and prepend them to the existing `CHANGELOG.md`. 
 
-#### Log 
-TBD
+Before digging into the subcommands, I created the `changelog` command. The building blocks of Commands created through the Argument Parser are [`ParsableCommand`](https://github.com/apple/swift-argument-parser/blob/main/Sources/ArgumentParser/Parsable%20Types/ParsableCommand.swift) types. These types are simply declared, and the Argument Parser handles all the boilerplate code necessary to hook them up to the command line. 
+
+```swift
+import ArgumentParser
+
+public struct Changelog: ParsableCommand {
+    public static let configuration = CommandConfiguration(
+        abstract: "Curbing Cumbersome Changelog Conflicts.",
+        discussion: "Creates changelog entries and stores them as single files to avoid merge conflictss in version control. When it's time to release, `changelog publish` collects these files and appends them to your changelog file.",
+        version: "0.3.0",
+        subcommands: [])
+        
+    public init() { }
+}
+```
+
+As you can see, the `Changelog` command declaration is surprisingly simple. It also doesn't do anything yet. 
+
+
+#### Log Subcommand
+How does the tool _actually_ prevent merge conflicts? The strategy I settled on was saving each changelog entry as an entry with a unique filename. This way, each changelog entry is purely additive, and there's no interaction between a new entry and an existing one. 
+
+The meat of the `Log` command definition is fairly straightforward. 
+
+```swift
+struct Log: ParsableCommand {
+    @Argument(help: ArgumentHelp(
+                "The type of changelog entry to create. ",
+                discussion: "Valid entry types are \(EntryType.allCasesSentenceString).\n"),
+                transform: EntryType.init)
+    var entryType: EntryType // One of the types of changelog entries from the Keep a Changelog list above
+    
+    // Properties wrapped with the @Argument property wrapper are automatically parsed and type-checked for you
+    @Argument(help: ArgumentHelp("A list of quoted strings separated by spaces to be recorded as a bulleted changelog entry.")
+    var text: [String] = []
+    
+    // Errors thrown from the run() function cause your program to exit with a helpful message.
+    public func run() throws {
+        guard fileManager.fileExists(atPath: options.unreleasedChangelogsDirectory.path) else {
+            throw ChangelogError.changelogDirectoryNotFound(expectedPath: options.unreleasedChangelogsDirectory.relativeString)
+        }
+        
+        if text.isEmpty {
+            try openEditor(editor, for: entryType)
+        } else {
+            try createEntry(with: text)
+        }
+    }
+    
+    private func createEntry(with text: [String]) throws {
+        // save the entry to disk
+    }
+    
+    private func openEditor(_ editor: String, for entryType: EntryType) throws {
+        // opens vim or another text editor for interactive editing and save to disk
+    }
+}
+```
+
+I've omitted a few bells and whistles for simplicity's sake. If you want, you can view the [full `Log` command implementation](https://github.com/pg8wood/changelog-generator/blob/main/Sources/ChangelogCore/Commands/Log.swift). 
+
+Adding `Log.self` to the `Changelog` command's `subcommands` array allows the tool to start logging changes. I also made the `Log` command the `Changelog` command's `defaultSubcommand` by using another the `CommandConfiguration` initializer. 
+
+Now, the tool is actually functional. The user can run `changelog fix "A ton of cool stuff"` and a new changelog entry will be saved to disk.
+
+Next up is to document how I created the `publish` command. This command also was where I really started focusing on the testability of the tool, which required a bit of a refactor to get around some Swift Package implementation details. If there's anything in particular you'd like me to touch on in part 2, leave me a comment to let me know. Or, if you'd like to peek ahead and see the completed implementation, check out the [changelog-generator repository](https://github.com/pg8wood/changelog-generator)!
