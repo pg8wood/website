@@ -1,10 +1,9 @@
-#header-navbar {
+/* #header-navbar {
     border-radius: 0;
     z-index: 5;
-}
+} */
 
 #blog-feature {
-  /* background-color: rgba(152, 129, 79, 0.5); */
   border: 2px solid #5448C8;
   border-radius: 25px;
   padding: 25px;

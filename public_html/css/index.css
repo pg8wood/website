@@ -1,52 +1,24 @@
+.html {
+    background: #5448c8;
+}
+
 #about {
     margin: 1vh 5vw 0vh 5vw;
 }
 
 #about-wrapper {
-    background: #414770;
+    background: #5448c8;
 }
 
 #about-wrapper h1 {
     color: white;
     font-family: 'Spectral', serif;
-    font-size: 50px;
+    font-size: 60px;
     margin-top: 1vh;
 }
 
-#about-wrapper p {
-    color: white;
-    font-family: 'Spectral', serif;
-    font-size: 35px;
-    margin-bottom: 10vh;
-}
-
-#download-resume-link {
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
-    display: inline-block;
-    font-size: 35px;
-    padding: 10px;
-    margin-bottom: 5vh;
-    text-decoration: none;
-    width: fit-content;
-}
-
-#download-resume-link:hover {
-    background-color: white;
-    color: rgb(65, 71, 112);
-}
-
-#gradient-container {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(244, 96, 54, 0), rgb(65, 71, 112));
-    height: 100vh;
-    min-height: inherit;
-}
-
 #intro {
-  background-color: #171123;
-    /* background-color: rgba(255, 255, 255, 1); */
-    /* background: url(../images/flag.jpg) no-repeat center center fixed; */
+    background-color: #171123;
     min-height: 600px;
 
     -webkit-background-size: cover;
@@ -56,7 +28,7 @@
 }
 
 #intro li {
-    display: inline-block;
+  list-style: none;
 }
 
 #name-header {
@@ -79,17 +51,21 @@
     object-fit: cover;
 }
 
-#resume-container {
-    border-left: 2vw solid rgb(65, 71, 112);
-    border-right: 2vw solid rgb(65, 71, 112);
+.whoami {
+    margin-top: 32px;
+    padding: 0px;
 }
 
-.subtitle {
+.whoami li {
     color: white;
     font-family: 'Spectral', sans-serif;
-    font-size: 15px;
-    margin-bottom: 15px;
-    margin-top: 0px;
+    font-size: 25px;
+    margin: 20px;
+    padding: 0px;
+}
+
+.contactLink {
+    display: inline-block;
 }
 
 .contactLinks {
@@ -102,7 +78,7 @@
 }
 
 body {
-    background: rgb(65, 71, 112);
+    background: #171123;
 }
 
 /* Circled Font Awesome icons */
@@ -122,14 +98,16 @@ i.custom-icon {
 /* Styles for mobile */
 @media only screen and (max-device-width: 480px) {
     #intro {
-        /* background-color: rgba(255, 255, 255, 1); */
-        /* background: url(../images/flag.jpg) no-repeat center scroll; */
         background-size: cover;
     }
     /* Prevent the spacing in the about
      section from getting obnoxiously long */
     #about-wrapper p {
         margin-bottom: 5vh;
+    }
+
+    #about-wrapper h1 {
+      font-size: 50px;
     }
 }
 

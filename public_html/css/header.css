@@ -2,6 +2,10 @@
 
 /* Navigation bar styles for mobile and desktop */
 
+body {
+    background: #171123;
+}
+
 #header-navbar {
     z-index: 10000;
 }
@@ -36,11 +40,6 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-/* Custom navbar image for homepage */
-.index {
-    background-image: url(../images/flag.jpg);
 }
 
 .navbar a {

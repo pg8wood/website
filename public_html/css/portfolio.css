@@ -143,7 +143,7 @@ body {
 }
 
 body {
-   background-color: var(--portfolio-background-color);
+   /* background-color: var(--portfolio-background-color); */
     /* background-image: linear-gradient(to top, rgba(222, 186, 109, 0.7), rgba(0, 0, 0, 0.7)), url("../images/writing.jpg"); */
     background-size: auto, cover;
     background-attachment: fixed, fixed;

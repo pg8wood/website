@@ -50,16 +50,18 @@
     <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
+    <!--Safari tab bar colors-->
+    <meta name="theme-color" content="#5448c8">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/site.css"/>
     <link rel="stylesheet" href="css/index.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
 
     <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/576b363788.js" crossorigin="anonymous"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 
-    <!-- Load header, resume, and footer from server -->
+    <!-- Load header, portfolio, and footer from server -->
     <script>
         $(function () {
             <!-- Load header and index-specific header background image -->
@@ -78,31 +80,34 @@
 <div id="header"></div>
 
 <div id="intro" align="center">
-    <!-- <div id="gradient-container"> -->
-        <!-- Feature portrait image -->
-        <img id="portrait" src="images/portrait.jpeg" alt="Patrick's Profile Photo"/>
+    <!-- Feature portrait image -->
+    <img id="portrait" src="images/portrait.jpeg" alt="Patrick's Profile Photo"/>
 
-        <h1 id="name-header">Patrick Gatewood</h1>
-        <p class="subtitle">Software Engineer &nbsp;&bull;&nbsp; Creator &nbsp;&bull;&nbsp; Technology Enthusiast</p>
-        <p class="subtitle">Probably clacking on his keyboard at 2 AM.</p>
+    <h1 id="name-header">Patrick Gatewood</h1>
+    <ul class="whoami">
+      <li>📲&nbsp;Software Engineer</li>
+      <li>💡&nbsp;Creator</li>
+      <li>🥳&nbsp;Technology Enthusiast</li>
+      <li>👨‍💻&nbsp;Probably clacking on his keyboard at 2 AM.</li>
+    </ul>
 
-        <ul class="contactLinks">
-            <li>
-                <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
-                    <i class="fa fa-linkedin custom-icon"></i>
-                </a>
-            </li>
-            <li><a href="https://github.com/pg8wood" target="_blank">
-                <i class="fa fa-github custom-icon"></i>
-            </a></li>
-            <li>
-                <a href="mailto:patrick@patrickgatewood.com">
-                    <i class="fa fa-envelope-o custom-icon"></i>
-                </a>
-            </li>
-        </ul>
-    <!-- </div> -->
+    <ul class="contactLinks">
+        <li class="contactLink">
+            <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
+                <i class="fa fa-linkedin custom-icon"></i>
+            </a>
+        </li>
+        <li class="contactLink"><a href="https://github.com/pg8wood" target="_blank">
+            <i class="fa fa-github custom-icon"></i>
+        </a></li>
+        <li class="contactLink">
+            <a href="mailto:patrick@patrickgatewood.com">
+                <i class="fa fa-envelope-o custom-icon"></i>
+            </a>
+        </li>
+    </ul>
 </div>
+
 <div id="portfolio-container"></div>
 
 </body>
