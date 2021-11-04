@@ -1,10 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+@import url("https://fonts.googleapis.com/css?family='Spectral':200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 /*
 	Solid State by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+:root {
+  --default-text-color: white;
+  --card-background-color: #ee4266;
+  --portfolio-background-color: #171123;
+}
 
 /* Reset */
 
@@ -137,7 +143,8 @@ body {
 }
 
 body {
-    background-image: linear-gradient(to top, rgba(222, 186, 109, 0.7), rgba(0, 0, 0, 0.7)), url("../images/writing.jpg");
+   background-color: var(--portfolio-background-color);
+    /* background-image: linear-gradient(to top, rgba(222, 186, 109, 0.7), rgba(0, 0, 0, 0.7)), url("../images/writing.jpg"); */
     background-size: auto, cover;
     background-attachment: fixed, fixed;
     background-position: center, center;
@@ -224,7 +231,7 @@ a.special:not(.button) {
     color: black;
     border-bottom: 0;
     display: block;
-    font-family: Raleway, Helvetica, sans-serif;
+    font-family: 'Spectral', Helvetica, sans-serif;
     font-size: 0.8em;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -269,7 +276,7 @@ a.special:not(.button):active:before {
 }
 
 strong, b {
-    color: #ffffff;
+    color: var(--default-text-color);
     font-weight: 600;
 }
 
@@ -279,11 +286,12 @@ em, i {
 
 p {
     margin: 0 0 2em 0;
+    color: var(--default-text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
-    font-family: Raleway, Helvetica, sans-serif;
+    color: var(--default-text-color);
+    font-family: 'Spectral', Helvetica, sans-serif;
     font-weight: 700;
     letter-spacing: 0.1em;
     margin: 0 0 1em 0;
@@ -430,9 +438,9 @@ form > :last-child {
 }
 
 label {
-    color: #ffffff;
+    color: var(--default-text-color);;
     display: block;
-    font-family: Raleway, Helvetica, sans-serif;
+    font-family: 'Spectral', Helvetica, sans-serif;
     font-size: 0.8em;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -1033,7 +1041,7 @@ button,
     color: #ffffff !important;
     cursor: pointer;
     display: inline-block;
-    font-family: Raleway, Helvetica, sans-serif;
+    font-family: 'Spectral', Helvetica, sans-serif;
     font-size: 0.8em;
     font-weight: 700;
     height: 3.75em;
@@ -1170,8 +1178,9 @@ button:disabled,
 
 .features article {
     padding: 1.75em 1.75em 0.1em 1.75em;
-    background-color: rgba(152, 129, 79, 0.5);
-    border-radius: 5px;
+    /* background-color: rgba(238, 66, 102, 0.5); */
+    border: 2px solid #5448C8;
+    border-radius: 25px;
     margin: 1.5em 3em 1.5em 0;
     width: calc(50% - 1.5em);
 }
@@ -1332,7 +1341,7 @@ body.is-menu-visible #menu .inner {
     -ms-filter: blur(0);
     filter: blur(0);
     opacity: 1;
-    font-family: Raleway, Helvetica, sans-serif;
+    font-family: 'Spectral', Helvetica, sans-serif;
     font-size: 1em;
     font-weight: 200;
     letter-spacing: 0.1em;
@@ -1439,7 +1448,7 @@ body.is-loading #banner p {
 }
 
 #wrapper > header p {
-    font-family: Raleway, Helvetica, sans-serif;
+    font-family: 'Spectral', Helvetica, sans-serif;
     font-size: 1em;
     font-weight: 200;
     letter-spacing: 0.1em;

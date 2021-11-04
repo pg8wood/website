@@ -4,8 +4,8 @@
 }
 
 #blog-feature {
-  background-color: rgba(152, 129, 79, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(152, 129, 79, 0.5); */
+  border: 2px solid #5448C8;
   border-radius: 25px;
   padding: 25px;
   width: calc(50% - 1.5em);

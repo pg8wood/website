@@ -67,7 +67,7 @@
                 $(".navbar").addClass("index");
             });
 
-            $("#resume-container").load("resume.html");
+            $("#portfolio-container").load("portfolio.html");
             $("#footer").load("template/footer.html");
         });
     </script>
@@ -78,19 +78,15 @@
 <div id="header"></div>
 
 <div id="intro" align="center">
-    <div id="gradient-container">
+    <!-- <div id="gradient-container"> -->
         <!-- Feature portrait image -->
-        <img id="portrait" src="images/portrait.jpg" alt="Patrick's Profile Photo"/>
+        <img id="portrait" src="images/portrait.jpeg" alt="Patrick's Profile Photo"/>
 
         <h1 id="name-header">Patrick Gatewood</h1>
         <p class="subtitle">Software Engineer &nbsp;&bull;&nbsp; Creator &nbsp;&bull;&nbsp; Technology Enthusiast</p>
+        <p class="subtitle">Probably clacking on his keyboard at 2 AM.</p>
 
         <ul class="contactLinks">
-            <li>
-                <a href="http://www.facebook.com/senorpatrick" target="_blank">
-                    <i class="fa fa-facebook custom-icon"></i>
-                </a>
-            </li>
             <li>
                 <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
                     <i class="fa fa-linkedin custom-icon"></i>
@@ -100,27 +96,14 @@
                 <i class="fa fa-github custom-icon"></i>
             </a></li>
             <li>
-                <a href="mailto:pg8wood@vt.edu">
+                <a href="mailto:patrick@patrickgatewood.com">
                     <i class="fa fa-envelope-o custom-icon"></i>
                 </a>
             </li>
         </ul>
-    </div>
+    <!-- </div> -->
 </div>
-<div id="about-wrapper">
-    <br/>
-    <div id="about" align="center">
-        <h1>Who?</h1>
-        <p>Hi, I'm Patrick. I'm the guy you heard clacking on his keyboard at 2 AM.</p>
-        <p>I'm obsessed with mobile.</p>
-        <p>I like little details that make a big difference.</p>
-        <p>And I want to help invent the future.</p>
-        <p>Interested? Check out my resume.</p>
-        <a id="download-resume-link" href="docs/PatrickGatewoodResume.pdf" download="PatrickGatewoodResume.pdf"
-           class="centered">Download Resume</a>
-    </div>
-</div>
-<div id="resume-container"></div>
+<div id="portfolio-container"></div>
 
 </body>
 </html>

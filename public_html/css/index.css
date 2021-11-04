@@ -44,7 +44,9 @@
 }
 
 #intro {
-    background: url(../images/flag.jpg) no-repeat center center fixed;
+  background-color: #171123;
+    /* background-color: rgba(255, 255, 255, 1); */
+    /* background: url(../images/flag.jpg) no-repeat center center fixed; */
     min-height: 600px;
 
     -webkit-background-size: cover;
@@ -64,6 +66,7 @@
     letter-spacing: 6px;
     line-height: 70px;
     margin: 0;
+    text-transform: none;
 }
 
 #portrait {
@@ -73,6 +76,7 @@
     height: 250px;
     top: 27%;
     left: 13%;
+    object-fit: cover;
 }
 
 #resume-container {
@@ -82,7 +86,7 @@
 
 .subtitle {
     color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Spectral', sans-serif;
     font-size: 15px;
     margin-bottom: 15px;
     margin-top: 0px;
@@ -94,6 +98,7 @@
 
 .contactLinks a {
     text-decoration: none;
+    border-bottom-color: transparent;
 }
 
 body {
@@ -108,22 +113,17 @@ i.custom-icon {
     height: 40px;
 
     color: white;
-    border: 1px solid white;
-    border-radius: 50%;
     margin: 8px;
     padding: 15px;
     text-align: center;
     vertical-align: middle;
 }
 
-i.custom-icon:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
 /* Styles for mobile */
 @media only screen and (max-device-width: 480px) {
     #intro {
-        background: url(../images/flag.jpg) no-repeat center scroll;
+        /* background-color: rgba(255, 255, 255, 1); */
+        /* background: url(../images/flag.jpg) no-repeat center scroll; */
         background-size: cover;
     }
     /* Prevent the spacing in the about
@@ -140,4 +140,3 @@ i.custom-icon:hover {
     }
 
 }
-
