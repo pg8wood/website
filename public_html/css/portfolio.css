@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family='Spectral':200,700|Source+Sans+Pro:300,600,300italic,600italic");
+/* @import url("https://fonts.googleapis.com/css?family='Spectral':200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 /*
 	Solid State by HTML5 UP
@@ -31,7 +31,7 @@ body {
     line-height: 1;
 }
 
-ol, ul {
+#portfolio-container ol, ul {
     list-style: none;
 }
 
@@ -130,9 +130,9 @@ body {
     width: device-width;
 }
 
-body {
+/* body {
     -ms-overflow-style: scrollbar;
-}
+} */
 
 @media screen and (max-width: 640px) {
 
@@ -142,13 +142,11 @@ body {
 
 }
 
-body {
-   /* background-color: var(--portfolio-background-color); */
-    /* background-image: linear-gradient(to top, rgba(222, 186, 109, 0.7), rgba(0, 0, 0, 0.7)), url("../images/writing.jpg"); */
+/* body {
     background-size: auto, cover;
     background-attachment: fixed, fixed;
     background-position: center, center;
-}
+} */
 
 body.is-loading *, body.is-loading *:before, body.is-loading *:after {
     -moz-animation: none !important;
@@ -211,7 +209,7 @@ body, input, select, textarea {
 
 }
 
-a {
+#portfolio-container a {
     -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
     -webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
     -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -226,7 +224,7 @@ a:hover {
     color: #ffffff !important;
 }
 
-a.special:not(.button) {
+#portfolio-container a.special:not(.button) {
     text-decoration: none;
     color: black;
     border-bottom: 0;
@@ -239,7 +237,7 @@ a.special:not(.button) {
     text-transform: uppercase;
 }
 
-a.special:not(.button):before {
+#portfolio-container a.special:not(.button):before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: FontAwesome;
@@ -248,7 +246,7 @@ a.special:not(.button):before {
     text-transform: none !important;
 }
 
-a.special:not(.button):before {
+#portfolio-container a.special:not(.button):before {
     -moz-transition: background-color 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out;
     -ms-transition: background-color 0.2s ease-in-out;
@@ -267,11 +265,11 @@ a.special:not(.button):before {
     width: 2em;
 }
 
-a.special:not(.button):hover:before {
+#portfolio-container a.special:not(.button):hover:before {
     background-color: rgba(255, 255, 255, 0.025);
 }
 
-a.special:not(.button):active:before {
+#portfolio-container a.special:not(.button):active:before {
     background-color: rgba(255, 255, 255, 0.075);
 }
 
@@ -298,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+#portfolio-container h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
     text-decoration: none;
 }
@@ -737,102 +735,98 @@ input[type="radio"] + label:before {
 
 /* List */
 
-ol {
+#portfolio-container ol {
     list-style: decimal;
     margin: 0 0 2em 0;
     padding-left: 1.25em;
 }
 
-ol li {
+#portfolio-container ol li {
     padding-left: 0.25em;
 }
 
-ul {
+#portfolio-container ul {
     list-style: disc;
     margin: 0 0 2em 0;
     padding-left: 1em;
 }
 
-ul li {
-    padding-left: 0.5em;
-}
-
-ul.alt {
+#portfolio-container ul.alt {
     list-style: none;
     padding-left: 0;
 }
 
-ul.alt li {
+#portfolio-container ul.alt li {
     border-top: solid 1px rgba(255, 255, 255, 0.125);
     padding: 0.5em 0;
 }
 
-ul.alt li:first-child {
+#portfolio-container ul.alt li:first-child {
     border-top: 0;
     padding-top: 0;
 }
 
-ul.icons {
+#portfolio-container ul.icons {
     cursor: default;
     list-style: none;
     padding-left: 0;
 }
 
-ul.icons li {
+#portfolio-container ul.icons li {
     display: inline-block;
     padding: 0 1em 0 0;
 }
 
-ul.icons li:last-child {
+#portfolio-container ul.icons li:last-child {
     padding-right: 0;
 }
 
-ul.icons li .icon:before {
+#portfolio-container ul.icons li .icon:before {
     font-size: 1.25em;
 }
 
-ul.actions {
+#portfolio-container ul.actions {
     cursor: default;
     list-style: none;
     padding-left: 0;
 }
 
-ul.actions li {
+#portfolio-container ul.actions li {
     display: inline-block;
     padding: 0 1em 0 0;
     vertical-align: middle;
 }
 
-ul.actions li:last-child {
+#portfolio-container ul.actions li:last-child {
     padding-right: 0;
 }
 
-ul.actions.small li {
+#portfolio-container ul.actions.small li {
     padding: 0 0.5em 0 0;
 }
 
-ul.actions.vertical li {
+#portfolio-container ul.actions.vertical li {
     display: block;
     padding: 1em 0 0 0;
 }
 
-ul.actions.vertical li:first-child {
+#portfolio-container ul.actions.vertical li:first-child {
     padding-top: 0;
 }
 
-ul.actions.vertical li > * {
+#portfolio-container ul.actions.vertical li > * {
     margin-bottom: 0;
 }
 
-ul.actions.vertical.small li {
+#portfolio-container ul.actions.vertical.small li {
     padding: 0.5em 0 0 0;
 }
 
-ul.actions.vertical.small li:first-child {
+#portfolio-container ul.actions.vertical.small li:first-child {
     padding-top: 0;
 }
 
-ul.actions.fit {
+#portfolio-container ul.actions.fit {
     display: table;
     margin-left: -1em;
     padding: 0;
@@ -840,21 +834,21 @@ ul.actions.fit {
     width: calc(100% + 1em);
 }
 
-ul.actions.fit li {
+#portfolio-container ul.actions.fit li {
     display: table-cell;
     padding: 0 0 0 1em;
 }
 
-ul.actions.fit li > * {
+#portfolio-container ul.actions.fit li > * {
     margin-bottom: 0;
 }
 
-ul.actions.fit.small {
+#portfolio-container ul.actions.fit.small {
     margin-left: -0.5em;
     width: calc(100% + 0.5em);
 }
 
-ul.actions.fit.small li {
+#portfolio-container ul.actions.fit.small li {
     padding: 0 0 0 0.5em;
 }
 
@@ -890,19 +884,19 @@ ul.actions.fit.small li {
 
 }
 
-ul.contact {
+#portfolio-container ul.contact {
     list-style: none;
     padding: 0;
 }
 
-ul.contact li {
+#portfolio-container ul.contact li {
     text-decoration: none;
     margin: 2.5em 0 0 0;
     padding: 0 0 0 3.25em;
     position: relative;
 }
 
-ul.contact li:before {
+#portfolio-container ul.contact li:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: FontAwesome;
@@ -911,7 +905,7 @@ ul.contact li:before {
     text-transform: none !important;
 }
 
-ul.contact li:before {
+#portfolio-container ul.contact li:before {
     border-radius: 100%;
     border: solid 2px rgba(255, 255, 255, 0.125);
     display: inline-block;
@@ -925,7 +919,7 @@ ul.contact li:before {
     width: 2.5em;
 }
 
-ul.contact li:first-child {
+#portfolio-container ul.contact li:first-child {
     margin-top: 0;
 }
 
@@ -1905,4 +1899,4 @@ body.is-loading #banner p {
         padding: 2em 1.5em 0.1em 1.5em;
     }
 
-}
+} */

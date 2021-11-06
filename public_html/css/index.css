@@ -1,34 +1,25 @@
-.html {
-    background: #5448c8;
+body {
+    background: #171123;
 }
 
-#about {
-    margin: 1vh 5vw 0vh 5vw;
+ul {
+    /* For some reason Safari applies default padding to lists making them
+    appear off-center */
+    padding-inline-start: 0px;
 }
 
-#about-wrapper {
-    background: #5448c8;
-}
-
-#about-wrapper h1 {
-    color: white;
-    font-family: 'Spectral', serif;
-    font-size: 60px;
-    margin-top: 1vh;
+#header {
+    min-height: 50px;
 }
 
 #intro {
-    background-color: #171123;
-    min-height: 600px;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    width: 95vw;
+    height: 75%;
+    text-align: center;
 }
 
 #intro li {
-  list-style: none;
+    list-style: none;
 }
 
 #name-header {
@@ -42,7 +33,6 @@
 }
 
 #portrait {
-    margin-top: 16vh;
     border-radius: 50%;
     width: 250px;
     height: 250px;
@@ -69,7 +59,7 @@
 }
 
 .contactLinks {
-    padding: 0px;
+    font-size: 25px;
 }
 
 .contactLinks a {
@@ -77,16 +67,8 @@
     border-bottom-color: transparent;
 }
 
-body {
-    background: #171123;
-}
-
-/* Circled Font Awesome icons */
 i.custom-icon {
-    /* These must match */
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
+    font-size: 2em;
 
     color: white;
     margin: 8px;
@@ -97,9 +79,6 @@ i.custom-icon {
 
 /* Styles for mobile */
 @media only screen and (max-device-width: 480px) {
-    #intro {
-        background-size: cover;
-    }
     /* Prevent the spacing in the about
      section from getting obnoxiously long */
     #about-wrapper p {
