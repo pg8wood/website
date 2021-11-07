@@ -101,9 +101,9 @@ disableLanguages        = []
     weight            = 2
 
   [[menu.main]]
-    name              = "Apps"
+    name              = "Portfolio"
     identifier        = "portfolio"
-    url               = "https://patrickgatewood.com/portfolio.html"
+    url               = "https://patrickgatewood.com/index.html#portfolio-container"
     pre               = "<i class='fab fa-app-store'></i>"
     weight            = 3
 
