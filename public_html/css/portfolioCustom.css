@@ -5,6 +5,10 @@
   width: calc(50% - 1.5em);
 }
 
+#writing-archive ul {
+    list-style: none;
+}
+
 .article-preview {
     font-size: 14px;
     width: 75%;
@@ -66,6 +70,10 @@
   min-width: 30%;
   text-align: center;
   text-decoration: none;
+}
+
+#portfolio-container .flex-images-container a {
+  border-bottom: none;
 }
 
 .flex-images-container img {
