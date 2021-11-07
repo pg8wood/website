@@ -10,8 +10,13 @@ var chromeOverflowAtHtml = false;
 $(document).ready(function () {
     detectBrowser();
 
-    if (window.location.hash === "#download-resume-link") {
-        scrollToResume();
+    let hash = window.location.hash
+    console.log(hash)
+
+    if (hash == "#request-resume-link") {
+        scrollToResumeLink()
+    } else if (hash == "#portfolio-container") {
+        scrollToPortfolio()
     }
 });
 
@@ -48,19 +53,6 @@ function overflowIsAtHtml() {
     return false
 }
 
-$(window).scroll(function () {
-    if ($("body.home").length === 0) {
-        return;
-    }
-
-    // Give header opaque background after scrolling approx. one viewport's height
-    $("#nav-gradient-container").css("background",
-        $(window).scrollTop() >= $("#about-wrapper").offset().top - $(".navbar").height() ? "#414770" : "");
-
-    // Scroll header gradient along with #intro gradient
-    $("#nav-gradient-container").css("background-position", "0px -" + $(window).scrollTop() + "px");
-});
-
 $("#home-link").click(function () {
     if ($("body.home").length === 0) {
         return true;
@@ -74,13 +66,31 @@ $("#home-link").click(function () {
 });
 
 $("#resume-link").click(function () {
-    scrollToResume();
+    if ($("body.home").length === 0) {
+        return true;
+    }
+
+    scrollToResumeLink()
     return false;
 });
 
-function scrollToResume() {
+function scrollToResumeLink() {
     let navBarAndScrollTopPadding = $(".navbar").height() + 25
     $('html,body').animate({scrollTop: $("#request-resume-link").offset().top - navBarAndScrollTopPadding });
+}
+
+$("#portfolio-link").click(function () {
+    if ($("body.home").length === 0) {
+        return true;
+    }
+
+    scrollToPortfolio()
+    return false;
+});
+
+function scrollToPortfolio() {
+    let navBarAndScrollTopPadding = $(".navbar").height()
+    $('html,body').animate({scrollTop: $("#portfolio-container").offset().top - navBarAndScrollTopPadding });
 }
 
 /**

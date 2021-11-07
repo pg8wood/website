@@ -91,7 +91,7 @@
     }
 
     .expanded {
-        height: 200px;
+        height: 250px;
     }
 
     .navbar a:not(:first-child) {
