@@ -74,18 +74,13 @@ $("#home-link").click(function () {
 });
 
 $("#resume-link").click(function () {
-    if ($("body.home").length === 0) {
-        return true;
-    }
-
     scrollToResume();
     return false;
 });
 
 function scrollToResume() {
-    $(overflowIsAtHtml ? "html" : "body").animate({
-        scrollTop: $("#download-resume-link").offset().top - $(".navbar").height()
-    }, 700);
+    let navBarAndScrollTopPadding = $(".navbar").height() + 25
+    $('html,body').animate({scrollTop: $("#request-resume-link").offset().top - navBarAndScrollTopPadding });
 }
 
 /**

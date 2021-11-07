@@ -4,7 +4,7 @@
 
 :root {
     --patrick-purple: rgb(84, 72, 200);
-    --expanded-navbar-gray: #302B27;
+    --expanded-navbar-gray: #171123;
 }
 
 #header-navbar {
@@ -37,6 +37,18 @@
     background-size: cover;
 }
 
+#header-navbar.expanded {
+    border-bottom: 2px solid var(--patrick-purple);
+}
+
+#header-navbar.expanded a:not(:first-child):not(:last-child) {
+    border-left: 2px solid var(--patrick-purple);
+    border-right: 2px solid var(--patrick-purple);
+}
+#header-navbar.expanded a:last-child {
+    border-bottom: 2px solid var(--patrick-purple);
+}
+
 .navbar a {
     color: white;
     display: block;
@@ -51,7 +63,7 @@
 }
 
 .navbar a:hover {
-    background-color: #8DA9C4;
+    background-color: #171123;
     color: white !important;
 }
 
