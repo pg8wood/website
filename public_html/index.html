@@ -67,13 +67,17 @@
 
     <!-- Load header, portfolio, and footer from server -->
     <script>
+        // Hide body until page elements are loaded to prevent flickering
+        document.write('<style type="text/css">#intro-container{display:none}</style>');
+
         $(function () {
-            <!-- Load header and index-specific header background image -->
             $("#header").load("template/header.html", function () {
                 $(".navbar").addClass("index");
             });
 
-            $("#portfolio-container").load("portfolio.html");
+            $("#portfolio-container").load("portfolio.html", function() {
+                $('#intro-container').css('display','block');
+            })
             $("#footer").load("template/footer.html");
         });
     </script>
