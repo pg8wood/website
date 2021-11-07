@@ -4,9 +4,9 @@
 
 <br />
 <p align=center>
-  <img src="./public_html/images/website-home-screenshot.png" width=200px />
-    <img src="./public_html/images/website-portfolio-screenshot.png" width=200px />
-    <img src="./public_html/images/website-research-screenshot.png" width=200px />
+  <img src="./public_html/images/website-home-screenshot.jpeg" width=200px />
+    <img src="./public_html/images/website-portfolio-screenshot.jpeg" width=200px />
+    <img src="./public_html/images/website-research-screenshot.jpeg" width=200px />
 </p>
 <br />
 
