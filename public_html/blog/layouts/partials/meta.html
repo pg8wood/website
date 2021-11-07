@@ -15,6 +15,9 @@
 <meta name="application-name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
 <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
 
+<!--Safari 15 status bar colors-->
+<meta name="theme-color" content="#5448c8">
+
 <!-- Description tags -->
 <!-- Thanks to https://www.skcript.com/svr/perfect-seo-meta-tags-with-hugo/ for teaching me about these -->
 <meta name="description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}"/>
