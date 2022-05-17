@@ -56,9 +56,7 @@
     <!--Safari tab bar colors-->
     <meta name="theme-color" content="#5448c8">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/site.css"/>
-    <link rel="stylesheet" href="css/index.css"/>
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/576b363788.js" crossorigin="anonymous"></script>
@@ -70,9 +68,7 @@
         document.write('<style type="text/css">#intro-container{display:none}</style>');
 
         $(function () {
-            $("#header").load("template/header.html", function () {
-                $(".navbar").addClass("index");
-            });
+            $("#header").load("template/header.html");
             $('#intro-container').css('display','block');
             $("#footer").load("template/footer.html");
         });
@@ -85,6 +81,10 @@
 
 <!--patrickgatewood.com style overrides since I'm lazy ;)-->
 <style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
     .app-icon-container {
         margin: 20px auto;
         width: 200px;
@@ -95,39 +95,57 @@
         align-items: flex-end;
         background-color: #ececec;
         position: relative;
+        margin-top: 75px;
     }
-    
-    .regular {
-        font-family: -apple-system
+
+    .bold {
+        font-weight: bold;
+    }
+
+    #page-container {
+        text-align: left;
+        max-width: 500px;
+        margin: auto;
     }
     
     #contact-link {
-        color: white;
-        border: 2px solid white;
         border-radius: 15px;
-        font-size: 55px;
+        font-size: 25px;
         padding: 10px;
         text-decoration: none;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    #privacy-policy {
+        margin-top: 50px;
     }
 </style>
 
-<div id="intro-container" align="center">
-    <div id="intro" align="center">
-        <!-- Feature portrait image -->
+<div id="page-container">
+    <div id="intro">
         <img class="app-icon-container" src="images/recipe-nabber-icon.png" alt="Recipe Nabber app icon" style />
-        <h1 class=".regular" id="name-header">Recipe Nabber</h1>
-        <ul class="whoami">
-            <li>Skip the life stories of recipe bloggers and get straight to the recipe.</li>
-            <li>Save time and your thumbs by filtering out everything on the website that isn't related to the recipe.</li>
-            <li>Remove ads, popups, and other pesky obstructions that get in the way of the recipe you're trying to cook.</li>
-        </ul>
+        <h1 align="center" id="name-header">Recipe Nabber</h1>
+        <p>Skip the life stories of recipe bloggers and get straight to the recipe.</p>
+        <p>Save time and your thumbs by filtering out everything on the website that isn't related to the recipe.</p>
+        <p>Remove ads, popups, and other pesky obstructions that get in the way of the recipe you're trying to cook.</p>
+
+        <div align="center" style="margin: 50px;">
+            <a id="contact-link" href="mailto:recipe-nabber-contact@patrickgatewood.com?subject=Recipe Nabber">
+                ✉️ Contact
+            </a>
+        </div>
         
         <!--TODO: add App Store link-->
-        <br />
-        <br />
-        <a id="contact-link" href="mailto:recipe-nabber-contact@patrickgatewood.com?subject=Recipe Nabber">
-            ✉️ Contact
-        </a>
+        <h1 align="center" id="privacy-policy">Privacy Policy</h1>
+        <p class="bold" align="center">
+            Recipe Nabber does not collect any of your data.
+        </p>
+        <p>Your website stats are stored on your device and may be deleted at any time by navigating to the All Stats page.</p>
+        <p>Recipe Nabber does not use any advertising frameworks or analytics platforms. The "Remove Ads" feature removes ads that already exist in the websites you visit.</p>
+        <p>I don't want your data.</p>
+        
+        <p>© 2022 Patrick Gatewood. All Rights Reserved.</p>
     </div>
 </div>
 
