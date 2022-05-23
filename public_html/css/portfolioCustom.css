@@ -14,6 +14,18 @@
     width: 75%;
 }
 
+.app-icon-container {
+    margin: auto;
+    margin-bottom: 15px;
+    width: 103x;
+    height: 103px;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
 .badge {
     background: #5448C8;
     border-radius: 10px;
@@ -69,7 +81,7 @@
   flex-grow: 1;
   margin: 5px;
   max-width: 50%;
-  min-width: 30%;
+  min-width: 40%;
   text-align: center;
   text-decoration: none;
 }
