@@ -12,7 +12,4 @@
 
 
 ## Responsive web design brewed in-house
-Read more about it on my [portfolio page](https://patrickgatewood.com/portfolio.html).
-
-Wanna learn more about me? Check out my [resume](https://patrickgatewood.com/index.html#download-resume-link).
-
+[Check it out](https://patrickgatewood.com/)
