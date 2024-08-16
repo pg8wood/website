@@ -88,38 +88,167 @@
 
 <div id="intro-container" align="center">
     <div id="intro" align="center">
-        <!-- Feature portrait image -->
-        <img id="portrait" src="images/portrait.jpeg" alt="Patrick's Profile Photo"/>
-        <h1 id="name-header">Patrick Gatewood</h1>
-        <ul class="whoami">
-            <li>📲&nbsp;Software Engineer</li>
-            <li>💡&nbsp;Creator</li>
-            <li>🥳&nbsp;Technology Enthusiast</li>
-            <li>👨‍💻&nbsp;Probably clacking on his keyboard at 2 AM</li>
-        </ul>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+            <style>
+             @import url("https://fonts.googleapis.com/css?family='Spectral':200,700|Source+Sans+Pro:300,600,300italic,600italic");
+        
+              .title-container {
+                --color-main: white;
+                --color-primary: #9B5DE5;
+                --color-secondary: #EE4266;
+                --color-background: #171123;
+                --color-primary-text: white;
+                --color-secondary-text: #ad87e6;
+                --color-tertiary-text: #a45bb9;
+                --color-quaternary-text: #d1537a;
+        
 
-        <ul class="contactLinks">
-            <li class="contactLink">
-                <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
-                    <i class="fa fa-linkedin custom-icon"></i>
-                </a>
-            </li>
-            <li class="contactLink"><a href="https://github.com/pg8wood" target="_blank">
-                <i class="fa fa-github custom-icon"></i>
-            </a></li>
-            <li class="contactLink">
-                <a href="mailto:patrick@patrickgatewood.com">
-                    <i class="fa fa-envelope-o custom-icon"></i>
-                </a>
-            </li>
-        </ul>
+                width: 100%;
+                /* text-transform: uppercase; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                background-image: radial-gradient(var(--color-main), var(--color-primary), var(--color-secondary));
+                animation: border 5s linear infinite;
+                background-size: 200% 200%;
+                background-position: 0 0;
+                border-radius: 15px;
+              }
+        
+              .container {
+                margin: 5px;
+                border-radius: 45px;
+                background: var(--color-background);
+                height: calc(100% - 10px);
+                width: calc(100% - 10px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 32px;
+                align-items: center;
+                padding: 48px 32px 48px 32px;
+              }
+        
+              .items {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              }
+        
+              .title {
+                color: var(--color-primary-text);
+                text-transform: none;
+              }
+        
+        
+              ul {
+                font-size: 16px;
+                line-height: 26px;
+                color: var(--color-main);
+                font-weight: 700;
+                font-family: "Spectral", sans-serif;
+              }
+        
+              ul li {
+                display: flex;
+                letter-spacing: 0.125vw;
+              }
+        
+              ul li:nth-child(1) {
+                color: var(--color-primary-text);
+              }
+        
+              ul li:nth-child(2) {
+                color: var(--color-secondary-text);
+              }
+        
+               ul li:nth-child(3) {
+                color: var(--color-tertiary-text);
+              }
+        
+              ul li:nth-child(4) {
+                color: var(--color-secondary);
+              }
+        
+              ul li a {
+                margin-left: 5px;
+              }
+              ul li a:hover,
+              ul li a:focus {
+                color: var(--color-link-active);
+              }
+              ul li a {
+                color: var(--color-link);
+              }
+        
+              @keyframes border {
+                0% { background-position: 0 0; }
+                20% { background-position: 100% 0; }
+                40% { background-position: 100% 100%; }
+                60% { background-position: 0 100%; }
+                100% { background-position: 0 0; }
+              }
+        
+              @media (prefers-reduced-motion) {
+                .body {
+                  animation: none;
+                }
+        
+                ul li {
+                  opacity: 1;
+                  animation: none;
+                }
+        
+                h1 a span:nth-child(1),
+                h1 a span:nth-child(2),
+                h1 a span:nth-child(3) {
+                  animation: none;
+                }
+              }
+            </style>
+            <div class='title-container'>
+              <div class='container'>
+                <!-- Feature portrait image -->
+                <img id="portrait" src="images/portrait.jpeg" alt="Patrick's Profile Photo"/>
+                <h1 id="name-header">Patrick Gatewood</h1>
+                <section class='items'>
+                <ul class="whoami" align="left">
+                    <li>📲&#160;&#160;Software Engineer</li>
+                    <li>💡&#160;&#160;Creator</li>
+                    <li>🥳&#160;&#160;Technology Enthusiast</li>
+                    <li>👨‍💻&#160;&#160;Probably clacking on his keyboard at 2 AM</li>
+                </ul>
+                </section>
 
-        <div id="resume-link-container">
-            <i class="fas fa-info-circle"></i>
-            <a id="request-resume-link" href="mailto:patrick@patrickgatewood.com?subject=Resume Request from PatrickGatewood.com">
-                Request Résumé
-            </a>
-        </div>
+                <ul class="contactLinks">
+                    <li class="contactLink">
+                        <a href="http://www.linkedin.com/in/patrickgatewood" target="_blank">
+                            <i class="fa fa-linkedin custom-icon"></i>
+                        </a>
+                    </li>
+                    <li class="contactLink"><a href="https://github.com/pg8wood" target="_blank">
+                        <i class="fa fa-github custom-icon"></i>
+                    </a></li>
+                    <li class="contactLink">
+                        <a href="mailto:patrick@patrickgatewood.com">
+                            <i class="fa fa-envelope-o custom-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+        
+                <div id="resume-link-container">
+                    <i class="fas fa-info-circle"></i>
+                    <a id="request-resume-link" href="mailto:patrick@patrickgatewood.com?subject=Resume Request from PatrickGatewood.com">
+                        Request Résumé
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
     </div>
 </div>
 
