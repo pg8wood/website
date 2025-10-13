@@ -42,6 +42,13 @@ const projects = all.sort((a, b) => {
   }
   .realm .realm-icon { align-self: center; display: inline-block; }
   .realm span { max-width: 650px; align-self: center; }
+
+  /* On narrow screens, prefer leading (top) alignment so wrapped lines start at the same top edge */
+  @media (max-width: 640px) {
+    .realm { align-items: start !important; text-align: start; }
+    .realm .realm-icon { align-self: start !important; display: block; margin-top: .1em; }
+    .realm span { align-self: start !important; display: block; }
+  }
   .realm-icon { width: 1.2em; height: 1.2em; flex-shrink: 0; opacity: .9; filter: drop-shadow(0 0 4px rgba(139,122,241,.4)); }
   .realm-icon--scale { color: #6e7ff2; filter: drop-shadow(0 0 4px rgba(110,127,242,.4)); }
   .realm-icon--independent { color: #8b7af1; filter: drop-shadow(0 0 4px rgba(139,122,241,.5)); }
@@ -58,7 +65,7 @@ const projects = all.sort((a, b) => {
     <div class="realms-list">
       <div class="realm">
         <Icon name="mdi:domain" class="realm-icon realm-icon--scale" />
-        <span><strong class="realm-label">At scale:</strong> systems used by millions (Square, WillowTree)</span>
+        <span><strong class="realm-label">At scale:</strong> systems used by millions (Square, WillowTree).</span>
       </div>
       <div class="realm">
         <img src="public_html/images/company-logos/robot-hand.png" alt="Robot Hand" class="realm-icon realm-icon--independent" style="filter:brightness(0) invert(1)" />
@@ -66,7 +73,7 @@ const projects = all.sort((a, b) => {
       </div>
       <div class="realm">
         <Icon name="mdi:test-tube" class="realm-icon realm-icon--personal" />
-        <span><strong class="realm-label">Personal:</strong> small, well-crafted apps and tools that keep me curious</span>
+        <span><strong class="realm-label">Personal:</strong> small, well-crafted apps and tools that keep me curious.</span>
       </div>
     </div>
   </section>
