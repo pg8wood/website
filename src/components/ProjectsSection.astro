@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import ProjectCard from './ProjectCard.astro';
 import ProjectsCloud from './ProjectsCloud.astro';
 import Footer from './Footer.astro';
+import SiteFooter from './SiteFooter.astro';
 
 const all = await getCollection('projects', ({ data }) => !data.draft);
 // Featured projects first, then by weight
@@ -89,6 +90,7 @@ const projects = all.sort((a, b) => {
     </div>
   </div>
   <Footer />
+  <SiteFooter />
 </section>
 
 
