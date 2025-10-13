@@ -3,12 +3,13 @@ title: Emochi
 tagline: A system‑wide emoji picker for macOS.
 icon: /public_html/images/emochi-icon.png
 links:
-  repo: https://github.com/pg8wood/emochi
+  appStore: https://apps.apple.com/us/app/emochi-lighting-fast-emojis/id6450970369?mt=12
+emochi: lighting fast emojis
 media:
   video: /videos/emochi-demo.mp4
 badges: [Swift 5.7, StoreKit 2, SwiftUI, AppKit]
 platforms: [macOS]
-featured: true
+featured: false
 weight: 100
 affiliation:
   type: independent

@@ -6,7 +6,7 @@ links:
   appStore: https://apps.apple.com/us/app/recipe-nabber/id1602584893
 badges: [Swift 5.6, SwiftUI, Safari Web Extensions, In-App Purchases, Core Data]
 platforms: [iOS]
-featured: true
+featured: false
 weight: 95
 affiliation:
   type: independent
