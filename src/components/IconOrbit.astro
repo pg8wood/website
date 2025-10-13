@@ -1,0 +1,34 @@
+---
+interface Props { icons: Array<{ title: string; icon?: string; iconName?: string }>; iconPx?: number; gap?: number; radiusScale?: number; spin?: number }
+const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.004 } = Astro.props as Props;
+---
+<div class="orbit" data-icon-orbit="1" data-iconpx={iconPx} data-gap={gap} data-radius-scale={radiusScale} data-spin={spin} style={`--size:${iconPx}px`} aria-label="App icons">
+  {icons.map((it) => (
+    <span class="node" title={it.title}>
+      {it.icon ? (
+        <img src={it.icon} alt={it.title} />
+      ) : it.iconName ? (
+        <span class="fallback" aria-hidden="true"></span>
+      ) : null}
+    </span>
+  ))}
+</div>
+
+<style>
+.orbit { position: relative; width: 100%; height: clamp(360px, 80vh, 1200px); }
+.orbit .node {
+  position: absolute; left: 0; top: 0;
+  width: var(--size); height: var(--size);
+  display: grid; place-items: center;
+  border-radius: 18px; padding: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  will-change: transform;
+}
+.orbit img { width: 100%; height: 100%; border-radius: 12px; display: block; }
+</style>
+
+<script type="module" src="/src/components/icon-orbit.client.ts"></script>
+
+
