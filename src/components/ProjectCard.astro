@@ -82,7 +82,7 @@ if (isFeatured && typeof project.render === 'function') {
     {d.links?.live && <a class="link" href={d.links.live}>Live</a>}
     {d.links?.docs && <a class="link" href={d.links.docs}>Docs</a>}
   </div>
-  {isFeatured && Content ? (<div class="body"><Content /></div>) : null}
+  {Content ? (<div class="body"><Content /></div>) : null}
 </article>
 
 

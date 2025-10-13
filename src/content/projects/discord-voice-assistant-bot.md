@@ -1,6 +1,6 @@
 ---
 title: Discord Voice Assistant Bot
-tagline: A bot that chats with Google Assistant and manages music, sheets, more.
+tagline: A Discord bot that also chats with Google Assistant and manages music, custom commands, more.
 iconName: skill-icons:discord
 links:
   repo: https://github.com/pg8wood/discord-voice-assistant-bot
