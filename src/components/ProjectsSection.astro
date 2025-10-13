@@ -45,9 +45,14 @@ const projects = all.sort((a, b) => {
 
   /* On narrow screens, prefer leading (top) alignment so wrapped lines start at the same top edge */
   @media (max-width: 640px) {
-    .realm { align-items: start !important; text-align: start; }
-    .realm .realm-icon { align-self: start !important; display: block; margin-top: .1em; }
-    .realm span { align-self: start !important; display: block; }
+    /* Nudge icon down to visually align with first line when text wraps */
+    .realm { align-items: start; text-align: start; }
+    .realm .realm-icon {
+      display: inline-block;
+      line-height: 1;
+      margin-top: .28em; /* optical alignment tweak for wrapped text */
+    }
+    .realm span { display: inline; }
   }
   .realm-icon { width: 1.2em; height: 1.2em; flex-shrink: 0; opacity: .9; filter: drop-shadow(0 0 4px rgba(139,122,241,.4)); }
   .realm-icon--scale { color: #6e7ff2; filter: drop-shadow(0 0 4px rgba(110,127,242,.4)); }
