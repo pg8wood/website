@@ -7,4 +7,8 @@ links:
 badges: [Swift 5.2, Cocoa]
 platforms: [macOS]
 weight: 70
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---

@@ -7,4 +7,8 @@ links:
 badges: [Java, XML]
 platforms: [Android]
 weight: 20
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---

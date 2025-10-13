@@ -18,10 +18,23 @@ const projects = all.sort((a, b) => {
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 1rem; grid-auto-flow: dense; }
   .grid > * { min-width: 0; }
   @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+  .realms-intro { text-align: center; margin: 4rem auto 2rem; max-width: 750px; line-height: 1.7; color: #e0e0e0; }
+  .realms-title { font-size: 1.6rem; margin-bottom: 0.75rem; background: linear-gradient(90deg, #8b7af1, #3bc6c9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 </style>
 
 <section id="projects">
   <ProjectsCloud icons={projects} onLabel="Apps" />
+  <section class="realms-intro">
+    <h2 class="realms-title">How I Build</h2>
+    <p class="realms-body">
+      I build across three realms:
+      <br />
+      • <strong>At scale</strong> — systems used by millions (Square, WillowTree) <br />
+      • <strong>Independent</strong> — as founder of Robot Hand LLC (e.g., <em>Constellation Quest</em>) <br />
+      • <strong>Personal</strong> — small, well‑crafted apps and tools that keep me curious
+    </p>
+  </section>
   <div class="panel">
     <div class="grid">
       {projects.map((p) => <ProjectCard project={p} />)}

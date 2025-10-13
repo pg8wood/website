@@ -11,39 +11,61 @@ if (isFeatured && typeof project.render === 'function') {
 }
 ---
 <style>
-  .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 1rem; background: rgba(255,255,255,0.02); min-width: 0; overflow: visible; }
+  .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 1rem; background: rgba(255,255,255,0.02); min-width: 0; overflow: visible; position: relative; }
   .card.featured { grid-column: span 2; padding: 1.25rem; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-color: rgba(255,255,255,0.18); }
   @media (min-width: 980px) { .card.featured { grid-column: span 3; } }
   @media (max-width: 900px) { .card.featured { grid-column: span 1; } }
   .header { display: flex; gap: .75rem; align-items: center; }
+  .titleWrap { flex: 1; min-width: 0; }
   .icon { width: 48px; height: 48px; border-radius: 10px; }
   .icon img, .icon svg, .icon canvas { width: 48px; height: 48px; border-radius: 10px; object-fit: fill; }
   .title { margin: 0; color: var(--white); font-size: 1.2rem; }
   .tagline { margin: .25rem 0 .5rem; color: var(--pale-gray); opacity: .9; }
   .badges { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .4rem; }
   .badge { border: 1px solid rgba(255,255,255,.15); padding: .2rem .5rem; border-radius: 999px; font-size: .8rem; opacity: .9; }
-  .client { margin-left: auto; font-size: .8rem; color: var(--lavender); opacity: .95; }
+  .client { font-size: .8rem; color: var(--lavender); opacity: .95; }
   .links { margin-top: .75rem; display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
   .link { color: var(--lavender); text-decoration: none; }
   .appStoreBadge { height: 40px; width: auto; display: block; }
   .body { margin-top: .75rem; color: var(--pale-gray); line-height: 1.55; }
   .body a { color: var(--lavender); }
   .body ul { margin: .5rem 0 .5rem 1rem; }
+
+  /* Affiliation chip (same row as title, no wrap) */
+  .affil { margin-left: auto; display: inline-flex; align-items: center; gap: .4rem; padding: .25rem .55rem; border-radius: 9999px; border: 1px solid var(--glass-border, rgba(255,255,255,0.18)); background: var(--glass-bg, rgba(255,255,255,0.06)); box-shadow: var(--glass-shadow, 0 4px 12px rgba(0,0,0,.25)); white-space: nowrap; }
+  .affil-logo { width: 16px; height: 16px; object-fit: contain; filter: brightness(0) invert(1); opacity: .9; }
+  .affil-label { color: #e0e0e0; font-size: .8rem; font-weight: 500; }
+  .affil[data-type="enterprise"] { background: linear-gradient(90deg, #3a3f5c 0%, #4a516f 100%); }
+  .affil[data-type="independent"] { background: linear-gradient(90deg, #5448c8 0%, #8b7af1 100%); }
+  .affil[data-type="personal"] { background: linear-gradient(90deg, #3bc6c9 0%, #6ed1e1 100%); }
+
+  @media (max-width: 480px) {
+    .title { font-size: 1.1rem; }
+  }
 </style>
 
 <article id={`project-${project.slug}`} class={isFeatured ? 'card featured' : 'card'}>
+  
   <header class="header">
     {d.iconName ? (
       <span class="icon"><Icon name={d.iconName} width="48" height="48" /></span>
     ) : d.icon ? (
       <img class="icon" src={d.icon} alt={d.title} />
     ) : null}
-    <div>
+    <div class="titleWrap">
       <h3 class="title">{d.title}</h3>
-      <p class="tagline">{d.tagline}</p>
     </div>
-    {d.client ? (<span class="client">Client: {d.client}</span>) : null}
+    {d.affiliation ? (
+      <span class="affil" data-type={d.affiliation.type}>
+        {d.affiliation.logo ? (
+          <img class="affil-logo" src={d.affiliation.logo} alt={d.affiliation.label} />
+        ) : null}
+        <span class="affil-label">{d.affiliation.label}</span>
+      </span>
+    ) : null}
   </header>
+  <p class="tagline">{d.tagline}</p>
+  {d.affiliation?.type === 'independent' && d.client ? (<span class="client">Client: {d.client}</span>) : null}
   {d.badges?.length ? (
     <div class="badges">{d.badges.map((b: string) => <span class="badge">{b}</span>)}</div>
   ) : null}

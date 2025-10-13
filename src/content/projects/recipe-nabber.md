@@ -8,4 +8,8 @@ badges: [Swift 5.6, SwiftUI, Safari Web Extensions, In-App Purchases, Core Data]
 platforms: [iOS]
 featured: true
 weight: 95
+affiliation:
+  type: independent
+  logo: public_html/images/company-logos/robot-hand.png
+  label: Robot Hand
 ---

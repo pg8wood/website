@@ -8,4 +8,8 @@ links:
 badges: [Swift 3, UIKit, TMDb API]
 platforms: [iOS]
 weight: 40
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---

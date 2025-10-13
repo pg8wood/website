@@ -1,7 +1,6 @@
 ---
 title: CFA Institute
 tagline: "Modernized member experience with search and renewal systems across mobile platforms."
-client: CFA Institute via WillowTree
 icon: public_html/images/company-logos/cfa.png
 badges:
   - Leadership
@@ -13,6 +12,10 @@ platforms:
 featured: false
 weight: 4
 date: "2019"
+affiliation:
+  type: enterprise
+  logo: public_html/images/company-logos/willowtree.svg
+  label: WillowTree
 ---
 
 Served as lead iOS engineer and technical liaison for the client.

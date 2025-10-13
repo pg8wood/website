@@ -1,7 +1,6 @@
 ---
 title: Vocable AAC
 tagline: "Hands-free ARKit communication app empowering speech-impaired individuals."
-client: WillowTree Labs
 icon: public_html/images/company-logos/vocable.webp
 links:
   repo: "https://github.com/willowtreeapps/vocable-ios"
@@ -15,6 +14,10 @@ platforms:
 featured: true
 weight: 6
 date: "2021"
+affiliation:
+  type: enterprise
+  logo: public_html/images/company-logos/willowtree.svg
+  label: WillowTree
 ---
 
 Co-designed and implemented an ARKit-powered head-tracking communication interface enabling users with limited mobility to speak through gaze and motion.

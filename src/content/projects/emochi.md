@@ -10,4 +10,8 @@ badges: [Swift 5.7, StoreKit 2, SwiftUI, AppKit]
 platforms: [macOS]
 featured: true
 weight: 100
+affiliation:
+  type: independent
+  logo: public_html/images/company-logos/robot-hand.png
+  label: Robot Hand
 ---

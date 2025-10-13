@@ -1,7 +1,6 @@
 ---
 title: FOX White-Label Apps
 tagline: "Scaled white-label architecture supporting 27 FOX Television Station apps."
-client: FOX Television Stations via WillowTree
 icon: public_html/images/company-logos/fox-tv-stations.png
 badges:
   - XcodeGen
@@ -12,6 +11,10 @@ platforms:
 featured: false
 weight: 5
 date: "2020"
+affiliation:
+  type: enterprise
+  logo: public_html/images/company-logos/willowtree.svg
+  label: WillowTree
 ---
 
 Delivered a scalable CI/CD system powering dozens of FOX local station apps.

@@ -8,4 +8,8 @@ links:
 badges: [Swift 4, UIKit, ARKit, SpriteKit, SceneKit]
 platforms: [iOS]
 weight: 50
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---

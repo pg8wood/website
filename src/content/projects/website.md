@@ -7,4 +7,8 @@ links:
 badges: [HTML, CSS, jQuery, Astro]
 platforms: [web]
 weight: 25
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---

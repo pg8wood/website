@@ -8,4 +8,8 @@ links:
 badges: [Java EE, JSF, XHTML, MySQL, PrimeFaces, Materialize CSS]
 platforms: [web]
 weight: 30
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---

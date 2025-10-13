@@ -7,4 +7,8 @@ links:
 badges: [Java, XML, Butter Knife, Dagger 2, Retrofit, Gson, Gradle]
 platforms: [Android]
 weight: 18
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---

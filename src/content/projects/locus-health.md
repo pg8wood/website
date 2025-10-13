@@ -1,7 +1,6 @@
 ---
 title: Locus Health
 tagline: "Improved privacy compliance and secure authentication for healthcare app users."
-client: Locus Health via WillowTree
 icon: public_html/images/company-logos/locus-health.png
 badges:
   - Security
@@ -12,6 +11,10 @@ platforms:
 featured: false
 weight: 2
 date: "2019"
+affiliation:
+  type: enterprise
+  logo: public_html/images/company-logos/willowtree.svg
+  label: WillowTree
 ---
 
 Discovered and resolved a critical encryption gap in health data storage.

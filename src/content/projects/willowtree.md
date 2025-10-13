@@ -1,7 +1,6 @@
 ---
 title: WillowTree
 tagline: "Engineering award-winning apps for world-class clients across media, health, and enterprise."
-client: WillowTree, LLC
 icon: public_html/images/company-logos/willowtree.svg
 badges:
   - Senior Engineer

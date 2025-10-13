@@ -17,6 +17,10 @@ featured: true
 weight: 0
 date: "2024-01-01"
 draft: false
+affiliation:
+  type: independent
+  logo: public_html/images/company-logos/robot-hand.png
+  label: Robot Hand
 ---
 
 Sole developer and product partner for the Seven Stars Festival’s companion app: an offline‑first, puzzle‑driven PWA used on‑site to guide attendees through constellation clues and a QR‑scanned finale.

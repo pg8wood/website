@@ -8,6 +8,13 @@ const projects = defineCollection({
     icon: z.string().optional(),
     iconName: z.string().optional(),
     client: z.string().optional(),
+    affiliation: z
+      .object({
+        type: z.enum(["enterprise", "independent", "personal"]),
+        logo: z.string().optional(),
+        label: z.string(),
+      })
+      .optional(),
     links: z
       .object({
         appStore: z.string().optional(),

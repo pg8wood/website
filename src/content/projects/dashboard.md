@@ -7,4 +7,8 @@ links:
 badges: [Swift 4, UIKit, CoreData]
 platforms: [iOS]
 weight: 45
+affiliation:
+  type: personal
+  logo: /public_html/images/favicons/favicon-white.svg
+  label: Personal
 ---
