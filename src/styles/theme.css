@@ -19,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll when clouds overflow */
   color: var(--pale-gray);
   background: radial-gradient(
     circle at 30% 20%,
