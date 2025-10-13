@@ -1,0 +1,77 @@
+---
+const STAR_COUNT = 200;
+const width = 1920;
+const height = 1080;
+function rand(min: number, max: number) {
+  return Math.random() * (max - min) + min;
+}
+const stars = Array.from({ length: STAR_COUNT }).map((_, i) => {
+  // Slight clustering toward edges: bias x,y toward 0 or 1
+  const edgeBias = 0.35;
+  const bx = Math.random() < 0.5 ? Math.pow(Math.random(), 1 + edgeBias) : 1 - Math.pow(Math.random(), 1 + edgeBias);
+  const by = Math.random() < 0.5 ? Math.pow(Math.random(), 1 + edgeBias) : 1 - Math.pow(Math.random(), 1 + edgeBias);
+  const r = rand(0.7, 1.3);
+  const delay = rand(0, 7);
+  const dur = rand(2.5, 5.5);
+  const opacity = rand(0.6, 1);
+  return { id: i, cx: bx * width, cy: by * height, r, delay, dur, opacity };
+});
+---
+<style>
+  .twinkle {
+    animation-name: twinkle;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+
+  .drift {
+    position: absolute;
+    inset: 0;
+    transform: translate3d(0,0,0);
+    animation: drift 40s linear infinite;
+  }
+  @keyframes drift {
+    0% { transform: translate3d(0,0,0); }
+    50% { transform: translate3d(-10px, -6px, 0); }
+    100% { transform: translate3d(0,0,0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .twinkle, .drift { animation: none !important; }
+  }
+</style>
+
+<div aria-hidden="true" style="z-index:-1; position:fixed; inset:0; overflow:hidden;">
+  <svg class="drift" width="100%" height="100%" viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="0.8" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    {stars.map((s) => (
+      <circle
+        cx={s.cx}
+        cy={s.cy}
+        r={s.r}
+        fill="white"
+        opacity={s.opacity}
+        filter="url(#starGlow)"
+        class="twinkle"
+        style={`animation-duration:${s.dur}s; animation-delay:${s.delay}s;`}
+      />
+    ))}
+  </svg>
+  <!-- gradient overlay to deepen corners subtly -->
+  <div style="position:absolute; inset:0; background: radial-gradient(120% 80% at 80% 20%, transparent 0%, rgba(4,7,15,0.45) 55%, rgba(4,7,15,0.8) 100%);"></div>
+  </div>
+

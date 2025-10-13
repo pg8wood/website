@@ -1,0 +1,38 @@
+<style>
+  .satellite {
+    position: absolute;
+    left: 8vw;
+    top: 22vh;
+    width: 56px;
+    height: 56px;
+    animation: float 46s ease-in-out infinite, wobble 72s ease-in-out infinite;
+    filter: drop-shadow(0 2px 10px rgba(84,72,200,0.45));
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-14px) translateX(8px); }
+    50% { transform: translateY(6px) translateX(-6px); }
+    75% { transform: translateY(-10px) translateX(-2px); }
+  }
+  @keyframes wobble {
+    0%, 100% { rotate: 0deg; }
+    50% { rotate: 4deg; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .satellite { animation: none; }
+  }
+</style>
+
+<svg class="satellite" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#6aa3ff"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+  </defs>
+  <!-- placeholder "app icon" with orbital ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <rect x="18" y="18" width="28" height="28" rx="8" fill="url(#g)" stroke="#ffffff" stroke-opacity="0.35" />
+  <circle cx="32" cy="32" r="6" fill="#5448c8"/>
+</svg>
+

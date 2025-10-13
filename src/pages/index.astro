@@ -1,0 +1,27 @@
+---
+import '../styles/theme.css';
+import Starfield from '../components/Starfield.astro';
+import Hero from '../components/Hero.astro';
+import Satellite from '../components/Satellite.astro';
+const title = 'Patrick Gatewood | Software Engineer. Creator. Technology Enthusiast.';
+const description = "Hi, I'm Patrick. I'm the guy you heard clacking on his keyboard at 2 AM.";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#5448c8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- System stack with Inter if present on device; no external font download to keep lean -->
+  </head>
+  <body>
+    <Starfield />
+    <Hero />
+    <Satellite />
+  </body>
+  </html>
+
