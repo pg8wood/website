@@ -23,8 +23,24 @@ const projects = all.sort((a, b) => {
   .realms-intro { text-align: center; margin: 4rem auto 3rem; max-width: 700px; color: #d8d8d8; line-height: 1.7; }
   .realms-title { font-size: 1.6rem; margin-bottom: 0.75rem; background: linear-gradient(90deg, #8b7af1, #3bc6c9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .realms-text { margin-bottom: 1rem; }
-  .realms-list { display: flex; flex-direction: column; align-items: flex-start; gap: .5rem; margin: 0 auto; max-width: 650px; }
-  .realm { display: flex; align-items: center; gap: .6rem; font-size: 1rem; justify-content: flex-start; }
+  /* Shrink-wrap to content and center the whole block by the longest line */
+  .realms-list {
+    display: grid;
+    gap: .5rem;
+    margin: 0 auto;
+    width: fit-content;            /* shrink to longest row */
+    max-width: 700px;              /* don’t exceed desired width */
+    justify-items: start;          /* keep rows left-aligned inside */
+  }
+  /* Two-column grid: fixed icon column + flexible text column */
+  .realm {
+    display: grid;
+    grid-template-columns: 1.4em auto;
+    align-items: start;
+    column-gap: .6rem;
+    font-size: 1rem;
+  }
+  .realm span { max-width: 650px; }
   .realm-icon { width: 1.2em; height: 1.2em; flex-shrink: 0; opacity: .9; filter: drop-shadow(0 0 4px rgba(139,122,241,.4)); }
   .realm-icon--scale { color: #6e7ff2; filter: drop-shadow(0 0 4px rgba(110,127,242,.4)); }
   .realm-icon--independent { color: #8b7af1; filter: drop-shadow(0 0 4px rgba(139,122,241,.5)); }
@@ -45,7 +61,7 @@ const projects = all.sort((a, b) => {
       </div>
       <div class="realm">
         <img src="public_html/images/company-logos/robot-hand.png" alt="Robot Hand" class="realm-icon realm-icon--independent" style="filter:brightness(0) invert(1)" />
-        <span><strong class="realm-label">Independent:</strong> as founder of <strong>Robot Hand, LLC.</strong></span>
+        <span><strong class="realm-label">Independently:</strong> as founder of <strong>Robot Hand, LLC.</strong></span>
       </div>
       <div class="realm">
         <Icon name="mdi:test-tube" class="realm-icon realm-icon--personal" />
