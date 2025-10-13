@@ -5,7 +5,7 @@ const { project } = Astro.props as Props;
 const d = project.data;
 const isFeatured = !!d.featured;
 let Content: any = null;
-if (isFeatured && typeof project.render === 'function') {
+if (typeof project.render === 'function') {
   const rendered = await project.render();
   Content = rendered.Content;
 }
@@ -31,6 +31,20 @@ if (isFeatured && typeof project.render === 'function') {
   .body { margin-top: .75rem; color: var(--pale-gray); line-height: 1.55; }
   .body a { color: var(--lavender); }
   .body ul { margin: .5rem 0 .5rem 1rem; }
+
+  /* Collapsible body */
+  .bodyWrap { position: relative; margin-top: .6rem; }
+  .bodyInner { color: var(--pale-gray); line-height: 1.55; }
+  .collapsed .bodyInner {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .fade { position: absolute; inset: auto 0 0 0; height: 2.2rem; pointer-events: none; background: linear-gradient(180deg, rgba(4,7,15,0), rgba(4,7,15,0.85)); border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+  .expanded .fade { display: none; }
+  .toggle { margin-top: .4rem; background: transparent; color: var(--lavender); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: .25rem .6rem; font: inherit; cursor: pointer; }
+  .toggle:hover { border-color: rgba(255,255,255,0.35); color: var(--white); }
 
   /* Affiliation chip (same row as title, no wrap) */
   .affil { margin-left: auto; display: inline-flex; align-items: center; gap: .4rem; padding: .25rem .55rem; border-radius: 9999px; border: 1px solid var(--glass-border, rgba(255,255,255,0.18)); background: var(--glass-bg, rgba(255,255,255,0.06)); box-shadow: var(--glass-shadow, 0 4px 12px rgba(0,0,0,.25)); white-space: nowrap; }
@@ -68,6 +82,16 @@ if (isFeatured && typeof project.render === 'function') {
     <span class="client-inline">Client: {d.affiliation.client ?? d.client}</span>
   ) : null}
   <p class="tagline">{d.tagline}</p>
+  {Content ? (
+    <>
+      <div class="bodyWrap collapsed" id={`body-${project.slug}`} data-collapsible>
+        <div class="bodyInner"><Content /></div>
+        <div class="fade" aria-hidden="true"></div>
+      </div>
+      <button class="toggle" data-toggle aria-controls={`body-${project.slug}`} aria-expanded="false">More</button>
+    </>
+  ) : null}
+
   {d.badges?.length ? (
     <div class="badges">{d.badges.map((b: string) => <span class="badge">{b}</span>)}</div>
   ) : null}
@@ -82,7 +106,50 @@ if (isFeatured && typeof project.render === 'function') {
     {d.links?.live && <a class="link" href={d.links.live}>Live</a>}
     {d.links?.docs && <a class="link" href={d.links.docs}>Docs</a>}
   </div>
-  {Content ? (<div class="body"><Content /></div>) : null}
+  
 </article>
+
+<script is:inline>
+  (function(){
+    function setup(btn){
+      const id = btn.getAttribute('aria-controls');
+      const wrap = id ? document.getElementById(id) : null;
+      if (!wrap) return;
+      const inner = wrap.querySelector('.bodyInner');
+      if (!inner) return;
+
+      const cs = getComputedStyle(inner);
+      const lh = parseFloat(cs.lineHeight) || 20;
+      const maxH = lh * 3 + 2;
+
+      // Measure natural height without clamp
+      wrap.classList.remove('collapsed');
+      const naturalH = (inner).getBoundingClientRect().height;
+      wrap.classList.add('collapsed');
+
+      if (naturalH <= maxH + 1) {
+        (btn).style.display = 'none';
+        const fade = wrap.querySelector('.fade');
+        if (fade) (fade).remove();
+        return;
+      }
+
+      btn.addEventListener('click', () => {
+        const expanded = wrap.classList.toggle('expanded');
+        wrap.classList.toggle('collapsed', !expanded);
+        (btn).setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        (btn).textContent = expanded ? 'Less' : 'More';
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('[data-toggle]').forEach((b) => setup(b));
+      });
+    } else {
+      document.querySelectorAll('[data-toggle]').forEach((b) => setup(b));
+    }
+  })();
+</script>
 
 

@@ -24,9 +24,9 @@ During my time with FOX Consumer Products & Engineering, I led several high-impa
 
 ## 📺 Architecting tvOS Support
 
-One of my primary responsibilities was architecting and implementing full **tvOS support** for FOX’s mobile video player SDK. I served as the **tvOS tech lead**, partnering closely with engineering teams across the FOX app suite — including FOX Now, Sports, Weather, Nation, and News International — to provide technical guidance and integration support.
+One of my primary responsibilities was architecting and implementing tvOS support for FOX’s mobile video player SDK. I served as the **tvOS tech lead**, partnering closely with engineering teams across the FOX app suite (FOX Now, Sports, Weather, Nation, and Fox News International) to provide technical guidance and integration support.
 
-This cross-functional role positioned me as a trusted embedded resource within FOX, helping drive platform consistency and performance across a broad portfolio of consumer-facing apps.
+This cross-functional role positioned me as a trusted embedded-resource within FOX, helping drive platform consistency and performance across a broad portfolio of consumer-facing apps.
 
 ## ⚙️ Streamlining Delivery Pipelines
 
