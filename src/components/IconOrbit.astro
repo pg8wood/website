@@ -1,11 +1,12 @@
 ---
 import { Icon } from 'astro-icon/components'
-interface Props { icons: Array<{ title: string; icon?: string; iconName?: string }>; iconPx?: number; gap?: number; radiusScale?: number; spin?: number }
+interface IconItem { title: string; icon?: string; iconName?: string; slug?: string }
+interface Props { icons: Array<IconItem>; iconPx?: number; gap?: number; radiusScale?: number; spin?: number }
 const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro.props as Props;
 ---
 <div class="orbit" data-icon-orbit="1" data-iconpx={iconPx} data-gap={gap} data-radius-scale={radiusScale} data-spin={spin} style={`--size:${iconPx}px`} aria-label="App icons">
   {icons.map((it) => (
-    <span class="node">
+    <a class="node" href={it.slug ? `#project-${it.slug}` : undefined} aria-label={it.title} title={it.title}>
       <span class="inner" title={it.title}>
         {it.icon ? (
           <img src={it.icon} alt={it.title} />
@@ -13,7 +14,7 @@ const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro
           <Icon name={it.iconName} />
         ) : null}
       </span>
-    </span>
+    </a>
   ))}
 </div>
 
@@ -21,7 +22,7 @@ const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro
 .orbit { position: relative; width: 100%; height: clamp(360px, 80vh, 1200px); }
 .orbit { opacity: 0; transition: opacity .6s ease; }
 .orbit.ready { opacity: 1; }
-.orbit .node { position: absolute; left: 0; top: 0; }
+.orbit .node { position: absolute; left: 0; top: 0; text-decoration: none; }
 .orbit .inner {
   width: var(--size); height: var(--size);
   display: grid; place-items: center;

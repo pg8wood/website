@@ -30,7 +30,7 @@ if (isFeatured && typeof project.render === 'function') {
   .body ul { margin: .5rem 0 .5rem 1rem; }
 </style>
 
-<article class={isFeatured ? 'card featured' : 'card'}>
+<article id={`project-${project.slug}`} class={isFeatured ? 'card featured' : 'card'}>
   <header class="header">
     {d.iconName ? (
       <span class="icon"><Icon name={d.iconName} width="48" height="48" /></span>
