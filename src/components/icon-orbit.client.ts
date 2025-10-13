@@ -16,7 +16,7 @@ function setup(root: HTMLElement) {
 
   const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const ICON = iconPx;
-  const COLLIDE = ICON / 2 + gap;
+  const COLLIDE = ICON / 2 + gap + 2;
   const DECAY = prefersReduced ? 0.98 : 0.9;
   const SPIN = prefersReduced ? 0.0 : spin;
 
@@ -32,6 +32,30 @@ function setup(root: HTMLElement) {
   }
 
   let dims = measure();
+
+  // Seed initial positions in a compact offscreen grid to avoid stacking
+  {
+    const count = simNodes.length;
+    const cols = Math.ceil(Math.sqrt(count));
+    const cell = ICON + gap;
+    const startX = ICON; // small padding from left
+    const startY = dims.h + cell; // below container
+    for (let i = 0; i < count; i++) {
+      const col = i % cols;
+      const row = Math.floor(i / cols);
+      const jitterX = (Math.random() - 0.5) * 6;
+      const jitterY = (Math.random() - 0.5) * 6;
+      simNodes[i].x = startX + col * cell + jitterX;
+      simNodes[i].y = startY + row * cell + jitterY;
+    }
+    // Apply initial transform so first frame is offscreen and unstacked
+    const tZ = " translate(-50%, -50%)";
+    for (const n of simNodes) {
+      (n.el as HTMLElement).style.transform =
+        `translate3d(${n.x}px, ${n.y}px, 0)` + tZ;
+    }
+  }
+
   const sim = forceSimulation(simNodes as any)
     .velocityDecay(DECAY)
     .force("center", forceCenter(dims.cx, dims.cy))
