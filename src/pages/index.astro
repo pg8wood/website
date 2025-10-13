@@ -2,6 +2,7 @@
 import '../styles/theme.css';
 import Starfield from '../components/Starfield.astro';
 import Hero from '../components/Hero.astro';
+import AvatarOrbit from '../components/AvatarOrbit.astro';
 import Satellite from '../components/Satellite.astro';
 import ProjectsSection from '../components/ProjectsSection.astro';
 const title = 'Patrick Gatewood | Software Engineer. Creator. Technology Enthusiast.';
@@ -24,9 +25,11 @@ const description = "Hi, I'm Patrick. I'm the guy you heard clacking on his keyb
   </head>
   <body style="background-color:#04070f;">
     <Starfield />
-    <Hero />
+    <Hero>
+      <AvatarOrbit slot="avatar" src="public_html/images/portrait.png" alt="Patrick Gatewood headshot" size={176} brand="#5448c8" />
+    </Hero>
     <Satellite />
-    <div style="margin-top:-6vh">
+    <div style="margin-top:-2vh">
       <ProjectsSection />
     </div>
   </body>

@@ -9,6 +9,7 @@ const name = 'Patrick Gatewood';
     height: 50vh;
     text-align: center;
     margin-top: 20vh;
+    margin-bottom: 10vh;
     padding: 0rem 1.25rem 0rem;
     z-index: 3; /* ensure hero sits above satellite/starfield */
   }
@@ -124,6 +125,9 @@ const name = 'Patrick Gatewood';
 
 <section class="hero" aria-label="Intro">
   <div class="container">
+    <div style="margin-bottom: 1rem; display: grid; place-items: center;">
+      <slot name="avatar" />
+    </div>
     <h1 class="title">{name}</h1>
     <p>iOS Engineer · Creator · Technology Enthusiast</p>
     <p class="terminalline">clacking on his keyboard at 2 am</p>

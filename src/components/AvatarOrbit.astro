@@ -1,0 +1,83 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  size?: number;
+  brand?: string;
+  glow?: number; // 0..1
+}
+const { src, alt, size = 176, brand = '#5448c8', glow = 0.3 } = Astro.props as Props;
+const boxStyle = `--brand:${brand}; --glow:${glow}; width:${size}px; height:${size}px;`;
+---
+<div class="avatar-orbit" style={boxStyle} role="img" aria-label={alt}>
+  <svg viewBox="0 0 100 100" aria-hidden="true">
+    <defs>
+      <clipPath id="avatarClip">
+        <circle cx="50" cy="50" r="38" />
+      </clipPath>
+    </defs>
+
+    <!-- Headshot image clipped to circle -->
+    <image href={src} x="12" y="12" width="76" height="76" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" />
+
+    <!-- Neutral inner separator ring just outside image mask -->
+    <circle cx="50" cy="50" r="39.5" fill="none" stroke="white" stroke-opacity="0.8" stroke-width="2" />
+
+    <!-- Outer orbital rings: contra-rotating with cut-out notches -->
+    <g class="ring ring-a">
+      <circle cx="50" cy="50" r="46"
+              fill="none"
+              stroke={brand}
+              stroke-width="4"
+              stroke-linecap="round"
+              pathLength="1"
+              stroke-dasharray="0.40 0.10 0.40 0.10"
+              stroke-dashoffset="0" />
+    </g>
+
+    <g class="ring ring-b">
+      <circle cx="50" cy="50" r="42"
+              fill="none"
+              stroke={brand}
+              opacity="0.7"
+              stroke-width="3"
+              stroke-linecap="round"
+              pathLength="1"
+              stroke-dasharray="0.40 0.10 0.40 0.10"
+              stroke-dashoffset="0.25" />
+    </g>
+  </svg>
+</div>
+
+<style>
+.avatar-orbit { position: relative; display: grid; place-items: center; border-radius: 999px; }
+.avatar-orbit svg { width: 100%; height: 100%; overflow: visible; }
+
+/* Subtle brand glow around rings without washing over the photo */
+.avatar-orbit .ring {
+  filter: drop-shadow(0 0 calc(16px * var(--glow)) var(--brand));
+  transform-origin: 50% 50%;
+}
+
+/* Motion */
+.avatar-orbit .ring-a { animation: spin 18s linear infinite; }
+.avatar-orbit .ring-b { animation: spin-rev 22s linear infinite; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin-rev { to { transform: rotate(-360deg); } }
+
+/* Accessibility: honor reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .avatar-orbit .ring-a,
+  .avatar-orbit .ring-b { animation: none; }
+}
+
+/* Optional polish: slight hover focus enhancement */
+.avatar-orbit:where(:hover, :focus, :focus-within) .ring {
+  filter: drop-shadow(0 0 calc(22px * var(--glow)) var(--brand));
+}
+.avatar-orbit:where(:hover, :focus, :focus-within) .ring-a { animation-duration: 21.6s; }
+.avatar-orbit:where(:hover, :focus, :focus-within) .ring-b { animation-duration: 26.4s; }
+</style>
+
+
