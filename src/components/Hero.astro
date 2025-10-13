@@ -60,14 +60,19 @@ const name = 'Patrick Gatewood';
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.18);
+    border: 1px solid color-mix(in oklch, var(--lavender) 28%, transparent);
     text-decoration: none;
     transition: border-color .2s ease, color .2s ease, background .2s ease;
-    background: rgba(255,255,255,0.03);
+    background: color-mix(in oklch, var(--lavender) 14%, transparent);
+    box-shadow: 0 6px 18px color-mix(in oklch, var(--lavender) 18%, transparent);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
-  .iconLink:hover { color: var(--white); border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.06); }
+  .iconLink:hover {
+    color: var(--white);
+    border-color: color-mix(in oklch, var(--lavender) 45%, transparent);
+    background: color-mix(in oklch, var(--lavender) 22%, transparent);
+  }
   .iconLink svg { width: 22px; height: 22px; fill: currentColor; }
 
   /* Gentle orbital/bobble motion with staggered timings */
