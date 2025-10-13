@@ -23,8 +23,9 @@ if (isFeatured && typeof project.render === 'function') {
   .badges { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .4rem; }
   .badge { border: 1px solid rgba(255,255,255,.15); padding: .2rem .5rem; border-radius: 999px; font-size: .8rem; opacity: .9; }
   .client { margin-left: auto; font-size: .8rem; color: var(--lavender); opacity: .95; }
-  .links { margin-top: .75rem; display: flex; gap: .75rem; }
+  .links { margin-top: .75rem; display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
   .link { color: var(--lavender); text-decoration: none; }
+  .appStoreBadge { height: 40px; width: auto; display: block; }
   .body { margin-top: .75rem; color: var(--pale-gray); line-height: 1.55; }
   .body a { color: var(--lavender); }
   .body ul { margin: .5rem 0 .5rem 1rem; }
@@ -48,7 +49,11 @@ if (isFeatured && typeof project.render === 'function') {
   ) : null}
   <div class="links">
     {d.links?.repo && <a class="link" href={d.links.repo}>Source</a>}
-    {d.links?.appStore && <a class="link" href={d.links.appStore}>App Store</a>}
+    {d.links?.appStore && (
+      <a href={d.links.appStore} target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+        <img class="appStoreBadge" src="public_html/images/download-on-the-app-store-black.svg" alt="Download on the App Store" />
+      </a>
+    )}
     {d.links?.playStore && <a class="link" href={d.links.playStore}>Play</a>}
     {d.links?.live && <a class="link" href={d.links.live}>Live</a>}
     {d.links?.docs && <a class="link" href={d.links.docs}>Docs</a>}

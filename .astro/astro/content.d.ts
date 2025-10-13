@@ -148,6 +148,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"cfa-institute.md": {
+	id: "cfa-institute.md";
+  slug: "cfa-institute";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "changelog-generator.md": {
 	id: "changelog-generator.md";
   slug: "changelog-generator";
@@ -190,9 +197,37 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"fox-apps-video-sdk.md": {
+	id: "fox-apps-video-sdk.md";
+  slug: "fox-apps-video-sdk";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"fox-white-label-apps.md": {
+	id: "fox-white-label-apps.md";
+  slug: "fox-white-label-apps";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"health-wellness-client.md": {
+	id: "health-wellness-client.md";
+  slug: "health-wellness-client";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "kim-jong-chew.md": {
 	id: "kim-jong-chew.md";
   slug: "kim-jong-chew";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"locus-health.md": {
+	id: "locus-health.md";
+  slug: "locus-health";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -211,6 +246,20 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"pepsi-snackbot.md": {
+	id: "pepsi-snackbot.md";
+  slug: "pepsi-snackbot";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"predicate-builder.md": {
+	id: "predicate-builder.md";
+  slug: "predicate-builder";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "recipe-nabber.md": {
 	id: "recipe-nabber.md";
   slug: "recipe-nabber";
@@ -218,9 +267,23 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"square.md": {
+	id: "square.md";
+  slug: "square";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "tv-playlists.md": {
 	id: "tv-playlists.md";
   slug: "tv-playlists";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"vocable-aac.md": {
+	id: "vocable-aac.md";
+  slug: "vocable-aac";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -235,6 +298,13 @@ declare module 'astro:content' {
 "website.md": {
 	id: "website.md";
   slug: "website";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"willowtree.md": {
+	id: "willowtree.md";
+  slug: "willowtree";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
