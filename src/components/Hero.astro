@@ -35,6 +35,7 @@ const name = 'Patrick Gatewood';
     display: flex;
     gap: 1rem;
     justify-content: center;
+    position: relative;
   }
   .iconLink {
     color: var(--pale-gray);
@@ -48,9 +49,35 @@ const name = 'Patrick Gatewood';
     text-decoration: none;
     transition: border-color .2s ease, color .2s ease, background .2s ease;
     background: rgba(255,255,255,0.03);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   .iconLink:hover { color: var(--white); border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.06); }
   .iconLink svg { width: 22px; height: 22px; fill: currentColor; }
+
+  /* Gentle orbital/bobble motion with staggered timings */
+  .icons .iconLink:nth-child(1) { animation-name: bobbleA; animation-duration: 18s; animation-delay: .2s; }
+  .icons .iconLink:nth-child(2) { animation-name: bobbleB; animation-duration: 22s; animation-delay: 1.1s; }
+  .icons .iconLink:nth-child(3) { animation-name: bobbleC; animation-duration: 26s; animation-delay: .6s; }
+
+  @keyframes bobbleA {
+    0%, 100% { transform: translate(0,0) rotate(0deg); }
+    20% { transform: translate(3px, -4px) rotate(2deg); }
+    40% { transform: translate(-2px, -1px) rotate(-1deg); }
+    60% { transform: translate(-3px, 3px) rotate(-2deg); }
+    80% { transform: translate(2px, 2px) rotate(1deg); }
+  }
+  @keyframes bobbleB {
+    0%, 100% { transform: translate(0,0) rotate(0deg); }
+    25% { transform: translate(-4px, 3px) rotate(-2deg); }
+    50% { transform: translate(2px, -2px) rotate(1deg); }
+    75% { transform: translate(3px, 2px) rotate(2deg); }
+  }
+  @keyframes bobbleC {
+    0%, 100% { transform: translate(0,0) rotate(0deg); }
+    30% { transform: translate(2px, 3px) rotate(1.5deg); }
+    60% { transform: translate(-3px, 1px) rotate(-1.5deg); }
+  }
 
   .cta {
     margin-top: 1.25rem;
@@ -74,6 +101,10 @@ const name = 'Patrick Gatewood';
   }
   .legacyLinks a { color: var(--pale-gray); opacity: 0.8; text-decoration: none; }
   .legacyLinks a:hover { opacity: 1; text-decoration: underline; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .icons .iconLink { animation: none !important; }
+  }
 </style>
 
 <section class="hero" aria-label="Intro">
@@ -103,8 +134,6 @@ const name = 'Patrick Gatewood';
     </div>
 
     <nav class="legacyLinks" aria-label="Legacy links">
-      <a href="/portfolio.html">Portfolio (legacy)</a>
-      <span>•</span>
       <a href="/resume.html">Résumé</a>
       <span>•</span>
       <a href="/legacy/index.html">Legacy Home</a>
