@@ -11,6 +11,7 @@ platforms:
   - iOS
   - tvOS
 featured: true
+weight: 100
 date: "2021"
 affiliation:
   type: enterprise
@@ -30,9 +31,9 @@ This cross-functional role positioned me as a trusted embedded-resource within F
 
 ## ⚙️ Streamlining Delivery Pipelines
 
-To improve efficiency and reduce manual toil, I automated multiple stages of the **continuous delivery pipeline**, which led to a **25% reduction in release cycle time**. These efforts not only accelerated engineering velocity but also improved reliability and traceability across builds.
+To improve efficiency and reduce manual toil, I automated multiple stages of the continuous delivery pipeline, which led to a **25% reduction in release cycle time**. These efforts not only accelerated engineering velocity but also improved reliability and traceability across builds.
 
-Additionally, I created and open-sourced a custom **Changelog Generator** — a CLI tool designed to resolve merge conflicts and automate changelog generation across teams. This tool saved **dozens of hours each release cycle** and continues to benefit teams beyond its original scope.
+Additionally, I created and open-sourced a custom **Changelog Generator**: a CLI tool designed to resolve merge conflicts and automate changelog generation across teams. This tool **saved hours each release cycle** and continues to benefit teams beyond its original scope.
 
 ## 💡 Driving Innovation & Stakeholder Alignment
 
@@ -42,8 +43,8 @@ I also played a key role in organizing and leading cross-functional **discussion
 
 ## 🌱 Mentorship & Team Growth
 
-Beyond technical work, I invested in the growth and development of fellow engineers by **mentoring newer team members**. I view mentorship as a multiplier — helping others level up ultimately improves team output, culture, and resilience.
+Beyond technical work, I invested in the growth and development of fellow engineers by **mentoring newer team members**. I view mentorship as a multiplier: helping others level up ultimately improves team output, culture, and resilience.
 
 ---
 
-This chapter of my career reflects a blend of deep technical ownership, platform innovation, and collaborative leadership — all in service of delivering premium streaming experiences at scale.
+This chapter of my career reflects a blend of deep technical ownership, platform innovation, and collaborative leadership, all in service of delivering premium streaming experiences at scale.
