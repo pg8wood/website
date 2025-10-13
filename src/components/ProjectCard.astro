@@ -24,6 +24,7 @@ if (isFeatured && typeof project.render === 'function') {
   .badges { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .4rem; }
   .badge { border: 1px solid rgba(255,255,255,.15); padding: .2rem .5rem; border-radius: 999px; font-size: .8rem; opacity: .9; }
   .client { font-size: .8rem; color: var(--lavender); opacity: .95; }
+  .client-inline { display: block; ; color: var(--lavender); opacity: .95; font-size: .8rem; text-align: right; }
   .links { margin-top: .75rem; display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
   .link { color: var(--lavender); text-decoration: none; }
   .appStoreBadge { height: 40px; width: auto; display: block; }
@@ -63,8 +64,10 @@ if (isFeatured && typeof project.render === 'function') {
       </span>
     ) : null}
   </header>
+  {d.affiliation?.type === 'independent' && (d.affiliation.client || d.client) ? (
+    <span class="client-inline">Client: {d.affiliation.client ?? d.client}</span>
+  ) : null}
   <p class="tagline">{d.tagline}</p>
-  {d.affiliation?.type === 'independent' && d.client ? (<span class="client">Client: {d.client}</span>) : null}
   {d.badges?.length ? (
     <div class="badges">{d.badges.map((b: string) => <span class="badge">{b}</span>)}</div>
   ) : null}

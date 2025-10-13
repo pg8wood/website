@@ -13,6 +13,7 @@ const projects = defineCollection({
         type: z.enum(["enterprise", "independent", "personal"]),
         logo: z.string().optional(),
         label: z.string(),
+        client: z.string().optional(),
       })
       .optional(),
     links: z
