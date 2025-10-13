@@ -20,7 +20,7 @@ const d = project.data;
 <article class="card">
   <header class="header">
     {d.iconName ? (
-      <Icon name={d.iconName} width="48" height="48" style="border-radius:10px; " />
+      <span class="icon"><Icon name={d.iconName} width="48" height="48" /></span>
     ) : d.icon ? (
       <img class="icon" src={d.icon} alt={d.title} />
     ) : null}
