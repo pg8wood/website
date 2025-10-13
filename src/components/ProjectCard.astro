@@ -1,0 +1,40 @@
+---
+interface Props { project: any }
+const { project } = Astro.props as Props;
+const d = project.data;
+---
+<style>
+  .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 1rem; background: rgba(255,255,255,0.02); }
+  .header { display: flex; gap: .75rem; align-items: center; }
+  .icon { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; }
+  .title { margin: 0; color: var(--white); font-size: 1.2rem; }
+  .tagline { margin: .25rem 0 .5rem; color: var(--pale-gray); opacity: .9; }
+  .badges { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .badge { border: 1px solid rgba(255,255,255,.15); padding: .2rem .5rem; border-radius: 999px; font-size: .8rem; opacity: .9; }
+  .links { margin-top: .75rem; display: flex; gap: .75rem; }
+  .link { color: var(--lavender); text-decoration: none; }
+</style>
+
+<article class="card">
+  <header class="header">
+    <img class="icon" src={d.icon} alt={d.title} />
+    <div>
+      <h3 class="title">{d.title}</h3>
+      <p class="tagline">{d.tagline}</p>
+    </div>
+  </header>
+  {d.badges?.length ? (
+    <div class="badges">{d.badges.map((b: string) => <span class="badge">{b}</span>)}</div>
+  ) : null}
+  <div class="links">
+    {d.links?.repo && <a class="link" href={d.links.repo}>Source</a>}
+    {d.links?.appStore && <a class="link" href={d.links.appStore}>App Store</a>}
+    {d.links?.playStore && <a class="link" href={d.links.playStore}>Play</a>}
+    {d.links?.live && <a class="link" href={d.links.live}>Live</a>}
+    {d.links?.docs && <a class="link" href={d.links.docs}>Docs</a>}
+  </div>
+  <slot />
+  {project.body ? (<div innerHTML={project.body} />) : null}
+</article>
+
+

@@ -1,0 +1,47 @@
+---
+interface IconItem { title: string; icon: string; slug: string }
+interface Props { icons: Array<{ data: any }>; onLabel?: string }
+const { icons, onLabel = 'Apps' } = Astro.props as Props;
+const items: IconItem[] = icons.map((p) => ({ title: p.data.title, icon: p.data.icon, slug: p.slug }));
+---
+<style>
+  .cloudWrap { position: relative; margin: 3rem auto 1rem; max-width: 960px; padding: 1.25rem; }
+  .titleRow { display: flex; align-items: center; justify-content: center; gap: .5rem; }
+  .title { color: var(--white); font-weight: 700; letter-spacing: .04em; }
+  .cluster {
+    position: relative; margin-top: .75rem; border: 1px dashed rgba(255,255,255,.25);
+    border-radius: 20px; padding: 1.25rem; background: rgba(255,255,255,0.03);
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .cluster:hover { border-color: rgba(255,255,255,.5); background: rgba(255,255,255,0.05); }
+  .chevron { width: 18px; height: 18px; opacity: .8; transform: translateY(2px); }
+
+  .icons { position: relative; min-height: 140px; }
+  .icon { position: absolute; width: 56px; height: 56px; border-radius: 12px; object-fit: cover; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+  .icon:nth-child(1) { left: 8%;  top: 22%; animation: driftA 24s ease-in-out infinite; }
+  .icon:nth-child(2) { left: 24%; top: 8%;  animation: driftB 28s ease-in-out infinite .5s; }
+  .icon:nth-child(3) { left: 42%; top: 26%; animation: driftC 26s ease-in-out infinite 1.1s; }
+  .icon:nth-child(4) { left: 60%; top: 10%; animation: driftB 30s ease-in-out infinite .2s; }
+  .icon:nth-child(5) { left: 76%; top: 24%; animation: driftA 22s ease-in-out infinite .7s; }
+
+  @keyframes driftA { 0%,100%{ transform: translate(0,0) } 50%{ transform: translate(6px,-8px) rotate(2deg) } }
+  @keyframes driftB { 0%,100%{ transform: translate(0,0) } 50%{ transform: translate(-6px,6px) rotate(-2deg) } }
+  @keyframes driftC { 0%,100%{ transform: translate(0,0) } 50%{ transform: translate(4px,-4px) rotate(1deg) } }
+  @media (prefers-reduced-motion: reduce) { .icon { animation: none !important; } }
+
+  .hint { text-align: center; margin-top: .5rem; color: var(--lavender); opacity: .9; font-size: .95rem; display: flex; align-items: center; justify-content: center; gap: .45rem; }
+</style>
+
+<div class="cloudWrap">
+  <div class="titleRow">
+    <h2 class="title">{onLabel}</h2>
+  </div>
+  <div class="cluster">
+    <div class="icons" aria-label="App icons">
+      {items.slice(0, 10).map((it) => <img class="icon" src={it.icon} alt={it.title} title={it.title} />)}
+    </div>
+    <div class="hint">Hover to expand <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 8.3 12 13.6l5.3-5.3 1.4 1.4-6.7 6.7-6.7-6.7z"/></svg></div>
+  </div>
+</div>
+
+

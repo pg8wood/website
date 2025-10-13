@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+import ProjectsCloud from './ProjectsCloud.astro';
+
+const all = await getCollection('projects', ({ data }) => !data.draft);
+const projects = all.sort((a, b) => (b.data.weight ?? 0) - (a.data.weight ?? 0));
+---
+<style>
+  section { margin: 2.5rem auto 4rem; max-width: 1000px; padding: 0 1rem; }
+  details { margin-top: .5rem; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.15); }
+  summary {
+    list-style: none; cursor: pointer; padding: .75rem 1rem; display: flex; align-items: center; gap: .5rem;
+    background: rgba(255,255,255,.03);
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { background: rgba(255,255,255,.05); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 1rem; }
+  .summaryRow { display: flex; align-items: center; gap: .5rem; }
+  .chev { width: 18px; height: 18px; opacity: .85; transition: transform .2s ease; }
+  details[open] .chev { transform: rotate(180deg); }
+</style>
+
+<section id="projects">
+  <ProjectsCloud icons={projects} onLabel="Apps" />
+  <details>
+    <summary>
+      <div class="summaryRow">
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 8.3 12 13.6l5.3-5.3 1.4 1.4-6.7 6.7-6.7-6.7z"/></svg>
+        <span>Show project details</span>
+      </div>
+    </summary>
+    <div class="grid">
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </details>
+</section>
+
+
