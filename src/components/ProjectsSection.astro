@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 import { getCollection } from 'astro:content';
 import ProjectCard from './ProjectCard.astro';
 import ProjectsCloud from './ProjectsCloud.astro';
@@ -30,9 +31,9 @@ const projects = all.sort((a, b) => {
     <p class="realms-body">
       I build software in three realms:
       <br />
-      • <strong>At scale</strong> — systems used by millions (Square, WillowTree) <br />
-      • <strong>Independent</strong> — as founder of Robot Hand LLC (e.g., <em>Constellation Quest</em>) <br />
-      • <strong>Personal</strong> — small, well‑crafted apps and tools that keep me curious
+      <Icon name="mdi:domain" style="width:16px;height:16px;vertical-align:middle;margin-left:.25rem" /> <strong>At scale</strong>: systems used by millions (Square, WillowTree) <br />
+      <img src="public_html/images/company-logos/robot-hand.png" alt="Robot Hand" style="width:16px;height:16px;vertical-align:middle;filter:brightness(0) invert(1);margin-left:.25rem;margin-right:.1rem" /><strong>Independent</strong>: as founder of <strong>Robot Hand, LLC</strong>.<br />
+      <Icon name="mdi:test-tube" style="width:16px;height:16px;vertical-align:middle;margin-left:.25rem" /> <strong>Personal</strong>: small, well‑crafted apps and tools that keep me curious
     </p>
   </section>
   <div class="panel">
