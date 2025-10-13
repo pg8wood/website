@@ -18,18 +18,21 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  min-height: 100dvh; /* fill safe areas on iOS */
   overflow-x: hidden; /* prevent horizontal scroll when clouds overflow */
   color: var(--pale-gray);
-  background: radial-gradient(
-    circle at 30% 20%,
-    var(--bg-deep-2),
-    var(--bg-deep-1),
-    var(--bg-deep-0)
-  );
+  background: var(--bg-deep-0);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prefer small viewport height when supported for stable layout under mobile UI */
+@supports (height: 100svh) {
+  html,
+  body {
+    min-height: 100svh;
+  }
 }
 
 .visually-hidden {

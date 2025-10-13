@@ -11,15 +11,18 @@ const description = "Hi, I'm Patrick. I'm the guy you heard clacking on his keyb
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#5448c8" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <!-- System stack with Inter if present on device; no external font download to keep lean -->
   </head>
-  <body>
+  <body style="background-color:#04070f;">
     <Starfield />
     <Hero />
     <Satellite />
