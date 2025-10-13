@@ -36,11 +36,12 @@ const projects = all.sort((a, b) => {
   .realm {
     display: grid;
     grid-template-columns: 1.4em auto;
-    align-items: start;
+    align-items: center;           /* vertically center icon with text block */
     column-gap: .6rem;
     font-size: 1rem;
   }
-  .realm span { max-width: 650px; }
+  .realm .realm-icon { align-self: center; display: inline-block; }
+  .realm span { max-width: 650px; align-self: center; }
   .realm-icon { width: 1.2em; height: 1.2em; flex-shrink: 0; opacity: .9; filter: drop-shadow(0 0 4px rgba(139,122,241,.4)); }
   .realm-icon--scale { color: #6e7ff2; filter: drop-shadow(0 0 4px rgba(110,127,242,.4)); }
   .realm-icon--independent { color: #8b7af1; filter: drop-shadow(0 0 4px rgba(139,122,241,.5)); }
