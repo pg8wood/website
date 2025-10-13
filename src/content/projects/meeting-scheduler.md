@@ -1,7 +1,7 @@
 ---
 title: Meeting Scheduler
 tagline: A web app to coordinate meeting times across teams.
-icon: /images/favicons/favicon-white.svg
+iconName: mdi:calendar-clock
 links:
   docs: /docs/MeetingSchedulerReport.pdf
   repo: https://github.com/pg8wood/meeting-scheduler

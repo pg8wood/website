@@ -1,8 +1,8 @@
 ---
-interface IconItem { title: string; icon: string; slug: string }
-interface Props { icons: Array<{ data: any }>; onLabel?: string }
+interface IconItem { title: string; icon?: string; iconName?: string; slug: string }
+interface Props { icons: Array<{ data: any; slug: string }>; onLabel?: string }
 const { icons, onLabel = 'Apps' } = Astro.props as Props;
-const items: IconItem[] = icons.map((p) => ({ title: p.data.title, icon: p.data.icon, slug: p.slug }));
+const items: IconItem[] = icons.map((p) => ({ title: p.data.title, icon: p.data.icon, iconName: p.data.iconName, slug: p.slug }));
 ---
 <style>
   .cloudWrap { position: relative; margin: 3rem auto 1rem; max-width: 960px; padding: 1.25rem; }
@@ -18,6 +18,7 @@ const items: IconItem[] = icons.map((p) => ({ title: p.data.title, icon: p.data.
 
   .icons { position: relative; min-height: 140px; }
   .icon { position: absolute; width: 56px; height: 56px; border-radius: 12px; object-fit: cover; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+  .icon img, .icon svg, .icon canvas { width: 56px; height: 56px; border-radius: 12px; }
   .icon:nth-child(1) { left: 8%;  top: 22%; animation: driftA 24s ease-in-out infinite; }
   .icon:nth-child(2) { left: 24%; top: 8%;  animation: driftB 28s ease-in-out infinite .5s; }
   .icon:nth-child(3) { left: 42%; top: 26%; animation: driftC 26s ease-in-out infinite 1.1s; }
@@ -38,7 +39,9 @@ const items: IconItem[] = icons.map((p) => ({ title: p.data.title, icon: p.data.
   </div>
   <div class="cluster">
     <div class="icons" aria-label="App icons">
-      {items.slice(0, 10).map((it) => <img class="icon" src={it.icon} alt={it.title} title={it.title} />)}
+      {items.slice(0, 10).map((it) => (
+        it.icon ? <img class="icon" src={it.icon} alt={it.title} title={it.title} /> : <div class="icon" title={it.title} style="background: rgba(255,255,255,0.08);"></div>
+      ))}
     </div>
     <div class="hint">Hover to expand <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 8.3 12 13.6l5.3-5.3 1.4 1.4-6.7 6.7-6.7-6.7z"/></svg></div>
   </div>

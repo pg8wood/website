@@ -5,7 +5,8 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     tagline: z.string(),
-    icon: z.string(),
+    icon: z.string().optional(),
+    iconName: z.string().optional(),
     links: z
       .object({
         appStore: z.string().optional(),
