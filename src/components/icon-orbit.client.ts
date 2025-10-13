@@ -111,6 +111,17 @@ function setup(root: HTMLElement) {
     sim.alpha(0.9).restart();
   }
 
+  // Pre-simmer: run a number of ticks offscreen so nodes are arranged before reveal
+  {
+    const preTicks = 120; // ~ initial stabilization
+    for (let i = 0; i < preTicks; i++) {
+      swirl();
+      sim.tick();
+    }
+    write();
+    root.classList.add("ready");
+  }
+
   const ro = new ResizeObserver(() => restart());
   ro.observe(root);
   if (!prefersReduced) sim.restart();

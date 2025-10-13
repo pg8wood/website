@@ -19,10 +19,10 @@ const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro
 
 <style>
 .orbit { position: relative; width: 100%; height: clamp(360px, 80vh, 1200px); }
+.orbit { opacity: 0; transition: opacity .6s ease; }
+.orbit.ready { opacity: 1; }
 .orbit .node { position: absolute; left: 0; top: 0; }
 .orbit .inner {
-  transform: translateY(20vh);
-  animation: rise 1.6s ease-out .4s forwards;
   width: var(--size); height: var(--size);
   display: grid; place-items: center;
   border-radius: 18px; padding: 8px;
@@ -31,6 +31,8 @@ const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro
   box-shadow: 0 6px 18px rgba(0,0,0,.35);
   will-change: transform;
 }
+.orbit .inner { transform: translateY(20vh); }
+.orbit.ready .inner { animation: rise 1.6s ease-out .4s forwards; }
 .orbit img { width: 100%; height: 100%; border-radius: 12px; display: block; }
 .orbit .inner svg { width: 100%; height: 100%; border-radius: 12px; display: block; }
 @keyframes rise { from { transform: translateY(20vh); } to { transform: translateY(0); } }
