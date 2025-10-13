@@ -34,8 +34,8 @@ const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro
 }
 .orbit .inner { transform: translateY(20vh); }
 .orbit.ready .inner { animation: rise 1.6s ease-out .4s forwards; }
-.orbit img { width: 100%; height: 100%; border-radius: 12px; display: block; }
-.orbit .inner svg { width: 100%; height: 100%; border-radius: 12px; display: block; }
+  .orbit img { width: 100%; height: 100%; border-radius: 12px; display: block; object-fit: contain; }
+  .orbit .inner svg { width: 100%; height: 100%; border-radius: 12px; display: block; object-fit: contain; }
 @keyframes rise { from { transform: translateY(20vh); } to { transform: translateY(0); } }
 /* Match Hero contact link bobble animations */
 @keyframes bobbleA {

@@ -16,8 +16,8 @@ if (isFeatured && typeof project.render === 'function') {
   @media (min-width: 980px) { .card.featured { grid-column: span 3; } }
   @media (max-width: 900px) { .card.featured { grid-column: span 1; } }
   .header { display: flex; gap: .75rem; align-items: center; }
-  .icon { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; }
-  .icon img, .icon svg, .icon canvas { width: 48px; height: 48px; border-radius: 10px; }
+  .icon { width: 48px; height: 48px; border-radius: 10px; }
+  .icon img, .icon svg, .icon canvas { width: 48px; height: 48px; border-radius: 10px; object-fit: fill; }
   .title { margin: 0; color: var(--white); font-size: 1.2rem; }
   .tagline { margin: .25rem 0 .5rem; color: var(--pale-gray); opacity: .9; }
   .badges { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .4rem; }
