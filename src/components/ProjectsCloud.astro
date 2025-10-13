@@ -5,41 +5,55 @@ interface Props { icons: Array<{ data: any; slug: string }>; onLabel?: string }
 const { icons, onLabel = 'Apps' } = Astro.props as Props;
 const items: IconItem[] = icons.map((p) => ({ title: p.data.title, icon: p.data.icon, iconName: p.data.iconName, slug: p.slug }));
 
-// Compute stable positions for all icons so we don't rely on nth-child rules.
+// Compute stable positions filling a soft elliptical "cloud" with spacing.
 const centerX = 50; // percent
-const centerY = 18; // percent (a band near top of cluster)
+const centerY = 18; // percent (top band)
+const rx = 38; // x-radius in percent (wider for spacing)
+const ry = 20; // y-radius in percent
+const minDist = 9; // minimum distance between icons in percent units
 function fract(n: number) { return n - Math.floor(n); }
-function rand01(i: number) { return fract(Math.sin(i * 12.9898 + 78.233) * 43758.5453); }
+function rand01(seed: number) { return fract(Math.sin(seed * 12.9898 + 78.233) * 43758.5453); }
+function tryPlace(seed: number, placed: Array<{x:number;y:number}>): {x:number;y:number} {
+  // polar sample with radius bias to fill interior, then squash to ellipse
+  for (let t = 0; t < 200; t++) {
+    const a = rand01(seed + t) * Math.PI * 2;
+    const r = Math.sqrt(rand01(seed + t + 0.5)); // bias toward center
+    let x = centerX + Math.cos(a) * rx * r;
+    let y = centerY + Math.sin(a) * ry * r;
+    // clamp softly inside container bounds
+    x = Math.min(94, Math.max(6, x));
+    y = Math.min(40, Math.max(4, y));
+    let ok = true;
+    for (const p of placed) {
+      const dx = x - p.x; const dy = y - p.y;
+      if (Math.hypot(dx, dy) < minDist) { ok = false; break; }
+    }
+    if (ok) return { x, y };
+  }
+  // fallback: place on outer rim
+  const a = rand01(seed) * Math.PI * 2;
+  return { x: centerX + Math.cos(a) * rx, y: centerY + Math.sin(a) * ry };
+}
+const placed: Array<{x:number;y:number}> = [];
 const positions = items.map((_, i) => {
-  const angle = (Math.PI * 2 * i) / Math.max(items.length, 6);
-  const radius = 12 + rand01(i) * 18; // 12%..30%
-  let left = centerX + Math.cos(angle) * radius;
-  let top = centerY + Math.sin(angle) * radius * 0.6; // squashed vertically
-  // small jitter to avoid perfect symmetry
-  left += (rand01(i + 1) - 0.5) * 4;
-  top += (rand01(i + 2) - 0.5) * 3;
-  // clamp
-  left = Math.min(92, Math.max(8, left));
-  top = Math.min(36, Math.max(6, top));
+  const pos = tryPlace(i + 1, placed); placed.push(pos);
   const anim = i % 3 === 0 ? 'driftA' : i % 3 === 1 ? 'driftB' : 'driftC';
   const delay = (i % 7) * 0.25;
-  const dur = 22 + (i % 5) * 3;
-  return { left, top, anim, delay, dur };
+  const dur = 24 + (i % 5) * 4;
+  return { left: pos.x, top: pos.y, anim, delay, dur };
 });
 ---
 <style>
-  .cloudWrap { position: relative; margin: 3rem auto 1rem; max-width: 960px; padding: 1.25rem; }
+  .cloudWrap { position: relative; margin: 3rem auto 1rem; max-width: 1100px; padding: 1.25rem; }
   .titleRow { display: flex; align-items: center; justify-content: center; gap: .5rem; }
   .title { color: var(--white); font-weight: 700; letter-spacing: .04em; }
   .cluster {
-    position: relative; margin-top: .75rem; border: 1px dashed rgba(255,255,255,.25);
-    border-radius: 20px; padding: 1.25rem; background: rgba(255,255,255,0.03);
-    transition: border-color .2s ease, background .2s ease;
+    position: relative; margin-top: .75rem; border: none;
+    border-radius: 20px; padding: 0; background: transparent;
   }
-  .cluster:hover { border-color: rgba(255,255,255,.5); background: rgba(255,255,255,0.05); }
   .chevron { width: 18px; height: 18px; opacity: .8; transform: translateY(2px); }
 
-  .icons { position: relative; min-height: 200px; }
+  .icons { position: relative; min-height: 260px; }
   .icon {
     position: absolute;
     width: 56px; height: 56px;
@@ -79,7 +93,7 @@ const positions = items.map((_, i) => {
         return <span class="icon" style={style} title={it.title}></span>;
       })}
     </div>
-    <div class="hint">Hover to expand <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 8.3 12 13.6l5.3-5.3 1.4 1.4-6.7 6.7-6.7-6.7z"/></svg></div>
+    
   </div>
 </div>
 
