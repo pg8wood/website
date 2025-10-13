@@ -2,7 +2,7 @@
 title: FOX Apps & Video SDK
 tagline: "Unified cross-platform video player SDK and tvOS experiences for FOX Now, Sports, and News."
 client: FOX via WillowTree
-iconName: "mdi:television"
+icon: public_html/images/company-logos/fox-tv.png
 badges:
   - AVFoundation
   - tvOS
@@ -19,4 +19,3 @@ date: "2021"
 Architected FOX's shared video SDK supporting playback across multiple network apps and tvOS.
 
 Served as embedded tvOS tech lead, automated CI/CD pipelines, and reduced release time by 25%. Developed and demoed a **SharePlay proof-of-concept** that secured executive buy-in for program-level integration.
-

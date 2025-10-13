@@ -2,7 +2,7 @@
 title: WillowTree
 tagline: "Engineering award-winning apps for world-class clients across media, health, and enterprise."
 client: WillowTree, LLC
-iconName: "mdi:leaf"
+icon: public_html/images/company-logos/willowtree.svg
 badges:
   - Senior Engineer
   - Client Delivery
@@ -24,4 +24,3 @@ At WillowTree, I partnered with clients including FOX, Pepsi, CFA Institute, Loc
 Served as embedded tech lead for FOX's video SDK and tvOS apps, created a SharePlay prototype demoed to executives, and co-developed **Vocable AAC**, an award-winning ARKit app for hands-free communication.
 
 Contributed as a senior engineer and mentor, scaling pipelines, guiding architecture, and championing developer well-being and sustainability across teams.
-

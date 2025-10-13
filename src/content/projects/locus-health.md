@@ -2,7 +2,7 @@
 title: Locus Health
 tagline: "Improved privacy compliance and secure authentication for healthcare app users."
 client: Locus Health via WillowTree
-iconName: "mdi:shield-lock"
+icon: public_html/images/company-logos/locus-health.png
 badges:
   - Security
   - Privacy
@@ -17,4 +17,3 @@ date: "2019"
 Discovered and resolved a critical encryption gap in health data storage.
 
 Collaborated on architecture and implementation of two-factor authentication using Amazon Cognito to enhance patient security.
-

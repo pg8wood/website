@@ -72,7 +72,7 @@ function setup(root: HTMLElement) {
         prefersReduced ? 0.015 : 0.5
       )
     )
-    .force("collide", forceCollide(COLLIDE).iterations(5))
+    .force("collide", forceCollide(COLLIDE).iterations(2))
     .alpha(1)
     .alphaMin(0.001)
     .stop();
