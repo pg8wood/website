@@ -16,6 +16,8 @@ const projects = all.sort((a, b) => {
   section { margin: 0 auto 4rem; max-width: 1100px; padding: 0 1rem; }
   .panel { margin-top: .5rem; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.15); position: relative; z-index: 3; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 1rem; grid-auto-flow: dense; }
+  .grid > * { min-width: 0; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
 </style>
 
 <section id="projects">
