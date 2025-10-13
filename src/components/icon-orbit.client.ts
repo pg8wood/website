@@ -3,6 +3,8 @@ import {
   forceCenter,
   forceCollide,
   forceRadial,
+  forceX,
+  forceY,
 } from "d3-force";
 
 function setup(root: HTMLElement) {
@@ -59,8 +61,18 @@ function setup(root: HTMLElement) {
   const sim = forceSimulation(simNodes as any)
     .velocityDecay(DECAY)
     .force("center", forceCenter(dims.cx, dims.cy))
-    .force("radial", forceRadial(dims.R, dims.cx, dims.cy).strength(0.06))
-    .force("collide", forceCollide(COLLIDE).iterations(2))
+    // Stronger vertical clamp toward center line, weaker horizontal centering
+    .force("y", forceY(dims.cy).strength(prefersReduced ? 0.06 : 0.36))
+    .force("x", forceX(dims.cx).strength(prefersReduced ? 0.01 : 0.01))
+
+    // Keep a gentle radial pull for cohesion
+    .force(
+      "radial",
+      forceRadial(dims.R, dims.cx, dims.cy).strength(
+        prefersReduced ? 0.015 : 0.5
+      )
+    )
+    .force("collide", forceCollide(COLLIDE).iterations(5))
     .alpha(1)
     .alphaMin(0.001)
     .stop();
@@ -101,12 +113,20 @@ function setup(root: HTMLElement) {
     if (fC && typeof fC.x === "function") {
       fC.x(dims.cx).y(dims.cy);
     }
+    const fY = sim.force("y") as any;
+    if (fY && typeof fY.y === "function") {
+      fY.y(dims.cy).strength(prefersReduced ? 0.06 : 0.16);
+    }
+    const fX = sim.force("x") as any;
+    if (fX && typeof fX.x === "function") {
+      fX.x(dims.cx).strength(prefersReduced ? 0.01 : 0.03);
+    }
     const fR = sim.force("radial") as any;
     if (fR && typeof fR.radius === "function") {
       fR.radius(dims.R)
         .x(dims.cx)
         .y(dims.cy)
-        .strength(prefersReduced ? 0.03 : 0.06);
+        .strength(prefersReduced ? 0.015 : 0.02);
     }
     sim.alpha(0.9).restart();
   }
