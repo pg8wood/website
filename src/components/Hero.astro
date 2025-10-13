@@ -6,9 +6,10 @@ const name = 'Patrick Gatewood';
     position: relative;
     display: grid;
     place-items: center;
-    min-height: 80vh;
+    height: 50vh;
     text-align: center;
-    padding: 6rem 1.25rem 4rem;
+    margin-top: 20vh;
+    padding: 0rem 1.25rem 0rem;
     z-index: 1; /* ensure hero sits above starfield */
   }
   .container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
@@ -19,6 +20,20 @@ const name = 'Patrick Gatewood';
     font-size: clamp(2.75rem, 6vw, 5rem);
     line-height: 1.1;
     margin: 0 0 0.5rem 0;
+  }
+  .subline {
+    color: rgba(230,237,243,0.7); /* pale-gray at ~70% */
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    font-style: italic; /* whisper */
+    margin: .15rem 0 .1rem;
+  }
+  .terminalline {
+    color: rgba(139, 233, 164, 0.7); /* subtle terminal green */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin: .1rem 0 0;
   }
   .whoami {
     list-style: none;
@@ -110,11 +125,8 @@ const name = 'Patrick Gatewood';
 <section class="hero" aria-label="Intro">
   <div class="container">
     <h1 class="title">{name}</h1>
-    <ul class="whoami" aria-label="About me">
-      <li>📲 Software Engineer</li>
-      <li>💡 Creator</li>
-      <li>🥳 Technology Enthusiast</li>
-      <li>👨‍💻 Probably clacking on his keyboard at 2 AM</li>
+    <p>iOS Engineer · Creator · Technology Enthusiast</p>
+    <p class="terminalline">clacking on his keyboard at 2 am</p>
     </ul>
 
     <div class="icons" aria-label="Contact links">
@@ -132,14 +144,6 @@ const name = 'Patrick Gatewood';
     <div class="cta">
       <a class="button" href="mailto:patrick@patrickgatewood.com?subject=Resume%20Request%20from%20PatrickGatewood.com">Request Résumé</a>
     </div>
-
-    <nav class="legacyLinks" aria-label="Legacy links">
-      <a href="/resume.html">Résumé</a>
-      <span>•</span>
-      <a href="/legacy/index.html">Legacy Home</a>
-      <span>•</span>
-      <a href="https://blog.patrickgatewood.com">Blog (legacy)</a>
-    </nav>
   </div>
 </section>
 
