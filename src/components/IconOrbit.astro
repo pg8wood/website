@@ -32,10 +32,15 @@ const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro
   will-change: transform;
 }
 .orbit .inner { transform: translateY(20vh); }
-.orbit.ready .inner { animation: rise 1.6s ease-out .4s forwards; }
+.orbit.ready .inner { animation: rise 1.6s ease-out .4s forwards, driftC 24s ease-in-out .4s infinite; }
 .orbit img { width: 100%; height: 100%; border-radius: 12px; display: block; }
 .orbit .inner svg { width: 100%; height: 100%; border-radius: 12px; display: block; }
 @keyframes rise { from { transform: translateY(20vh); } to { transform: translateY(0); } }
+@keyframes driftC {
+  0%, 100% { transform: translate(0,0); }
+  30% { transform: translate(4px, -6px) rotate(1.5deg); }
+  60% { transform: translate(-6px, 3px) rotate(-1.5deg); }
+}
 @media (prefers-reduced-motion: reduce) {
   .orbit .inner { animation: none; transform: none; }
 }
