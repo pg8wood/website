@@ -7,6 +7,7 @@ const projects = defineCollection({
     tagline: z.string(),
     icon: z.string().optional(),
     iconName: z.string().optional(),
+    client: z.string().optional(),
     links: z
       .object({
         appStore: z.string().optional(),
