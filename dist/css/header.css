@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral:Semi-Bold,Regular,Light,Extra-Light');
+
+/* Navigation bar styles for mobile and desktop */
+
+:root {
+    --patrick-purple: rgb(84, 72, 200);
+    --expanded-navbar-gray: #171123;
+}
+
+#header-navbar {
+    z-index: 10000;
+}
+
+#toggle-navbar-button {
+    display: none;
+}
+
+.animated {
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+}
+
+.navbar {
+    background: rgb(84, 72, 200) no-repeat fixed center;
+    height: 50px;
+    left: 0;
+    line-height: 50px;
+    margin: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#header-navbar.expanded {
+    border-bottom: 2px solid var(--patrick-purple);
+}
+
+#header-navbar.expanded a:not(:first-child):not(:last-child) {
+    border-left: 2px solid var(--patrick-purple);
+    border-right: 2px solid var(--patrick-purple);
+}
+#header-navbar.expanded a:last-child {
+    border-bottom: 2px solid var(--patrick-purple);
+}
+
+.navbar a {
+    color: white;
+    display: block;
+    float: left;
+    font-family: 'Spectral', serif;
+    font-size: 20px;
+    font-weight: 300;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #171123;
+    color: white !important;
+}
+
+.navbar a.icon {
+    display: none;
+}
+
+/* Prevent white text on white background
+ * image in smaller browser windows */
+@media only screen and (max-width: 850px) {
+    .navbar {
+        background: rgb(84, 72, 200);
+    }
+}
+
+/* Collapse navbar on mobile and tiny browser windows */
+@media only screen and (max-width: 400px) {
+    #toggle-navbar-button {
+        display: block;
+        float: right;
+    }
+
+    .collapsed {
+        height: 50px;
+    }
+
+    .expanded {
+        height: 250px;
+    }
+
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .navbar a {
+        color: white !important;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .navbar a:hover {
+        background-color: transparent;
+    }
+
+    .navbar.expanded a.icon {
+        background-color: var(--expanded-navbar-gray);
+    }
+
+    .navbar.responsive {
+        border: none;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        border-color: transparent;
+        color: white !important;
+        display: block;
+        float: none;
+        text-align: left;
+    }
+
+    .navbar.responsive a:not(:first-child):not(:last-child) {
+        background-color: var(--expanded-navbar-gray);
+    }
+}

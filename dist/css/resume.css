@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral:Semi-Bold,Regular,Light,Extra-Light');
+
+#contact-info {
+    margin-bottom: 15px;
+}
+
+#resume-header {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#resume-wrapper {
+    background: rgb(221, 213, 208);
+    border-radius: 20px;
+    font-family: 'Spectral', serif;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+#resume-wrapper h2, h3, h4, ul, p {
+    margin: 0px;
+}
+
+#resume-wrapper h2 {
+    margin-bottom: -8px;
+}
+
+#resume-wrapper h2 * {
+    line-height: 200%;
+}
+
+#resume-container h3 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between
+}
+
+#resume-wrapper h4 {
+    font-weight: 500;
+    font-family: 'Spectral:Extra-light', serif;
+}
+
+#resume-wrapper .contactLinks li {
+    display: inline-block;
+    font-weight: normal;
+}
+
+#skills-extra {
+    font-size: 16px; 
+    font-weight: normal;
+}
+
+.activity-date {
+    float: right;
+    font-weight: normal;
+}
+
+.centered {
+    text-align: center;
+}
+
+.list-start {
+    margin-right: 1em;
+}
+
+.module-wrapper {
+    margin: 10px 10px 0px 10px;
+}
+
+.module-wrapper li {
+    font-weight: 100;
+    vertical-align: 50%;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+
+/* Resume styles for mobile and small browser windows */
+@media screen and (max-width: 500px) {
+
+    #activities-list {
+        list-style-type: none;
+    }
+
+    #resume-container * {
+        clear: both;
+    }
+
+    #resume-container h2 {
+        font-size: 6vw;
+    }
+
+    #resume-container h3 {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 5vw;
+        line-height: 1.5em;
+    } 
+
+    #resume-container li span {
+        display: block;
+        float: left;
+    }
+
+    #resume-container li span.activity-date {
+        font-size: 3vw;
+    }
+
+    #resume-container span.activity-date {
+        font-size: 4vw;
+    }
+
+    #resume-header {
+        font-size: 10vw;
+    }
+
+    #resume-wrapper {
+        padding-bottom: 45px;
+    }
+
+    #skills-extra {
+        margin-bottom: -1vh;
+        margin-top: -2vh;
+    } 
+}

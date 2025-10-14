@@ -1,0 +1,10 @@
+https://patrickgatewood.com {
+  root * ./dist
+  try_files {path} {path}/ /index.html
+  file_server
+}
+
+https://blog.patrickgatewood.com {
+  file_server
+    root "./blog/public/"
+}

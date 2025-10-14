@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview --host"
+    "preview": "astro preview --host",
+    "postbuild": "cd dist && ln -sfn ../public_html public_html && ln -sfn ../images images && ln -sfn ../videos videos"
   },
   "dependencies": {
     "astro": "^4.10.0"

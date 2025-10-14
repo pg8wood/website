@@ -1,0 +1,121 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Rich Link Preview metadata -->
+
+<!-- Title tags -->
+{{ if in .Site.BaseURL "localhost" }}
+  <title itemprop="name"> 🚧 DEBUG - {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }} 🚧</title>
+{{ else }}
+  <title itemprop="name">{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
+{{ end }}
+<meta name="title" property=”og:title” content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
+<meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
+<meta itemprop="name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
+<meta name="application-name" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
+<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+
+<!--Safari 15 status bar colors-->
+<meta name="theme-color" content="#5448c8">
+
+<!-- Description tags -->
+<!-- Thanks to https://www.skcript.com/svr/perfect-seo-meta-tags-with-hugo/ for teaching me about these -->
+<meta name="description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}"/>
+<meta name="og:description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}"/>
+<meta property="og:description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}" />
+<meta name="twitter:description" content="{{ .Description }}{{ if not .Description }}{{ .Site.Params.meta.Description  }}{{ end }}" />
+
+<!-- Link tags -->
+<base href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+<meta name="url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta property="og:url" content="{{ .Permalink }}"/>
+
+<!-- Language tags -->
+<meta property="og:locale" content="{{ .Language.Lang }}">
+<meta name="language" content="English">
+
+<!-- Image tags -->
+{{ if .Params.images }}
+  {{ range first 1 .Params.images }}
+    {{ $src := .src | absURL }}
+    <meta name="image" property="og:image" content="{{ $src }}"/>
+    <meta itemprop="image" content="{{ $src }}" />
+    <meta name="twitter:image" content="{{ $src }}" />
+    <meta name="twitter:image:src" content="{{ $src }}" />
+  {{ end }}
+{{ else }}
+  <meta property="og:image" content="images/2020/favicon.png"/>
+  <meta itemprop="image" content="images/2020/favicon.png" />
+  <meta name="twitter:image" content="images/2020/favicon.png" />
+  <meta name="twitter:image:src" content="images/2020/favicon.png" />
+{{ end }}
+
+<!-- Date tags -->
+<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+
+<!-- Search engine crawler tags -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+<!-- Google Search Console verification -->
+<meta name="google-site-verification" content="8X_R6WHgPIRH6WkMm6bCaUd0aL3b_llkgj5LV85xLkc" />
+
+<!-- Article-only meta tags -->
+{{ if eq .Section "blog" }}
+  <!-- Pagination meta tags for list pages only -->
+  {{ $paginator := .Paginate (where .Pages "Section" "blog") }}
+  {{ if $paginator }}
+    <link rel="first" href="{{ $paginator.First.URL }}">
+    <link rel="last" href="{{ $paginator.Last.URL }}">
+    {{ if $paginator.HasPrev }}
+      <link rel="prev" href="{{ $paginator.Prev.URL }}">
+    {{end }}
+    {{ if $paginator.HasNext }}
+      <link rel="next" href="{{ $paginator.Next.URL }}">
+    {{end }}
+  {{end }}
+
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+  <meta property="article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+
+  {{ with.Params.author }}
+    <meta property="og:article:author" content="{{humanize . }}" />
+    <meta property="article:author" content="{{humanize . }}" />
+    <meta name="author" content="{{humanize . }}" />
+  {{ end }}
+
+  {{ with.Params.categories }}
+    <meta name="news_keywords" content="{{ delimit $.Params.categories ", " }}" />
+    <meta property="article:section" content="{{ delimit $.Params.categories ", " }}" />
+  {{ end }}
+
+  {{ with.Params.tags }}
+    <meta property="article:tag" content="{{ delimit $.Params.tags ", " }}"/>
+  {{ end }}
+{{ end }}
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
+
+{{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+
+<!-- End Rich Link Preview metadata -->
+
+{{ if .Site.Params.meta.favicon }}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "favicon/apple-touch-icon.png" | relURL}}{{ with .Site.Params.meta.faviconVersion }}?v={{ . }}{{ end }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon/favicon-32x32.png" | relURL}}{{ with .Site.Params.meta.faviconVersion }}?v={{ . }}{{ end }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon/favicon-16x16.png" | relURL}}{{ with .Site.Params.meta.faviconVersion }}?v={{ . }}{{ end }}">
+  <link rel="manifest" href="{{ "favicon/site.webmanifest" | relURL}}{{ with .Site.Params.meta.faviconVersion }}?v={{ . }}{{ end }}">
+  {{ if .Site.Params.meta.svg }}
+    <link rel="mask-icon" href="{{ "favicon/safari-pinned-tab.svg" | relURL}}{{ with .Site.Params.meta.faviconVersion }}?v={{ . }}{{ end }}" color="{{ .Site.Params.meta.msColor }}">
+    <link rel="shortcut icon" href="{{ "favicon/favicon.ico" | relURL}}{{ with .Site.Params.meta.faviconVersion }}?v={{ . }}{{ end }}">
+    <meta name="msapplication-config" content="{{ "favicon/browserconfig.xml" | relURL}}{{ with .Site.Params.meta.faviconVersion }}?v={{ . }}{{ end }}">
+  {{ end }}
+  <meta name="msapplication-TileColor" content="{{ .Site.Params.meta.msColor }}">
+  <meta name="theme-color" content="{{ .Site.Params.meta.iOSColor }}">
+{{ end }}

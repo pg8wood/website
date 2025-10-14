@@ -1,0 +1,157 @@
+# For a description of these parameters, please visit the theme wiki.
+# https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
+baseurl                 = "https://blog.patrickgatewood.com/"
+DefaultContentLanguage  = "en"
+title                   = "Patrick Gatewood's Blog"
+theme                   = "hugo-future-imperfect-slim"
+paginate                = 3
+disqusShortname         = ""
+googleAnalytics         = "UA-179400076-1"
+pluralizeListTitles     = true
+disableLanguages        = []
+
+[markup.goldmark.renderer]
+  unsafe                = true
+
+[outputs]
+  home                  = ["html", "json", "rss"]
+
+[params]
+  author                = "Patrick Gatewood"
+  sitename              = "Patrick Gatewood | Software Engineer. Creator. Technology Enthusiast."
+  enableCDN             = false
+  cssFiles              = ["default"]
+  jsFiles               = ["default"]
+  highlightjs           = true
+  highlightjsTheme      = "vs-2015"
+  highlightjsLang       = []
+  viewMorePostsLink     = "/blog/"
+  readingTime           = true
+  imageStretch          = ""
+  removeBlur            = false
+  socialShare           = ["twitter", "facebook", "reddit", "linkedin", "pinterest", "email"]
+  hideEmptyStats        = true
+
+  [params.meta]
+    description         = "Stuff I found interesting."
+    author              = "Patrick Gatewood"
+    favicon             = false
+    svg                 = true
+    faviconVersion      = "1"
+    msColor             = "#ffffff"
+    iOSColor            = "#ffffff"
+
+  [params.header]
+    navbarTitle         = "<i class='fa fa-book-open'></i> Patrick's Blog"
+    dynamicTitles       = false
+    searchMenu          = true
+    shareMenu           = true
+    languageMenu        = false
+
+  [params.intro]
+    header                = "My Ideas"
+    paragraph             = "Stuff I found interesting"
+    rssIntro              = true
+    socialIntro           = true
+    hideWhenSingleColumn  = false
+    alwaysOnHomepage      = false
+
+    [params.intro.pic]
+      src                 = "images/2020/portrait.jpg"
+      shape               = "circle"
+      width               = ""
+      alt                 = "Picture of Patrick"
+
+  [params.sidebar]
+    # about               = "Sometimes I actually write my thoughts down"
+    postAmount          = 5
+    categories          = true
+    categoriesByCount   = true
+
+  [params.footer]
+    rssFooter           = true
+    socialFooter        = true
+
+  [params.staticman]
+    enabled             = true
+    api                 = ""  # No Trailing Slash
+    gitProvider         = "github"
+    username            = "pg8wood"
+    repo                = "website"
+    branch              = "master"
+
+    [params.staticman.recaptcha]
+      siteKey           = ""
+      encryptedKey      = ""
+
+[menu]
+
+  [[menu.main]]
+    name              = "Patrick Gatewood Home"
+    identifier        = "home"
+    url               = "https://patrickgatewood.com"
+    pre               = "<i class='fa fa-home'></i>"
+    weight            = 1
+
+  [[menu.main]]
+    name              = "Categories"
+    identifier        = "categories"
+    url               = "categories/"
+    pre               = "<i class='fas fa-sitemap'></i>"
+    weight            = 2
+
+  [[menu.main]]
+    name              = "Portfolio"
+    identifier        = "portfolio"
+    url               = "https://patrickgatewood.com/index.html#portfolio-container"
+    pre               = "<i class='fab fa-app-store'></i>"
+    weight            = 3
+
+[social]
+  # Coding Communities
+  github                = "pg8wood"
+  gitlab                = ""
+  stackoverflow         = "" # User Number
+  bitbucket             = ""
+  jsfiddle              = ""
+  codepen               = ""
+  # Visual Art Communities
+  deviantart            = ""
+  flickr                = ""
+  behance               = ""
+  dribbble              = ""
+  # Publishing Communities
+  wordpress             = ""
+  medium                = ""
+  # Professional/Business Oriented Communities
+  linkedin              = "patrickgatewood"
+  linkedin_company      = "willowtreeapps"
+  foursquare            = ""
+  xing                  = ""
+  slideshare            = ""
+  # Social Networks
+  facebook              = "senorpatrick"
+  reddit                = ""
+  quora                 = ""
+  youtube               = ""
+  vimeo                 = ""
+  whatsapp              = "" # WhatsApp Number
+    # WeChat and QQ need testing.
+    wechat              = ""
+    qq                  = "" # User ID Number
+  instagram             = "senorpatrick"
+  tumblr                = ""
+  twitter               = ""
+  strava                = ""
+  skype                 = ""
+  snapchat              = ""
+  pinterest             = ""
+  telegram              = ""
+  vine                  = ""
+  googlescholar         = ""
+  orcid                 = ""
+  researchgate          = ""
+  keybase               = ""
+  mastodon              = ""
+  # Email
+  email                 = "pg8wood[AT_SIGN_HERE]vt.edu"
