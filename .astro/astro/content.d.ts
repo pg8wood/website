@@ -146,175 +146,182 @@ declare module 'astro:content' {
   slug: "arkit-research";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "cfa-institute.md": {
 	id: "cfa-institute.md";
   slug: "cfa-institute";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "changelog-generator.md": {
 	id: "changelog-generator.md";
   slug: "changelog-generator";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "charles-janitor.md": {
 	id: "charles-janitor.md";
   slug: "charles-janitor";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "constellation-quest.md": {
 	id: "constellation-quest.md";
   slug: "constellation-quest";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "dashboard.md": {
 	id: "dashboard.md";
   slug: "dashboard";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "discord-voice-assistant-bot.md": {
 	id: "discord-voice-assistant-bot.md";
   slug: "discord-voice-assistant-bot";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "emochi.md": {
 	id: "emochi.md";
   slug: "emochi";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "fox-apps-video-sdk.md": {
 	id: "fox-apps-video-sdk.md";
   slug: "fox-apps-video-sdk";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "fox-white-label-apps.md": {
 	id: "fox-white-label-apps.md";
   slug: "fox-white-label-apps";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "health-wellness-client.md": {
 	id: "health-wellness-client.md";
   slug: "health-wellness-client";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "kim-jong-chew.md": {
 	id: "kim-jong-chew.md";
   slug: "kim-jong-chew";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "locus-health.md": {
 	id: "locus-health.md";
   slug: "locus-health";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "meeting-scheduler.md": {
 	id: "meeting-scheduler.md";
   slug: "meeting-scheduler";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "osrs-touch-bar.md": {
 	id: "osrs-touch-bar.md";
   slug: "osrs-touch-bar";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "pepsi-snackbot.md": {
 	id: "pepsi-snackbot.md";
   slug: "pepsi-snackbot";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "predicate-builder.md": {
 	id: "predicate-builder.md";
   slug: "predicate-builder";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "recipe-nabber.md": {
 	id: "recipe-nabber.md";
   slug: "recipe-nabber";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "robot-hand.md": {
 	id: "robot-hand.md";
   slug: "robot-hand";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "square.md": {
 	id: "square.md";
   slug: "square";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
+} & { render(): Render[".md"] };
+"taipo.md": {
+	id: "taipo.md";
+  slug: "taipo";
+  body: string;
+  collection: "projects";
+  data: any
 } & { render(): Render[".md"] };
 "tv-playlists.md": {
 	id: "tv-playlists.md";
   slug: "tv-playlists";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "vocable-aac.md": {
 	id: "vocable-aac.md";
   slug: "vocable-aac";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "weather-app.md": {
 	id: "weather-app.md";
   slug: "weather-app";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "website.md": {
 	id: "website.md";
   slug: "website";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "willowtree.md": {
 	id: "willowtree.md";
   slug: "willowtree";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -326,5 +333,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = never;
 }
