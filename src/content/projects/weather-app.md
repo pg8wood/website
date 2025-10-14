@@ -6,7 +6,7 @@ links:
   repo: https://github.com/pg8wood/weather-app
 badges: [Java, XML, Butter Knife, Dagger 2, Retrofit, Gson, Gradle]
 platforms: [Android, Dark Sky API]
-weight: 18
+weight: 2
 affiliation:
   type: personal
   logo: /public_html/images/favicons/favicon-white.svg

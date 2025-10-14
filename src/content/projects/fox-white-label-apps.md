@@ -9,7 +9,7 @@ badges:
 platforms:
   - iOS
 featured: false
-weight: 5
+weight: 25
 date: "2020"
 affiliation:
   type: enterprise

@@ -6,7 +6,7 @@ links:
   trailer: https://www.youtube.com/watch?v=CqUJdim2-po
 badges: [Android, Java, Sofia Framework, XML]
 platforms: [Android]
-weight: 20
+weight: 6
 affiliation:
   type: personal
   logo: /public_html/images/favicons/favicon-white.svg

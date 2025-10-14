@@ -11,7 +11,7 @@ platforms:
   - iOS
   - tvOS
 featured: true
-weight: 100
+weight: 6
 date: "2021"
 affiliation:
   type: enterprise
