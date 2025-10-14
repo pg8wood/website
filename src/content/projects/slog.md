@@ -21,7 +21,7 @@ date: "2025-10-14"
 draft: false
 ---
 
-A tiny CLI that launches your iOS Simulator app and taps through the login screen so you don’t have to—putting you one command away from being logged in.
+A tiny CLI that launches your iOS Simulator app and taps through the login screen so you don’t have to. You're one command away from being logged in.
 
 ---
 

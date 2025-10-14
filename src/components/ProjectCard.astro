@@ -27,6 +27,8 @@ if (typeof project.render === 'function') {
   .client-inline { display: block; ; color: var(--lavender); opacity: .95; font-size: .8rem; text-align: right; }
   .links { margin-top: .75rem; display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
   .link { color: var(--lavender); text-decoration: none; }
+  .link.repo, .link.docs, .link.trailer { display: inline-flex; align-items: center; gap: .35rem; }
+  .link.repo code, .link.docs code, .link.trailer code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: .9em; color: inherit; background: transparent; padding: 0; }
   .appStoreBadge { height: 40px; width: auto; display: block; }
   .body { margin-top: .75rem; color: var(--pale-gray); line-height: 1.55; }
   .body a { color: var(--lavender); }
@@ -96,15 +98,30 @@ if (typeof project.render === 'function') {
     <div class="badges">{d.badges.map((b: string) => <span class="badge">{b}</span>)}</div>
   ) : null}
   <div class="links">
-    {d.links?.repo && <a class="link" href={d.links.repo}>Source</a>}
+    {d.links?.repo && (
+      <a class="link repo" href={d.links.repo} aria-label="Source code on GitHub">
+        <Icon name="mdi:github" width="18" height="18" />
+        <code>source code</code>
+      </a>
+    )}
     {d.links?.appStore && (
       <a href={d.links.appStore} target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
         <img class="appStoreBadge" src="public_html/images/download-on-the-app-store-black.svg" alt="Download on the App Store" />
       </a>
     )}
     {d.links?.live && <a class="link" href={d.links.live}>Live</a>}
-    {d.links?.docs && <a class="link" href={d.links.docs}>Docs</a>}
-    {d.links?.trailer && <a class="link" href={d.links.trailer}>Trailer</a>}
+    {d.links?.docs && (
+      <a class="link docs" href={d.links.docs} aria-label="Documentation">
+        <Icon name="mdi:file-document-outline" width="18" height="18" />
+        <code>docs</code>
+      </a>
+    )}
+    {d.links?.trailer && (
+      <a class="link trailer" href={d.links.trailer} aria-label="Trailer">
+        <Icon name="mdi:movie-open-outline" width="18" height="18" />
+        <code>trailer</code>
+      </a>
+    )}
   </div>
   
 </article>
