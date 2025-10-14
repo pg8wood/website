@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import orbitScriptUrl from './icon-orbit.client.ts?url'
 interface IconItem { title: string; icon?: string; iconName?: string; slug?: string }
 interface Props { icons: Array<IconItem>; iconPx?: number; gap?: number; radiusScale?: number; spin?: number }
 const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro.props as Props;
@@ -66,6 +67,6 @@ const { icons, iconPx = 96, gap = 18, radiusScale = 0.46, spin = 0.006 } = Astro
 }
 </style>
 
-<script type="module" src="/src/components/icon-orbit.client.ts"></script>
+<script type="module" src={orbitScriptUrl}></script>
 
 
