@@ -10,7 +10,7 @@
     "postbuild": "cd dist && ln -sfn ../public_html public_html && ln -sfn ../images images && ln -sfn ../videos videos"
   },
   "dependencies": {
-    "astro": "^4.10.0"
+    "astro": "^5.14.3"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
