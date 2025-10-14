@@ -23,27 +23,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Ensure legacy index backup exists (one-time)
+      - name: Deploy dist to server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script_stop: true
+          script_stop: true # stop the script immediately if any commands fail
           script: |
-            set -e
-            mkdir -p ${{ secrets.SERVER_PATH }}/legacy
-            if [ ! -f ${{ secrets.SERVER_PATH }}/legacy/index.html ] && [ -f ${{ secrets.SERVER_PATH }}/index.html ]; then
-              cp ${{ secrets.SERVER_PATH }}/index.html ${{ secrets.SERVER_PATH }}/legacy/index.html
-            fi
-
-      - name: Deploy dist to server
-        uses: easingthemes/ssh-deploy@v5.1.0
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          REMOTE_PORT: ${{ secrets.PORT }}
-          SOURCE: "dist/"
-          TARGET: ${{ secrets.SERVER_PATH }}
+            cd ${{ secrets.SITE_DIR }}/
+            git pull
+            ${{ secrets.SERVE_SCRIPT }}
