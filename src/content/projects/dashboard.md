@@ -6,7 +6,7 @@ links:
   repo: https://github.com/pg8wood/dashboard
 badges: [Open Source, Swift 4, UIKit, CoreData]
 platforms: [iOS]
-weight: 25
+weight: 5
 affiliation:
   type: personal
   logo: /public_html/images/favicons/favicon-white.svg
