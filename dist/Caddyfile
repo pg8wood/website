@@ -1,6 +1,4 @@
 https://patrickgatewood.com {
-  root * ./dist
-  try_files {path} {path}/ /index.html
   file_server
 }
 
