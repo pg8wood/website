@@ -4,9 +4,19 @@ tagline: A Discord bot that also chats with Google Assistant and manages music, 
 iconName: skill-icons:discord
 links:
   repo: https://github.com/pg8wood/discord-voice-assistant-bot
-badges: [Google Assistant, Dialogflow, Discord, Sanic, G Suite, Python 3]
+badges:
+  [
+    Open Source,
+    Google Assistant,
+    Dialogflow,
+    Discord API,
+    Sanic,
+    Flask,
+    G Suite,
+    Python 3,
+  ]
 platforms: [web]
-weight: 35
+weight: 15
 affiliation:
   type: personal
   logo: /public_html/images/favicons/favicon-white.svg

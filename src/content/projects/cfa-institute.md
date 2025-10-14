@@ -1,6 +1,6 @@
 ---
 title: CFA Institute
-tagline: "Modernized member experience with search and renewal systems across mobile platforms."
+tagline: "Modernized CFA member experience with search and membership renewal systems across mobile platforms."
 icon: public_html/images/company-logos/cfa.png
 badges:
   - Leadership
@@ -10,7 +10,7 @@ platforms:
   - iOS
   - Android
 featured: false
-weight: 4
+weight: 10
 date: "2019"
 affiliation:
   type: enterprise

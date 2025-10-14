@@ -5,9 +5,9 @@ iconName: mdi:calendar-clock
 links:
   docs: /docs/MeetingSchedulerReport.pdf
   repo: https://github.com/pg8wood/meeting-scheduler
-badges: [Java EE, JSF, XHTML, MySQL, PrimeFaces, Materialize CSS]
+badges: [Open Source, Java EE, JSF, XHTML, MySQL, PrimeFaces, Materialize CSS]
 platforms: [web]
-weight: 30
+weight: 0
 affiliation:
   type: personal
   logo: /public_html/images/favicons/favicon-white.svg

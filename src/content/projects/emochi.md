@@ -8,7 +8,8 @@ media:
   video: /videos/emochi-demo.mp4
 badges: [Swift 5.7, StoreKit 2, SwiftUI, AppKit]
 platforms: [macOS]
-featured: true
+featured: false
+weight: 400
 affiliation:
   type: independent
   logo: public_html/images/company-logos/robot-hand.png

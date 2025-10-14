@@ -23,6 +23,7 @@ const projects = defineCollection({
         repo: z.string().optional(),
         live: z.string().optional(),
         docs: z.string().optional(),
+        trailer: z.string().optional(),
       })
       .partial()
       .default({}),

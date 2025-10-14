@@ -7,7 +7,7 @@ links:
   repo: https://github.com/pg8wood/ARKit-Research
 badges: [Swift 4, UIKit, ARKit, SpriteKit, SceneKit]
 platforms: [iOS]
-weight: 50
+weight: 20
 affiliation:
   type: personal
   logo: /public_html/images/favicons/favicon-white.svg
