@@ -2,7 +2,7 @@
 const {
   title = 'Patrick Gatewood | Software Engineer. Creator. Technology Enthusiast.',
   description = "Hi, I'm Patrick. I'm the guy you heard clacking on his keyboard at 2 AM.",
-  image = 'public_html/images/sitescreenshot.jpg'
+  image = 'public_html/images/site-screenshot.jpg'
 } = Astro.props as {
   title?: string;
   description?: string;
@@ -48,6 +48,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+   <!--Umami analytics-->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="f3e4fcd8-d992-4ec8-9ec6-4e5d5c83c105"></script>
   </head>
   <body style="background-color:#04070f;">
     <slot />
