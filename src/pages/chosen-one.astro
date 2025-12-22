@@ -1,0 +1,238 @@
+---
+import '../styles/theme.css';
+import Base from '../layouts/Base.astro';
+import SimpleNav from '../components/SimpleNav.astro';
+
+const title = 'Chosen One | Patrick Gatewood';
+const description = 'A free random finger chooser for game night. Tap, hold, done.';
+const ogImage = '/images/chosen-one-icon.png';
+---
+
+<Base title={title} description={description} image={ogImage}>
+  <SimpleNav />
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .app-icon-container {
+      margin: 20px auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      margin-top: 75px;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    #page-container {
+      text-align: left;
+      max-width: 500px;
+      margin: auto;
+      padding: 0 20px;
+      padding-bottom: 50px;
+    }
+    
+    #contact-link {
+      border-radius: 15px;
+      font-size: 25px;
+      padding: 10px;
+      text-decoration: none;
+      margin-top: 100px;
+      margin-bottom: 50px;
+      color: var(--pale-gray);
+      display: inline-block;
+    }
+
+    #contact-link:hover {
+      opacity: 0.8;
+    }
+
+    #privacy-policy {
+      margin-top: 50px;
+    }
+
+    h1 {
+      color: var(--pale-gray);
+    }
+
+    p {
+      color: var(--pale-gray);
+      line-height: 1.6;
+    }
+
+    ul {
+      color: var(--pale-gray);
+      line-height: 1.8;
+    }
+
+    .preview-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 40px auto;
+      display: block;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .preview-image:hover {
+      opacity: 0.9;
+    }
+
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(4, 7, 15, 0.95);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      overflow: auto;
+      padding: 0;
+    }
+
+    .image-modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .image-modal-content {
+      max-width: 95vw;
+      max-height: 95vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      cursor: default;
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: var(--pale-gray);
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      line-height: 1;
+      transition: opacity 0.2s;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .image-modal-close:hover {
+      opacity: 0.7;
+    }
+  </style>
+
+  <div id="page-container">
+    <div id="intro">
+      <img 
+        class="app-icon-container" 
+        src="/images/chosen-one-icon.png" 
+        alt="Chosen One app icon" 
+      />
+      <h1 align="center" id="name-header">Chosen One!</h1>
+      <p>A free random finger chooser for game night.</p>
+      <p>Tap, hold, done. Chosen One makes it easy to pick who goes first, choose a volunteer, or break any tie, from 2 to 200 players.</p>
+      <p>Customize the look with colorful themes, use your own photos as a background, and keep things fair over time with built-in stats that track who's been winning (and losing) the most.</p>
+
+      <img 
+        class="preview-image" 
+        id="preview-image"
+        src="/images/chosen-one-preview.png" 
+        alt="Chosen One app preview screenshots" 
+      />
+
+      <!-- Image Modal -->
+      <div id="image-modal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img 
+          class="image-modal-content" 
+          id="modal-image"
+          src="/images/chosen-one-preview.png" 
+          alt="Chosen One app preview screenshots" 
+        />
+      </div>
+
+      <div align="center" style="margin: 50px;">
+        <a 
+          id="contact-link" 
+          href="mailto:hello@robothand.dev?subject=Chosen One"
+        >
+          ✉️ Contact
+        </a>
+      </div>
+
+      <h1 align="center" id="privacy-policy">Privacy Policy</h1>
+      <p>Chosen One is designed to respect your privacy.</p>
+      <ul>
+        <li>Chosen One does not collect, sell, or share your personal data.</li>
+        <li>Game stats and settings are stored locally on your device and can be deleted at any time by removing the app.</li>
+        <li>In-app purchases and tips are processed securely by Apple via the App Store.</li>
+        <li>Chosen One does not show third-party ads.</li>
+      </ul>
+      <p>I don't want your data. Just happier game nights.</p>
+      
+      <p>© 2025 Patrick Gatewood. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('image-modal');
+    const previewImg = document.getElementById('preview-image');
+    const modalImg = document.getElementById('modal-image');
+    const closeBtn = document.querySelector('.image-modal-close');
+
+    // Open modal when preview image is clicked
+    previewImg.addEventListener('click', () => {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal when clicking the X button
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</Base>
+
