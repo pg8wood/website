@@ -1,7 +1,7 @@
 ---
 title: Locus Health
 tagline: "Improved privacy compliance and secure authentication for healthcare app users."
-icon: public_html/images/company-logos/locus-health.png
+icon: /images/company-logos/locus-health.png
 badges:
   - Security
   - Privacy
@@ -13,7 +13,7 @@ weight: 2
 date: "2019"
 affiliation:
   type: enterprise
-  logo: public_html/images/company-logos/willowtree.svg
+  logo: /images/company-logos/willowtree.svg
   label: WillowTree
 ---
 

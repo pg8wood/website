@@ -1,7 +1,7 @@
 ---
 title: ARKit Research
 tagline: Undergraduate ARKit research and campus tour companion app.
-icon: public_html/images/vt-ar-tour-app-logo.png
+icon: /images/vt-ar-tour-app-logo.png
 links:
   docs: https://patrickgatewood.com/arkit-research/research-intro.html
   repo: https://github.com/pg8wood/ARKit-Research
@@ -10,7 +10,7 @@ platforms: [iOS]
 weight: 20
 affiliation:
   type: personal
-  logo: /public_html/images/favicons/favicon-white.svg
+  logo: /images/favicons/favicon-white.svg
   label: Personal
 ---
 

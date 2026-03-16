@@ -1,7 +1,7 @@
 ---
 title: Robot Hand, LLC
 tagline: "Independent software studio crafting playful, purposeful tools."
-icon: public_html/images/company-logos/robot-hand.png
+icon: /images/company-logos/robot-hand.png
 badges:
   - Founder
   - macOS

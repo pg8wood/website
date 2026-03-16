@@ -1,7 +1,7 @@
 ---
 title: Pepsi SnackBot
 tagline: "Optimized API and modernized Swift codebase for PepsiCo's mobile engagement platform."
-icon: public_html/images/company-logos/pepsi.png
+icon: /images/company-logos/pepsi.png
 badges:
   - Swift 4 Migration
   - API Client
@@ -13,7 +13,7 @@ weight: 20
 date: "2018"
 affiliation:
   type: enterprise
-  logo: public_html/images/company-logos/willowtree.svg
+  logo: /images/company-logos/willowtree.svg
   label: WillowTree
 ---
 

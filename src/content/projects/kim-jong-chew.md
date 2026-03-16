@@ -1,7 +1,7 @@
 ---
 title: Kim Jong Chew
 tagline: A satirical Android game built with the Sofia framework.
-icon: /public_html/images/kim-jong-chew-app-icon.png
+icon: /images/kim-jong-chew-app-icon.png
 links:
   trailer: https://www.youtube.com/watch?v=CqUJdim2-po
 badges: [Android, Java, Sofia Framework, XML]
@@ -9,7 +9,7 @@ platforms: [Android]
 weight: 6
 affiliation:
   type: personal
-  logo: /public_html/images/favicons/favicon-white.svg
+  logo: /images/favicons/favicon-white.svg
   label: Personal
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: CFA Institute
 tagline: "Modernized CFA member experience with search and membership renewal systems across mobile platforms."
-icon: public_html/images/company-logos/cfa.png
+icon: /images/company-logos/cfa.png
 badges:
   - Leadership
   - Testing Automation
@@ -14,7 +14,7 @@ weight: 10
 date: "2019"
 affiliation:
   type: enterprise
-  logo: public_html/images/company-logos/willowtree.svg
+  logo: /images/company-logos/willowtree.svg
   label: WillowTree
 ---
 

@@ -2,7 +2,7 @@
 title: Health & Wellness App
 tagline: "Delivered HealthKit-driven rewards system and rebuilt team culture on a struggling project."
 client: Confidential Health Client via WillowTree
-icon: public_html/images/company-logos/willowtree.svg
+icon: /images/company-logos/willowtree.svg
 badges:
   - HealthKit
   - Leadership
@@ -14,7 +14,7 @@ weight: 3
 date: "2020"
 affiliation:
   type: enterprise
-  logo: public_html/images/company-logos/willowtree.svg
+  logo: /images/company-logos/willowtree.svg
   label: WillowTree
 ---
 

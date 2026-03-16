@@ -1,7 +1,7 @@
 ---
 title: Square
 tagline: "Empowering millions of sellers through safer, faster, and smarter point-of-sale experiences."
-icon: public_html/images/company-logos/square.png
+icon: /images/company-logos/square.png
 badges:
   - Senior Engineer
   - AI Tooling

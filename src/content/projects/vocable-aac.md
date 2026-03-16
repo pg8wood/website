@@ -1,7 +1,7 @@
 ---
 title: Vocable AAC
 tagline: "Hands-free ARKit communication app empowering speech-impaired individuals."
-icon: public_html/images/company-logos/vocable.webp
+icon: /images/company-logos/vocable.webp
 links:
   repo: "https://github.com/willowtreeapps/vocable-ios"
 badges:
@@ -16,7 +16,7 @@ weight: 6
 date: "2021"
 affiliation:
   type: enterprise
-  logo: public_html/images/company-logos/willowtree.svg
+  logo: /images/company-logos/willowtree.svg
   label: WillowTree
 ---
 

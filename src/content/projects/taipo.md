@@ -4,7 +4,7 @@ tagline: "An AI-powered oopsie catcher for your shell. Because typing ish ard an
 iconName: mdi:console
 affiliation:
   type: personal
-  logo: /public_html/images/favicons/favicon-white.svg
+  logo: /images/favicons/favicon-white.svg
   label: Personal
 links:
   repo: "https://github.com/pg8wood/taipo"

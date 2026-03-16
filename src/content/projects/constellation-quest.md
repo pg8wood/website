@@ -1,7 +1,7 @@
 ---
 title: Constellation Quest
 tagline: "Offline‑first companion PWA for GRiZ's Seven Stars Festival"
-icon: public_html/images/constellation-quest-app-icon.png
+icon: /images/constellation-quest-app-icon.png
 client: GriZ LLC
 links:
   live: "https://quest.sevenstarsfest.com"
@@ -20,7 +20,7 @@ date: "2024-01-01"
 draft: false
 affiliation:
   type: independent
-  logo: public_html/images/company-logos/robot-hand.png
+  logo: /images/company-logos/robot-hand.png
   label: Robot Hand
 ---
 

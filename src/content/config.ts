@@ -22,6 +22,7 @@ const projects = defineCollection({
         playStore: z.string().optional(),
         repo: z.string().optional(),
         live: z.string().optional(),
+        site: z.string().optional(),
         docs: z.string().optional(),
         trailer: z.string().optional(),
       })

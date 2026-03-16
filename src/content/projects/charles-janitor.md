@@ -1,7 +1,7 @@
 ---
 title: Charles Janitor
 tagline: Cleans up system proxy when Charles Proxy frequents forgets to do it for you.
-icon: /public_html/images/charles-janitor-logo.png
+icon: /images/charles-janitor-logo.png
 links:
   repo: https://github.com/pg8wood/charles-janitor
 badges: [Swift 5.2, Cocoa]
@@ -9,6 +9,6 @@ platforms: [macOS]
 weight: 5
 affiliation:
   type: personal
-  logo: /public_html/images/favicons/favicon-white.svg
+  logo: /images/favicons/favicon-white.svg
   label: Personal
 ---

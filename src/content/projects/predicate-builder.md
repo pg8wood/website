@@ -19,7 +19,7 @@ weight: 50
 date: "2023"
 affiliation:
   type: enterprise
-  logo: public_html/images/company-logos/square.png
+  logo: /images/company-logos/square.png
   label: Square
 ---
 

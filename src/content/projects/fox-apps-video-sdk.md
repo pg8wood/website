@@ -1,7 +1,7 @@
 ---
 title: FOX Apps & Video SDK
 tagline: "Unified cross-platform video player SDK and tvOS experiences for FOX Now, Sports, Nation, and News."
-icon: public_html/images/company-logos/fox-tv.png
+icon: /images/company-logos/fox-tv.png
 badges:
   - AVFoundation
   - tvOS
@@ -15,7 +15,7 @@ weight: 6
 date: "2021"
 affiliation:
   type: enterprise
-  logo: public_html/images/company-logos/willowtree.svg
+  logo: /images/company-logos/willowtree.svg
   label: WillowTree
 ---
 

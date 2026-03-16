@@ -4,7 +4,7 @@ tagline: "Because Simulator Logins shouldn’t be a slog."
 iconName: mdi:login
 affiliation:
   type: personal
-  logo: /public_html/images/favicons/favicon-white.svg
+  logo: /images/favicons/favicon-white.svg
   label: Personal
 links:
   repo: "https://github.com/pg8wood/slog"

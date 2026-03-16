@@ -169,6 +169,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"chosen-one.md": {
+	id: "chosen-one.md";
+  slug: "chosen-one";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "constellation-quest.md": {
 	id: "constellation-quest.md";
   slug: "constellation-quest";

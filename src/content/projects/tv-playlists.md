@@ -10,6 +10,6 @@ platforms: [iOS]
 weight: 0
 affiliation:
   type: personal
-  logo: /public_html/images/favicons/favicon-white.svg
+  logo: /images/favicons/favicon-white.svg
   label: Personal
 ---
