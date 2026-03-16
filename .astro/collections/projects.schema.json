@@ -1,0 +1,150 @@
+{
+  "$ref": "#/definitions/projects",
+  "definitions": {
+    "projects": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "tagline": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "iconName": {
+          "type": "string"
+        },
+        "client": {
+          "type": "string"
+        },
+        "affiliation": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "enterprise",
+                "independent",
+                "personal"
+              ]
+            },
+            "logo": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "client": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "appStore": {
+              "type": "string"
+            },
+            "playStore": {
+              "type": "string"
+            },
+            "repo": {
+              "type": "string"
+            },
+            "live": {
+              "type": "string"
+            },
+            "site": {
+              "type": "string"
+            },
+            "docs": {
+              "type": "string"
+            },
+            "trailer": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "default": {}
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "video": {
+              "type": "string"
+            },
+            "images": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "src": {
+                    "type": "string"
+                  },
+                  "alt": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "src",
+                  "alt"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false,
+          "default": {}
+        },
+        "badges": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "featured": {
+          "type": "boolean",
+          "default": false
+        },
+        "weight": {
+          "type": "number",
+          "default": 0
+        },
+        "date": {
+          "type": "string"
+        },
+        "draft": {
+          "type": "boolean",
+          "default": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "tagline"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

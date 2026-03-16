@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview --host",
-    "postbuild": "cd dist && ln -sfn ../public_html public_html && ln -sfn ../images images && ln -sfn ../videos videos"
+    "postbuild": "cd dist && ln -sfn ../public_html public_html && ln -sfn ../images images && ln -sfn ../videos videos",
+    "sync-resume": "node scripts/sync-resume.mjs"
   },
   "dependencies": {
     "astro": "^5.14.4"
@@ -16,6 +17,7 @@
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/skill-icons": "^1.2.3",
     "astro-icon": "^1.1.5",
-    "d3-force": "^3.0.0"
+    "d3-force": "^3.0.0",
+    "js-yaml": "^4.1.1"
   }
 }

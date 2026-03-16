@@ -1,0 +1,169 @@
+{
+  "name": "Patrick Gatewood",
+  "contact": {
+    "website": {
+      "label": "PatrickGatewood.com",
+      "url": "https://patrickgatewood.com"
+    },
+    "github": {
+      "label": "pg8wood",
+      "url": "https://github.com/pg8wood"
+    },
+    "linkedin": {
+      "label": "PatrickGatewood",
+      "url": "https://linkedin.com/in/PatrickGatewood"
+    },
+    "email": {
+      "label": "patrick@patrickgatewood.com",
+      "url": "mailto:patrick@patrickgatewood.com"
+    }
+  },
+  "work_experience": [
+    {
+      "company": "Square (Block, Inc.)",
+      "title": "Senior Software Engineer",
+      "dates": "August 2022 - February 2026",
+      "highlights": [
+        "Identified an unstable Core Data pattern underpinning every transaction across Square's point of sale apps and set direction on a multi-phase hardening effort. Architected, shipped, and open-sourced a declarative, type-safe predicate DSL, plus Square's first Swift macro to remove boilerplate and enforce compile-time query checks. Reduced Core Data query development and code review time by 40% based on internal cycle-time data.\n",
+        "Owned iOS delivery as DRI for OCR-Assisted Stock Intake, led a 3-engineer iOS team, and translated ambiguous product and design inputs into engineering design docs, phased milestones, and execution strategy. Implemented core feature work while driving cross-functional release execution through PM, design, and QA ownership changes, and established the technical foundation for Square's broader OCR platform initiative. Alpha testing surfaced only 2 P3 bugs, and launch measurements showed seller inventory intake time down 75%.\n",
+        "Drove end-to-end migration of Square's most complex seller-facing screen from Objective-C, UIKit, and multiple internal UI frameworks to a unified Swift architecture. Broke 12+ years of tech debt into phased milestones and led 3 engineers through delivery while preserving existing tests. Shipped with zero P0/P1/P2 bugs, raised coverage from 44% to 95%, and cut new feature development time by ~3x based on observed team throughput.\n",
+        "Established an SPM-Bazel dual-module CLI standard for hybrid Swift Package modules in Square's bazel-based iOS monorepo. Built and rolled out tooling to enable SwiftUI Previews and isolated development workflows. Evangelized the new capabilities and drove adoption by directly onboarding and supporting partner teams. Reduced UI iteration loops from minutes to seconds based on observed local build and preview cycles.\n",
+        "Pioneered AI-assisted development at Block by founding a Copilot for Xcode working group and setting direction for secure adoption before generative AI tooling became standard internally. Drove security and legal review, then rolled out configuration and access to all Block iOS engineers. Helped establish the foundation for the organization's shift toward AI-first engineering workflows.\n",
+        "Rescued an orphaned localization REST API after a reorg risked service drift by establishing ownership and driving knowledge transfer sessions. Standardized scattered docs into a single searchable source of truth. Reduced discovery time from minutes to seconds based on engineer feedback.\n",
+        "Advocated for Square's Jira-to-Linear migration by persistently surfacing blockers in a two-year-stalled data integration and pushing security, IT, and engineering leadership to prioritize the switch. Helped establish pilot scope and build adoption momentum while internal DX surveys ranked Jira as engineers' #1 pain point. Pilot results led to full Square adoption of Linear, and leadership cited this advocacy in the final switch decision.\n"
+      ]
+    },
+    {
+      "company": "Robot Hand, LLC",
+      "title": "Owner / Sole Engineer",
+      "dates": "2022 - Present",
+      "highlights": [
+        "Co-defined and solo-engineered Constellation Quest, an offline-first scavenger hunt PWA for GRiZ's Seven Stars Festival (~23,500 attendees). Set direction for both product and on-site execution, including signage, reward mechanics, and interaction flows in zero-connectivity environments. Built with Vite, TypeScript, and localStorage; shipped ahead of schedule with zero downtime and became a fan-favorite highlight with organic Reddit engagement.\n",
+        "Designed and shipped Chosen One to the App Store, defining a focused game-night utility with zero accounts and zero ads. Implemented custom multi-touch tracking, animated ring themes via StoreKit 2 in-app purchases, and tuned haptics for reliable tactile feedback. Delivered a polished, low-friction experience centered on repeat social use.\n",
+        "Maintain full product ownership and demonstrate continuous delivery by independently identifying friction points and shipping a portfolio of tools and apps: Recipe Nabber (iOS Safari extension to extract recipes), Emochi (system-wide macOS emoji picker), slog (automated Simulator login CLI), taipo (AI shell typo fixer), and an automated Changelog Generator.\n"
+      ]
+    },
+    {
+      "company": "WillowTree, LLC",
+      "dates": "July 2018 - August 2022",
+      "title": "Senior iOS Engineer",
+      "projects": [
+        {
+          "name": "FOX Consumer Products & Engineering",
+          "highlights": [
+            "Architected cross-platform features and served as tvOS tech lead for FOX's shared video player SDK. Drove adoption across the entire FOX app suite (FOX Now, Sports, Weather, Nation, News International) by establishing consistent integration patterns and enabling partner teams to ship reliable video experiences at scale.\n",
+            "Automated key continuous delivery pipeline steps for FOX video SDK releases and reduced release cycle time by 25% based on pipeline data.\n",
+            "Built and open-sourced an automated Changelog Generator for FOX release workflows, eliminating a recurring merge conflict tax on every pull request and saving an estimated hour of manual resolution per release cycle.\n",
+            "Evangelized SharePlay, created and demoed a proof of concept to VP and C-level stakeholders; procured program-level buy-in. Received official feedback from Fox's VP of Video Platforms and WillowTree VPs.\n",
+            "Invested in growth of team members by mentoring newer engineers and providing opportunities to own larger, complex features and communicate with external clients.\n"
+          ]
+        },
+        {
+          "name": "FOX Television Stations",
+          "highlights": [
+            "Created 8 FOX Television Stations apps using a white-label architecture and scaled CI infrastructure to support 27 white-label apps.\n",
+            "Identified a recurring 10 person-hour per sprint cost from .xcodeproj merge conflicts on a 50-person team and set direction on generated project files. Rolled out XcodeGen by replacing an ~80,000-line .pbxproj with a ~200-line YAML definition adopted across 27 white-label apps.\n"
+          ]
+        },
+        {
+          "name": "WillowTree Live Apps Team",
+          "highlights": [
+            "Onboarded and maintained 10 inherited, mature codebases and ingested CI/CD pipelines into WillowTree's stack, establishing standardized release ownership across the portfolio.\n",
+            "Delivered an emergency Wyndham Hotels COVID-19 guest-guidance feature and was named by the client as a reason for contract renewal.\n"
+          ]
+        },
+        {
+          "name": "CFA Institute",
+          "highlights": [
+            "Served as lead iOS engineer for CFA Institute for 8 months, setting delivery direction for the engagement.\n",
+            "Built an automated test suite for CFA Institute and reduced regression testing time by 50%; architected Search and Member Renewal end-to-end, including backend API architecture and Xamarin client implementations.\n"
+          ]
+        },
+        {
+          "name": "Vitality Group",
+          "highlights": [
+            "Joined a red-status Health & Wellness engagement, addressed burnout through team-health interventions and team-building sessions, and rebuilt a sustainable delivery cadence. Converted project trajectory and delivered a HealthKit rewards feature on time.\n"
+          ]
+        },
+        {
+          "name": "Locus Health",
+          "highlights": [
+            "Discovered, raised, and fixed a privacy issue where stored health data did not meet encryption guidelines, then collaborated on architecture and code review for an Amazon Cognito 2-factor authentication rollout.\n"
+          ]
+        },
+        {
+          "name": "Vocable AAC",
+          "highlights": [
+            "Co-defined and implemented a hands-free ARKit head-tracking and virtual-cursor system to enable communication for speech-impaired individuals.\n",
+            "Implemented localization and contributing guidelines, then open-sourced project materials and led early communication with open-source contributors.\n",
+            "2021 Webby Award winner and honoree; 2020 W3 Award winner in 3 categories."
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Virginia Polytechnic Institute and State University",
+      "degree": "B.S. Computer Science",
+      "year": 2018
+    }
+  ],
+  "skills": {
+    "mobile_development": [
+      "Swift",
+      "Swift Concurrency",
+      "SwiftUI",
+      "iOS",
+      "tvOS",
+      "UIKit",
+      "Core Data",
+      "Combine",
+      "Objective-C",
+      "ARKit",
+      "StoreKit 2",
+      "Push Notifications",
+      "Accessibility",
+      "Localization",
+      "XCTest",
+      "Swift Testing"
+    ],
+    "architecture_and_build_systems": [
+      "App Modularization",
+      "Composable Systems",
+      "Swift Macros",
+      "Swift Package Manager",
+      "Bazel",
+      "CI/CD Pipeline Automation",
+      "Feature Flagging",
+      "Crash Triage",
+      "Metrics & Instrumentation",
+      "Xcode Instruments",
+      "TestFlight"
+    ],
+    "agentic_engineering": [
+      "Agentic Workflows",
+      "Agent Orchestration",
+      "Context Engineering",
+      "MCP & Skill Development",
+      "LLM Integration",
+      "Cursor",
+      "Claude Code",
+      "Antigravity",
+      "Goose",
+      "GitHub Copilot"
+    ],
+    "tools": [
+      "git",
+      "GitHub Actions",
+      "Azure DevOps",
+      "Jenkins",
+      "LaunchDarkly",
+      "Datadog",
+      "Bugsnag",
+      "Linear",
+      "Bash",
+      "TypeScript"
+    ]
+  }
+}

@@ -1,0 +1,357 @@
+---
+import { Icon } from 'astro-icon/components';
+import resumeData from '../data/resume.json';
+
+const FIELD = {
+  name: resumeData.name ?? "Patrick Gatewood",
+  contact: resumeData.contact ?? {},
+  experience: resumeData.work_experience ?? [],
+  education: resumeData.education ?? [],
+  skills: resumeData.skills ?? {},
+};
+
+const LINK_ICON_MAP = {
+  website: "mdi:house",
+  github: "mdi:github",
+  linkedin: "mdi:linkedin",
+  email: "mdi:envelope",
+  phone: "mdi:phone",
+};
+
+const labels = {
+  mobile_development: "Mobile Development",
+  architecture_and_build_systems: "Architecture & Build Systems",
+  agentic_engineering: "Agentic AI & Engineering",
+  tools: "Tools & Infrastructure",
+};
+
+const formatPhoneNumber = (num) => {
+  if (!num) return "";
+  const cleaned = num.replace(/\D/g, "");
+  const digits = (cleaned.length === 11 && cleaned.startsWith("1")) ? cleaned.substring(1) : cleaned;
+  if (digits.length === 10) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+  return num;
+};
+---
+
+<div class="resume-container">
+  <header class="header">
+    <h1 class="name">{FIELD.name}</h1>
+    <div class="links-row">
+      {Object.entries(FIELD.contact).map(([key, val]) => (
+        <span class="link-item">
+          <Icon name={LINK_ICON_MAP[key] || "mdi:link"} class="link-icon" />
+          <a href={val.url || "#"}>{val.label || key}</a>
+        </span>
+      ))}
+    </div>
+    <hr class="header-line" />
+  </header>
+
+  <section id="work-experience" class="section">
+    <h2 class="section-title">
+      <Icon name="mdi:briefcase" class="section-icon" />
+      Work Experience
+    </h2>
+    {FIELD.experience.map((job) => (
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company-title">
+            <strong>{job.company}</strong>
+            {job.title && (
+              <>
+                <span class="separator">|</span>
+                <span class="title">{job.title}</span>
+              </>
+            )}
+          </span>
+          <span class="job-dates">{job.dates}</span>
+        </div>
+
+        {job.progression && Array.isArray(job.progression) && (
+          <div class="job-progression">
+            {job.progression.map((p, i) => (
+              <span class="prog-item">
+                <span class="prog-year">{p.year}</span>
+                <span class="prog-dot">·</span>
+                {p.title}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {job.highlights && Array.isArray(job.highlights) && (
+          <ul class="job-bullets">
+            {job.highlights.map((h) => (
+              <li>{h.trim()}</li>
+            ))}
+          </ul>
+        )}
+
+        {job.projects && Array.isArray(job.projects) && (
+          job.projects.map((proj) => (
+            <div class="job-project">
+              <div class="job-project-name">{proj.name}</div>
+              {proj.highlights && Array.isArray(proj.highlights) && (
+                <ul class="job-bullets">
+                  {proj.highlights.map((h) => (
+                    <li>{h.trim()}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))
+        )}
+
+        {job.additional_clients && Array.isArray(job.additional_clients) && (
+          <div class="additional-clients">
+            <strong>Additional clients:</strong> {job.additional_clients.join(", ")}
+          </div>
+        )}
+      </div>
+    ))}
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">
+      <Icon name="mdi:graduation-cap" class="section-icon" />
+      Education
+    </h2>
+    {FIELD.education.map((s) => (
+      <div class="education-item">
+        <div class="education-institution"><strong>{s.institution}</strong></div>
+        <div class="education-degree-year">{s.degree} <span class="separator">|</span> {s.year}</div>
+      </div>
+    ))}
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">
+      <Icon name="mdi:wrench" class="section-icon" />
+      Skills
+    </h2>
+    <div class="skills-grid">
+      {Object.entries(FIELD.skills).map(([key, items]) => (
+        <div class="skills-group">
+          <span class="skills-group-label">{labels[key] || key}:</span>
+          <span class="skills-list">{(items as string[]).join(" · ")}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  .resume-container {
+    color: #e0e0e0;
+    font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background: transparent;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+    background: linear-gradient(90deg, #fff, #b8b8b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .link-icon {
+    color: #5448c8;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .link-item a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .link-item a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .header-line {
+    border: none;
+    border-top: 4px solid #5448c8;
+    margin: 1.25rem 0;
+    opacity: 0.8;
+  }
+
+  .section {
+    margin-top: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+  }
+
+  .section-icon {
+    color: #5448c8;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .job {
+    margin-bottom: 1.5rem;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+  }
+
+  .job-company-title {
+    font-size: 1.3rem;
+  }
+
+  .separator {
+    margin: 0 0.5rem;
+    opacity: 0.5;
+    font-weight: 300;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+  }
+
+  .job-dates {
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+
+  .job-progression {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+  }
+
+  .prog-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .prog-year {
+    font-weight: 600;
+  }
+
+  .prog-dot {
+    opacity: 0.5;
+  }
+
+  .job-bullets {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+    list-style-type: disc;
+  }
+
+  .job-bullets li {
+    margin-bottom: 0.3rem;
+  }
+
+  .job-project {
+    margin-top: 0.75rem;
+    margin-left: 0.5rem;
+    border-left: 2px solid rgba(84, 72, 200, 0.3);
+    padding-left: 0.75rem;
+  }
+
+  .job-project-name {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: #fff;
+  }
+
+  .additional-clients {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+
+  .education-item {
+    margin-bottom: 1rem;
+  }
+
+  .education-institution {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  .education-degree-year {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  .skills-grid {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .skills-group-label {
+    font-weight: 700;
+    color: #fff;
+    margin-right: 0.5rem;
+  }
+
+  .skills-list {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 600px) {
+    .job-header {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .name {
+      font-size: 2.25rem;
+    }
+    .section-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
