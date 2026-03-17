@@ -33,5 +33,6 @@ jobs:
           script_stop: true # stop the script immediately if any commands fail
           script: |
             cd ${{ secrets.SITE_DIR }}/
-            git pull
-            caddy reload --config Caddyfile || caddy start --config Caddyfile
+            git fetch origin
+            git reset --hard origin/master
+            ${{ secrets.SERVE_SCRIPT }}
