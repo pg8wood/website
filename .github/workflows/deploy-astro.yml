@@ -34,4 +34,4 @@ jobs:
           script: |
             cd ${{ secrets.SITE_DIR }}/
             git pull
-            ${{ secrets.SERVE_SCRIPT }}
+            caddy reload --config Caddyfile || caddy start --config Caddyfile
