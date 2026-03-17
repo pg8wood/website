@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview --host",
     "postbuild": "cd dist && ln -sfn ../public_html public_html && ln -sfn ../images images && ln -sfn ../videos videos",
-    "sync-resume": "node scripts/sync-resume.mjs"
+    "sync-resume": "node scripts/sync-resume.mjs",
+    "prepare": "git config core.hooksPath .githooks"
   },
   "dependencies": {
     "astro": "^5.14.4"
