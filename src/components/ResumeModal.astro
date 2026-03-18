@@ -23,26 +23,40 @@ import { Icon } from 'astro-icon/components';
 </dialog>
 
 <script>
+  const resumeTriggers = document.querySelectorAll('[data-resume-trigger]');
   const modal = document.getElementById('resume-modal') as HTMLDialogElement;
   const closeBtn = document.getElementById('close-resume');
-
-  closeBtn?.addEventListener('click', () => {
+  const closeModal = () => {
+    if (!modal?.open) return;
     modal.classList.add('closing');
     setTimeout(() => {
       modal.close();
       modal.classList.remove('closing');
     }, 300); // match transition duration
+  };
+
+  resumeTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      if (!modal?.open) {
+        modal?.showModal();
+      }
+    });
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    closeModal();
   });
 
   // Close on backdrop click
   modal?.addEventListener('click', (e) => {
     if (e.target === modal) {
-      modal.classList.add('closing');
-      setTimeout(() => {
-        modal.close();
-        modal.classList.remove('closing');
-      }, 300);
+      closeModal();
     }
+  });
+
+  modal?.addEventListener('cancel', (e) => {
+    e.preventDefault();
+    closeModal();
   });
 </script>
 
