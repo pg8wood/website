@@ -5,7 +5,9 @@ icon: /images/level-lens-icon.png
 affiliation:
   type: independent
   logo: /images/company-logos/robot-hand.png
-  label: Robot Hand
+  label: Robot Hand, LLC
+links:
+  site: /level-lens/
 badges:
   - Safari Extension
   - SwiftUI

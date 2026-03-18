@@ -1,0 +1,106 @@
+---
+import '../styles/theme.css';
+import Base from '../layouts/Base.astro';
+import SimpleNav from '../components/SimpleNav.astro';
+
+const title = 'Level Lens | Patrick Gatewood';
+const description = 'Privacy policy for Level Lens.';
+const ogImage = '/images/level-lens-icon.png';
+---
+
+<Base title={title} description={description} image={ogImage}>
+  <SimpleNav />
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .app-icon-container {
+      margin: 20px auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      margin-top: 75px;
+    }
+
+    #page-container {
+      text-align: left;
+      max-width: 500px;
+      margin: auto;
+      padding: 0 20px 50px;
+    }
+
+    #contact-link {
+      border-radius: 15px;
+      font-size: 25px;
+      padding: 10px;
+      text-decoration: none;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      color: var(--pale-gray);
+      display: inline-block;
+    }
+
+    #contact-link:hover {
+      opacity: 0.8;
+    }
+
+    #privacy-policy {
+      margin-top: 40px;
+    }
+
+    h1 {
+      color: var(--pale-gray);
+    }
+
+    p {
+      color: var(--pale-gray);
+      line-height: 1.6;
+    }
+
+    ul {
+      color: var(--pale-gray);
+      line-height: 1.8;
+    }
+  </style>
+
+  <div id="page-container">
+    <div id="intro">
+      <img
+        class="app-icon-container"
+        src="/images/level-lens-icon.png"
+        alt="Level Lens app icon"
+      />
+      <h1 align="center" id="name-header">Level Lens</h1>
+      <p>Instant salary transparency for your job search.</p>
+      <p>Level Lens automatically detects career pages and job listings in Safari and shows salary data with a native-feeling sidebar.</p>
+
+      <div id="contact" align="center" style="margin: 50px;">
+        <a
+          id="contact-link"
+          href="mailto:hello@robothand.dev?subject=Level%20Lens"
+        >
+          Contact
+        </a>
+      </div>
+
+      <h1 align="center" id="privacy-policy">Privacy Policy</h1>
+      <p>Level Lens is designed to respect your privacy.</p>
+      <ul>
+        <li>Level Lens does not collect, sell, or share your personal data.</li>
+        <li>Your browsing history, personal information, and salary searches are not stored or transmitted by us.</li>
+        <li>Any extension preferences stay on your device and can be deleted at any time by removing the app or extension.</li>
+        <li>Level Lens may request salary data directly from Levels.fyi to show results, but we do not proxy, store, or track those lookups.</li>
+        <li>Level Lens does not show third-party ads.</li>
+      </ul>
+      <p>I don't want your data. Just a better job search.</p>
+
+      <p>Copyright 2026 Robot Hand, LLC. All Rights Reserved.</p>
+    </div>
+  </div>
+</Base>
